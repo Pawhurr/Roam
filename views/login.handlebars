@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="css/login.css">
+
+<title>Login</title>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8">
+                <div class="row">
+                    <div class="col-lg-12 main">
+
+                        <div id="login-div">
+
+                            <form action="/login" method="POST" id="login-form">
+                                <h1 id="login-header">Login Form</h1>
+
+                                <label>Username:</label>
+                                    <input type="text" name="username" id="login-username" placeholder="master_of_the_universe" required>
+                                
+                                <label>Password:</label>
+                                    <input type="password" name="password" id="login-password" required>
+                                
+                                <input type="submit" value="Submit" id="submit-btn">
+                            </form>
+
+                            <a id="signup" href="/signup">Not Signed Up?</a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2"></div>
+        </div>
+    </div>
+
+</body>
