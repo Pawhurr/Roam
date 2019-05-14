@@ -26,10 +26,10 @@ module.exports = function(sequelize, DataTypes) {
     User.validatePassword = function(user, password) {
         if (user.dataValues.password !== password){
             var isMatch = false;
-            return isMatch;
+            return Promise.resolve(isMatch);
         } else {
             var isMatch = true;
-            return isMatch;
+            return Promise.resolve(isMatch);
         }
     }
       return User;
