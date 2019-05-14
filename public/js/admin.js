@@ -15,17 +15,3 @@ $('#admin-submit').on('submit', function(event) {
     });
 });
 
-$('#login-submit').on('submit', function(event) {
-    event.preventDefault();
-    credentials = {
-        username: $('#login-username').val(),
-        password: $('#login-password').val()
-    };
-    $.ajax({
-        url: '/login',
-        method: 'POST',
-        data: credentials
-    }).then(function(res) {
-        console.log(result);
-    });
-});

@@ -16,6 +16,10 @@ router.get('/city', function(req, res) {
     });
 });
 
+router.get('/admin', function(req, res) {
+    res.render(res);
+});
+
 router.post('/signup', function(req, res) {
     db.User.create({
         username: req.body.username,

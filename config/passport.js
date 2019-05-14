@@ -42,7 +42,7 @@ module.exports = (app) => {
   // It's recommended you only serialize something like a unique username or user ID.
   // I prefer user ID.
   passport.serializeUser((user, done) => {
-    done(null, user._id);
+    done(null, user.id);
   });
 
   // Only necessary when using sessions.
@@ -51,7 +51,7 @@ module.exports = (app) => {
   // Here, we simply find the user with the matching ID and return that.
   // This will cause the User record to be available on each authenticated request via the req.user property.
   passport.deserializeUser(function (userId, done) {
-    db.User.findById(userId)
+    db.User.findByPk(userId)
       .then(function (user) {
         done(null, user);
       })
@@ -78,7 +78,7 @@ module.exports = (app) => {
 
         // call our validate method, which will call done with the user if the
         // passwords match, or false if they don't
-        db.User.validatePassword(user, password)
+        return db.User.validatePassword(user, password)
         .then(isMatch => done(null, isMatch ? user : false, isMatch ? null : { message: errorMsg }));
       })
       .catch(done);

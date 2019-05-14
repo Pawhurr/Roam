@@ -32,7 +32,7 @@ app.use((error, req, res, next) => {
   });
 
 app.post('/login', passport.authenticate('local', 
-{successRedirect: '/lol', failureRedirect: '/city', failureFlash: true }
+{successRedirect: '/lol', failureRedirect: '/why', failureFlash: true }
 ));
 
 var PORT = process.env.PORT || 8080;
