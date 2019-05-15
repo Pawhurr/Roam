@@ -1,0 +1,11 @@
+#worldMapIndex {
+    z-index: 1;
+}
+.modal {
+    z-index: 3;
+}
+.modal-backdrop {
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+}
