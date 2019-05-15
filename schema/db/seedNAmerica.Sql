@@ -1,7 +1,8 @@
 USE countries_db;
 
-INSERT INTO countries (country, bty, foods, religions, brief_history, facts, fun_fact)
-VALUES("United States of America",
+INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact)
+VALUES("NAmerica",
+"United States of America",
 "Spring and autumn are the best times to travel",
 "Corn Dogs, Hot dog, Crab Cakes, Clam Chowder, Buffalo Wings, State Fair Foods, Barbecue, Root Beer, Pie, Gumbo, Chicken and Waffles.",
 "Protestantism (48.9%), Roman Catholicism (23.0%), Mormonism (1.8%), No religion (18.2%), Judaism (2.1%), Islam (0.8%)",
@@ -10,8 +11,9 @@ VALUES("United States of America",
 "The current Flag was designed by 17 year old Robert G. Heft and he did it as a school project. He originally received a B– for the project, but he was later awarded an A after the flag was accepted by the Congress."
 );
 
-INSERT INTO countries (country, bty, foods, religions, brief_history, facts, fun_fact)
-VALUES("Canada",
+INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact)
+VALUES("NAmerica",
+"Canada",
 "During Summer, End of spring to early fall(May-October)",
 "Poutine, Bannock, Butter tarts, Nova Scotian Lobster Rolls, Montreal-style Bagels, Saskatoon berry pie, Montreal-style Smoked Meat, Peameal Bacon.",
 "Roman Catholicism (38.7%), Other Christian[2] (28.5%), Islam (3.2%), Hinduism (1.5%), Sikhism (1.4%), Buddhism (1.1%), Judaism (1.0%), Other religions (0.6%), Non-religious (23.9%)",
@@ -20,8 +22,9 @@ VALUES("Canada",
 "Around 90% of Canada's land area is uninhabited"
 );
 
-INSERT INTO countries (country, bty, foods, religions, brief_history, facts, fun_fact)
-VALUES("Mexico",
+INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact)
+VALUES("NAmerica",
+"Mexico",
 "During the dry season between December and April",
 "Chilaquiles, Pozole, Tacos al pastor, Tostadas, Chiles en nogada, Elote, Enchiladas, Mole.",
 "Roman Catholicism (83%), Other Christian (10%), Other Religion (0.2%), No religion (5%), Unspecified (3%)",

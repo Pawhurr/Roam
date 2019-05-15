@@ -1,7 +1,8 @@
 USE countries_db;
 
-INSERT INTO countries (country, bty, foods, religions, brief_history, facts, fun_fact)
-VALUES("Moroco",
+INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact)
+VALUES("Africa",
+"Moroco",
 "spring (mid-March to May) and Autumn (September to October)",
 "Couscous, Zaalouk, Fish Chermoula, Harira, Pastilla (Chicken or Pigeon Pie), Khobz, Steamed Sheep Head, Spicy Sardines.",
 "Islam (93%), Christianity, Bahá'í community, Jews.",
@@ -10,8 +11,9 @@ VALUES("Moroco",
 "The Karawan mosque in Fez is the oldest university in the world built by Fatima al-Fihr"
 );
 
-INSERT INTO countries (country, bty, foods, religions, brief_history, facts, fun_fact)
-VALUES("South Africa",
+INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact)
+VALUES("Africa",
+"South Africa",
 "Summer months between November and February, For whale watching is between July and November.",
 "Chakalaka, Potjiekos, Vetkoek, Mealie, Boerewors, Bredie, Frikkadel, Sosaties",
 "Christians(81%), Unaffiliated (10.9%), Traditional african religion(4.4%), Islam (1.6%), Hinduism (1.0%), Judaism (0.1%), Other religions (2.7%)",
@@ -20,8 +22,9 @@ VALUES("South Africa",
 "The first human heart transplant was performed in a Cape Town hospital in 1967"
 );
 
-INSERT INTO countries (country, bty, foods, religions, brief_history, facts, fun_fact)
-VALUES("Egypt",
+INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact)
+VALUES("Africa",
+"Egypt",
 "Best time to visit is from October to April.",
 "Ful Medammes, Falafel, Koshari, Mahshi, Shawarma, Macaroni Béchamel, Molokhia.",
 "Sunni Muslims (80-94%), Coptic Christians (6% to 20%)",
@@ -30,8 +33,9 @@ VALUES("Egypt",
 "The Egyptians invented the 365 days a year Calender"
 );
 
-INSERT INTO countries (country, bty, foods, religions, brief_history, facts, fun_fact)
-VALUES("Tanzania",
+INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact)
+VALUES("Africa",
+"Tanzania",
 "Dry season from late June to October. Wildebeest migration in Serengeti is June and July and calving is late January to February.",
 "Coconut Bean Soup, Chai, Fried Flat Bread, Fried Bananas/Plantains, Rice in Coconut milk, Pilau, Plantain Soup (supu ya ndizi), Date Nut Bread",
 "Christianity is the largest religion in Tanzania, and Muslim and Animist minorities",
@@ -40,8 +44,9 @@ VALUES("Tanzania",
 "Tanzania has 2 capital cities. Dar Es Salaam is the former capital which has government offices. Dodoma is the present capital where the Presidential office and a few government ministries are located."
 );
 
-INSERT INTO countries (country, bty, foods, religions, brief_history, facts, fun_fact)
-VALUES("Kenya",
+INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact)
+VALUES("Africa",
+"Kenya",
 "Dry season from late June to October. The wildebeest migration in Masai Mara in July and remains until October.",
 "Ugali, Irio, Githeri, Kenyan Pilau, Wali wa Nazi, Sukuma Wiki, Kenyan Stew, Nyama Choma",
 "Christianity (84.8%), Islam (9.7 to 11.1%)",

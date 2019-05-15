@@ -7,6 +7,7 @@ USE countries_db;
 CREATE TABLE countries
 (
     id INT AUTO_INCREMENT,
+    continent VARCHAR(100),
     country VARCHAR(100),
     bty TEXT,
     foods TEXT,

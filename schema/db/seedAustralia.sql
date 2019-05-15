@@ -1,7 +1,8 @@
 USE countries_db;
 
-INSERT INTO countries (country, bty, foods, religions, brief_history, facts, fun_fact)
-VALUES("Australia",
+INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact)
+VALUES("Australia", 
+"Australia",
 "During the cool and dry season between November and early April",
 "Barbequed snags (aka sausages), Lamingtons, A burger with 'the lot', Chicken parmigiana, Pavlova, Meat pies, Barramundi, Vegemite on Toast.",
 "52.1% Christian, 22.6% Catholic, 13.3% Anglican, 8.2% other religion.",
@@ -10,8 +11,9 @@ VALUES("Australia",
 " 90% of Australians live on the coast"
 );
 
-INSERT INTO countries (country, bty, foods, religions, brief_history, facts, fun_fact)
-VALUES("New Zealand",
+INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact)
+VALUES("Australia", 
+"New Zealand",
 "Summer - December to February",
 "Hangi, Crayfish, Kiwi, Hokey Pokey Ice Cream, Kina, Kiwi Burger, Jaffas, Pavlova, L&P",
 "Catholicism (12.61%), Anglicanism (11.79%), Presbyterianism (8.47%), Other Christianity (15.14%), Hinduism (2.11%), Buddhism (1.50%), Islam (1.18%), Other religions (1.53%)",
