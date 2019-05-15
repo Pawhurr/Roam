@@ -1,0 +1,38 @@
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+
+
+<title>Countries</title>
+
+</head>
+
+<body>
+
+{{#each result}}
+
+    <div class="parallax" style="background-image: url('img/{{dataValues.country}}.jpg')">
+   
+        <div class="cityHeader">
+            <h1>{{country}}</h1>
+        </div>
+    </div>
+
+    <div class="info p-5" style="background-image: url('img/extra_clean_paper.png'">
+        <p>{{capital}}</p>
+        <p>{{bty}}</p>
+        <p>{{foods}}</p>
+        <p>{{religions}}</p>
+        <p>{{brief_history}}</p>
+        <p>{{facts}}</p>
+        <p>{{fun_fact}}</p>
+    </div>
+
+{{/each}}
+
+</body>
