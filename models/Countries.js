@@ -1,12 +1,12 @@
 module.exports = function(sequelize, DataTypes) {
     var Country = sequelize.define('Country', {
-        // countinent: {
-        //     type: DataTypes.STRING,
-        //     allowNull: false,
-        //     validate: {
-        //         len: [1]
-        //     }
-        // },
+        countinent: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                len: [1]
+            }
+        },
         country: {
             type: DataTypes.STRING,
             allowNull: false,
