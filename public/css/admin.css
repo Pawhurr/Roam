@@ -1,0 +1,28 @@
+
+body {
+    background-image: url('../imgs/rids.png');
+    background-size: cover;
+}
+
+#city-div {
+    background: rgb(0, 0, 0, 0.6);
+    margin: 50px 0px;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+#city-builder input, label, textarea, select {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+    border-radius: 5px;
+}
+
+#city-submit {
+    color: black;
+    background: lightblue;
+    border: none;
+    border-radius: 5px;
+}
