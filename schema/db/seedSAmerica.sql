@@ -1,7 +1,8 @@
 USE countries_db;
 
-INSERT INTO countries (country, bty, foods, religions, brief_history, facts, fun_fact)
-VALUES("Brazil",
+INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact)
+VALUES("SAmerica",
+"Brazil",
 "The dry season in the south runs from March to November, whereas December to February sees the most rainfall.",
 "Brazilian chicken coxinha, Pão de queijo (cheese bread), Kibe, Cassava chips, Bacalhau (salt cod) bites, Brigadieros da Escocia (chocolate truffles), Brazilian Feijoada, Brazilian acarajé with vatapá",
 "Catholicism (64.8%), Protestant (4.0%), Assemblies of God(6.5%), Other Pentecostal(5.6%), Other Christian (8.0%), Spiritism (2.0%), Other religions (1.0%), No religion (8.0%)",
@@ -10,8 +11,9 @@ VALUES("Brazil",
 "Around 60% of the Amazon Rainforest is located in Brazil"
 );
 
-INSERT INTO countries (country, bty, foods, religions, brief_history, facts, fun_fact)
-VALUES("Peru",
+INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact)
+VALUES("SAmerica",
+"Peru",
 "The winter (May – September)",
 "Brigadeiro, Pão de Queijo, Coxinhas, Pastels, Farofa, Feijoada, Moqueca de Camarão.",
 "Catholics (76.03%), Protestants (14.1%), Adventists (1.52%), Jehovah's Witnesses (0.75%), Mormons (0.49%), Others (2.01%), No religion (5.1)",
@@ -20,8 +22,9 @@ VALUES("Peru",
 "Machu Picchu is of the New Seven Wonders of the World."
 );
 
-INSERT INTO countries (country, bty, foods, religions, brief_history, facts, fun_fact)
-VALUES("Argentina",
+INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact)
+VALUES("SAmerica",
+"Argentina",
 "April-June (fall) or from September-December (spring)",
 "Empanadas, Alfajores, Dulce de Leche, Helado, Medialunas",
 "atholicism (66%), Evangelical Protestantism (10%), No religion (21%), Judaism (1%), Islam (1%), Others (1%)",
@@ -30,8 +33,9 @@ VALUES("Argentina",
 "In Argentina, political parties have their own brands of beer."
 );
 
-INSERT INTO countries (country, bty, foods, religions, brief_history, facts, fun_fact)
-VALUES("Bolivia",
+INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact)
+VALUES("SAmerica",
+"Bolivia",
 "May-Oct is the best time to visit Bolivia",
 "Salteñas, Pique macho, Anticucho, Chicharrón, Majadito, Trucha, Fricase.",
 "Roman Catholic (76%), Protestant (17%), Other religion (1%),  None (5%), no answer (1%)",
@@ -41,8 +45,9 @@ VALUES("Bolivia",
 );
 
 
-INSERT INTO countries (country, bty, foods, religions, brief_history, facts, fun_fact)
-VALUES("Ecuador",
+INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact)
+VALUES("SAmerica",
+"Ecuador",
 "On the coast, the dry season from late May and June",
 "Llapingachos, Arroz con Pollo, Ceviche stand, Choclo, Cuy (guinea pig) in Banos, Langostinos, Librillo (tripe)",
 "77% Catholics, 14% Protestants, 1% Other religions, 7% No religious affiliation, 1% No answer",

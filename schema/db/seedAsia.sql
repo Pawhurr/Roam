@@ -1,7 +1,8 @@
 USE countries_db;
 
-INSERT INTO countries (country, bty, foods, religions, brief_history, facts, fun_fact)
-VALUES("India",
+INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact)
+VALUES("Asia",
+"India",
 "October to March",
 "Biryani, Dosa, Butter chicken/Butter paneer, Tandoori meats, vegetables and bread, Samosas, Chaat, Daal Makhni",
 "79.8% Hinduism, 14.2% Islam, 2.3% Christianity, 1.7% Sikhism. others Zoroastrianism and Judaism",
@@ -10,8 +11,9 @@ VALUES("India",
 "Home to the second largest English speaking population in the world"
 );
 
-INSERT INTO countries (country, bty, foods, religions, brief_history, facts, fun_fact)
-VALUES("China",
+INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact)
+VALUES("Asia",
+"China",
 "spring (April–May) and autumn (September–October)",
 "Spinach Noodles (bō cài miàn), Fried Mashi (chǎo má shi), BBQ Meat (kǎo ròu), Cold Vegetable Dish (liáng cài), Stinky Tofu (chòu dòu fu), Dumplings (jiǎo zi), Mutton Stew (yáng ròu pào mó), Chinese Hamburger (ròu jiā mó)",
 " Non-religious / Chinese folk religion (including local cults to deities and ancestors, Confucianism, Taoism, Chinese Buddhism) (73.56%), Buddhism (15.87%), Other religions, including folk salvationism and Taoist sects(7.60%), Christianity(2.53%), Islam(0.45%)",
@@ -20,8 +22,9 @@ VALUES("China",
 "Football (soccer) was invented here"
 );
 
-INSERT INTO countries (country, bty, foods, religions, brief_history, facts, fun_fact)
-VALUES("Japan",
+INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact)
+VALUES("Asia",
+"Japan",
 "Late spring (March to May) and late autumn (September to November)",
 "Sushi, Sashimi, Tempura, Yakitori, Miso soup, Tsukemono pickles, Udon, Soba",
 "Folk Shinto or no religion (51.8%) Buddhism (34.9%) Shinto organizations and others (4%) Christianity (2.3%) Unanswered (7%)",
@@ -30,8 +33,9 @@ VALUES("Japan",
 "Most vending machines in the world."
 );
 
-INSERT INTO countries (country, bty, foods, religions, brief_history, facts, fun_fact)
-VALUES("United Arab Emirates",
+INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact)
+VALUES("Asia",
+"United Arab Emirates",
 "April and May or from September to October",
 "Stuffed Camel. Stuffed Camel is one of the very amazing dishes of UAE, Al Harees. Al Harees is a famous dish of UAE with highly exotic taste, Shawarma. Shawarma is the most eaten food across this country, Al Machboos. It is also a very famous traditional dish of UAE, Hummus.",
 "Islam (76%), Christianity (12.6%), Hinduism (6.6%), Buddhism (2%), Others (2.8%)",
@@ -40,8 +44,9 @@ VALUES("United Arab Emirates",
 "Roughly 85 percent of Dubai’s population is foreign."
 );
 
-INSERT INTO countries (country, bty, foods, religions, brief_history, facts, fun_fact)
-VALUES("Thailand",
+INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact)
+VALUES("Asia",
+"Thailand",
 "During the cool and dry season between November and early April",
 "Tom Yum Goong (Spicy Shrimp Soup), Som Tum (Spicy Green Papaya Salad)!, Tom Kha Kai (Chicken in Coconut Soup)!, Gaeng Daeng (Red Curry), Pad Thai (Thai style Fried Noodles), Khao Pad (Fried Rice), Pad Krapow Moo Saap (Fried Basil and Pork), Gaeng Keow Wan Kai (Green Chicken Curry)",
 "Buddhism (94.50%), Islam (4.29%), Christianity	(1.17%)",
