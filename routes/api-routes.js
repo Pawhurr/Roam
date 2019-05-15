@@ -6,22 +6,23 @@ var exphbs = require('express-handlebars');
 var moment = require('moment-timezone');
 var passport = require('passport');
 var Strategy = require('passport-local').Strategy;
+var { ensureAuthenticated} = require('../config/auth');
 
 app.engine('handlebars', exphbs({defaultLayout: "main"}));
 app.set('view engine', 'handlebars');
 
-router.get('/city', function(req, res) {
-    db.City.findAll({}).then(function(result) {
-        res.render('index', result);
-    });
+//================================================================//
+
+router.get('/', ensureAuthenticated, function(req, res) {
+    res.render('home');
 });
 
-router.get('/cities', function(req, res) {
-    res.render('cities');
-})
+router.get('/login', function(req, res) {
+    res.render('login');
+});
 
-router.get('/admin', function(req, res) {
-    res.render(res);
+router.get('/signup', function(req, res) {
+    res.render('signup');
 });
 
 router.post('/signup', function(req, res) {
@@ -30,11 +31,30 @@ router.post('/signup', function(req, res) {
         email: req.body.email,
         password: req.body.password
     }).then(function(result) {
-        res.json(result);
+        res.render('login');
     });
 });
 
+//=============================================================//
 
+router.get('/city', ensureAuthenticated, function(req, res) {
+    res.render('cities');
+});
+
+router.get('/admin', ensureAuthenticated, function(req, res) {
+    console.log(req.session);
+    res.render('admin');
+});
+
+router.post('/create', ensureAuthenticated, function(req, res) {
+    db.City.create({
+        city: req.body.city,
+        timezone: req.body.tz
+    }).then(function(result) {
+        console.log(result);
+        res.render('index', result);
+    });
+});
 
 router.post('/clock', function(req, res) {
     var tz = req.body.tz;
@@ -43,27 +63,6 @@ router.post('/clock', function(req, res) {
         time: moment().tz(tz).format('MMMM Do YYYY, h:mm a')
     };
     res.json(clock);
-});
-
-router.post('/north_america/:city', function(req, res) {
-    var city = req.params.city;
-    db.City.findAll({where: {city: city}}).then(function(result) {
-        res.render('index', result);
-    });
-});
-
-router.post('/europe/:city', function(req, res) {
-    var city = req.params.city;
-    db.City.findAll({where: {city: city}}).then(function(result) {
-        res.json('index', result);
-    });
-});
-
-router.post('/australia/:city', function(req, res) {
-    var city = req.params.city;
-    db.City.findAll({where:{city: city}}).then(function(result) {
-        res.json('index', result);
-    });
 });
 
 module.exports = router;
