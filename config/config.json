@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "root",
-    "database": "project2",
+    "database": "countries_db",
     "port": 8889,
     "host": "localhost",
     "dialect": "mysql"
@@ -10,7 +10,7 @@
   "test": {
     "username": "root",
     "password": "root",
-    "database": "project2",
+    "database": "countries_db",
     "port": 8889,
     "host": "localhost",
     "dialect": "mysql"
@@ -18,7 +18,7 @@
   "production": {
     "username": "root",
     "password": "root",
-    "database": "project2",
+    "database": "countries_db",
     "port": 8889,
     "host": "localhost",
     "dialect": "mysql"
