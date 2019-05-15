@@ -1,4 +1,5 @@
 
+<link href="https://fonts.googleapis.com/css?family=Anton|Russo+One" rel="stylesheet">
 <link rel="stylesheet" href="css/admin.css">
 
 <title>Admin</title>
@@ -7,6 +8,16 @@
 
 <body>
 
+    <nav>
+        <ul>
+
+            <li><span class="nav" id="builder">City Builder</span></li>
+            <li><span class="nav" id="city-editor">City Editor</span></li>
+            <li><span class="nav" id="user-editor">User Editor</span></li>
+            
+        </ul>
+    </nav>
+
     <div class="container">
         <div class="row">
             <div class="col-lg-2"></div>
@@ -14,12 +25,16 @@
                 <div class="row">
                     <div class="col-lg-12">
                         
+                        <div id="header-div">
+                            <h1 id="admin-header">Admin Control Panel</h1>
+                        </div>
+
                         <div id="city-div">
 
                             <form action="/create" method="POST" id="city-builder">
                                 
                                 <label>Name of the city to add</label>
-                                    <input type="text" name="city">
+                                    <input class="input" type="text" name="city">
                                 
                                 <label>What country does it belong to?</label>
                                     <select name="country">
@@ -29,19 +44,19 @@
                                     </select>
 
                                 <label>What is the Capital City of the City's country</label>
-                                    <input type="text" name="capital" placeholder="Capital">
+                                    <input class="input" type="text" name="capital" placeholder="Capital">
                                 
                                 <label>What is the City's population?</label>
-                                    <input type="text" name="population" placeholder="Population #">
+                                    <input class="input" type="text" name="population" placeholder="Population #">
                                 
                                 <label>What is the City's most used language?</label>
-                                    <input type="text" name="language" placeholder="Language">
+                                    <input class="input" type="text" name="language" placeholder="Language">
                                 
                                 <label>What is the City's Currency?</label>
-                                    <input type="text" name="currency" placeholder="currency">
+                                    <input class="input" type="text" name="currency" placeholder="currency">
                                 
                                 <label>What's the best time of the year to visit the City?</label>
-                                    <input type="text" name="bty" placeholder="Best Time of Year">
+                                    <input class="input" type="text" name="bty" placeholder="Best Time of Year">
                                 
                                 <label>Please provide a list of the City's cultural foods.</label>
                                     <textarea name="food" rows="10" col="30">List of foods...</textarea>
@@ -67,4 +82,5 @@
         </div>
     </div>
 
+    <script src="js/admin-control.js"></script>
 </body>

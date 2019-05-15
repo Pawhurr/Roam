@@ -14,7 +14,7 @@ app.set('view engine', 'handlebars');
 //================================================================//
 
 router.get('/', ensureAuthenticated, function(req, res) {
-    res.render('home');
+    res.render('index');
 });
 
 router.get('/login', function(req, res) {
