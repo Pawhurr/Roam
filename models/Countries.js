@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
     var Country = sequelize.define('Country', {
-        countinent: {
+        continent: {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {

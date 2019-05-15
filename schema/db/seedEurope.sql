@@ -1,7 +1,8 @@
 USE countries_db;
 
-INSERT INTO countries (country, bty, foods, religions, brief_history, facts, fun_fact)
-VALUES ("France", 
+INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact)
+VALUES ("Europe", 
+"France", 
 "spring (April–May), summer (June–August) and autumn (September–October)", 
 "Soupe à l oignon, Coq au vin, Cassoulet, Beef bourguignon, Chocolate soufflé, Flamiche, Confit de canard, Nicoise salad", 
 "Christianity. No religion. Islam",
@@ -10,8 +11,9 @@ VALUES ("France",
 "Louis XIX was the king of France for just 20 minutes, the shortest ever reign" 
 );
 
-INSERT INTO countries (country, bty, foods, religions, brief_history, facts, fun_fact)
-VALUES("Italy",
+INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact)
+VALUES("Europe", 
+"Italy",
 "spring (April to June) or fall (September and October)",
 "Pizza, Bottarga, Lasagna, Fiorentina Steak, Ribollita, Polenta, Ossobuco, Risotto",
 "Christianity (83.3%). No religion (12.4%). Islam (3.7%). Other religions(0.6%)",
@@ -20,8 +22,9 @@ VALUES("Italy",
 "Vatican City in Rome is the smallest country in the world and is led by the Pope himself."
 );
 
-INSERT INTO countries (country, bty, foods, religions, brief_history, facts, fun_fact)
-VALUES("United Kingdom",
+INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact)
+VALUES("Europe", 
+"United Kingdom",
 "Spring (March, April, May) and Summer (June, July, August)",
 "Fish and chips, Cream Tea, Falafel, Cornish Pasty, Apple Crumble, Chips and Gravy, Haggis, English Breakfast, Salt Beef Bagel",
 "Christianity (59.5%). No religion (25.7%). Islam (4.4%). Hinduism (1.3%). Sikhism (0.7%). Judaism (0.4%)",
@@ -30,8 +33,9 @@ VALUES("United Kingdom",
 "The Queen, Elizabeth II, has visited over 115 countries despite not having a passport"
 );
 
-INSERT INTO countries (country, bty, foods, religions, brief_history, facts, fun_fact)
-VALUES("Switzerland",
+INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact)
+VALUES("Europe", 
+"Switzerland",
 "January/February: winter high season. March: early spring. July/August: summer high season.",
 "Cheese fondue, Rösti, Bircherműesli, Raclette, Bűndnernusstorte, Saffron risotto, Zurchergeschnetzeltes, Zopf", 
 "65.6% Christian , 26.0% unaffiliated, 5.4% Muslim, 0.3% Jewish, 1.4% other religions",
@@ -40,8 +44,9 @@ VALUES("Switzerland",
 "The capital of Switzerland is Bern, while the largest city is Zürich. For over 190 years Switzerland has been a neutral country during wartimes. Switzerland has 4 official languages: Swiss German which is spoken by over two thirds of the population, French, Italian, and Romansh"
 );
 
-INSERT INTO countries (country, bty, foods, religions, brief_history, facts, fun_fact)
-VALUES("Spain",
+INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact)
+VALUES("Europe", 
+"Spain",
 "spring (March to May) or during the fall (September to November)",
 "Patatas Bravas, Paella, Gazpacho, Jamón Ibérico, Calamari, Pulpo a la Gallega, Tortilla Española, Crema Catalana",
 " 67.5% Catholic Christians, 2.9%  other faiths (including Islam, Protestant Christianity, Buddhism etc.), 26.8%  non-believers",
@@ -50,8 +55,9 @@ VALUES("Spain",
 "We have chocolate thanks to the Spanish."
 );
 
-INSERT INTO countries (country, bty, foods, religions, brief_history, facts, fun_fact)
-VALUES("Greece",
+INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact)
+VALUES("Europe", 
+"Greece",
 "spring and early summer (mid-Apr to mid-June) or autumn (Sept to mid-Oct)",
 "Moussaka, Greek Gyro, Greek Salad, Saganaki, Soutzoukakia me Hilopitakia, Dolmades, Souvlaki, Loukoumades",
 "Christian Orthodox 98%, Others- Muslims, Catholic and Jewish",
