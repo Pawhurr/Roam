@@ -1,0 +1,54 @@
+
+body {
+    background-image: url('../imgs/server-blur.png');
+    background-size: cover;
+}
+
+.main {
+    height: 100vh;
+}
+
+#login-div {
+    position: absolute;
+    top: 18%;
+    left: 0%;
+    width: 100%;
+    background: rgb(0, 0, 0, 0.6);
+    border-radius: 5px;
+}
+
+#login-header {
+    margin: 20px 0px 20px 0px;
+}
+
+#login-form {
+    text-align: center;
+    color: rgb(33, 242, 214);
+}
+
+#login-form label {
+    font-weight: bold;
+}
+
+#login-form input {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    text-align: center;
+    width: 40%;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#submit-btn {
+    border: none;
+    background: rgb(178, 188, 64);
+}
+
+#login {
+    display: flex;
+    justify-content: center;
+    color: rgb(33, 242, 214);
+    margin-bottom: 10px;
+}

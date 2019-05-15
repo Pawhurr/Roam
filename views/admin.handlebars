@@ -1,6 +1,70 @@
 
-<h1>ADMINNSSSS</h1>
+<link rel="stylesheet" href="css/admin.css">
 
-<h1 id="clock" data-name="America/NewYork" data-tz="{{{result.tz}}}"></h1>
+<title>Admin</title>
 
-<script src="js/clock.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8">
+                <div class="row">
+                    <div class="col-lg-12">
+                        
+                        <div id="city-div">
+
+                            <form action="/create" method="POST" id="city-builder">
+                                
+                                <label>Name of the city to add</label>
+                                    <input type="text" name="city">
+                                
+                                <label>What country does it belong to?</label>
+                                    <select name="country">
+                                        {{!-- {{#each}} --}}
+                                        {{!-- <option value="{{db.country}}">{{db.country}}</option> --}}
+                                        {{!-- {{/each}} --}}
+                                    </select>
+
+                                <label>What is the Capital City of the City's country</label>
+                                    <input type="text" name="capital" placeholder="Capital">
+                                
+                                <label>What is the City's population?</label>
+                                    <input type="text" name="population" placeholder="Population #">
+                                
+                                <label>What is the City's most used language?</label>
+                                    <input type="text" name="language" placeholder="Language">
+                                
+                                <label>What is the City's Currency?</label>
+                                    <input type="text" name="currency" placeholder="currency">
+                                
+                                <label>What's the best time of the year to visit the City?</label>
+                                    <input type="text" name="bty" placeholder="Best Time of Year">
+                                
+                                <label>Please provide a list of the City's cultural foods.</label>
+                                    <textarea name="food" rows="10" col="30">List of foods...</textarea>
+                                
+                                <label>What're the popular religions within the City?</label>
+                                    <textarea name="religion" row="10" col="30">List of religions...</textarea>
+                                
+                                <label>What's a brief description of the City's history?</label>
+                                    <textarea name="history" row="10" col="30">History description...</textarea>
+                                
+                                <label>What're some facts of the City?</label>
+                                    <textarea name="facts" row="10" col="30">List of facts...</textarea>
+
+                                <input type="submit" id="city-submit" value="Submit">
+                            </form>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2"></div>
+        </div>
+    </div>
+
+</body>

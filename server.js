@@ -8,12 +8,11 @@ var cookieParser = require('cookie-parser');
 var session = require('express-session');
 var Strategy = require('passport-local').Strategy;
 require('./config/passport')(app);
-// var {ensureAuthenticated} = require('./config/auth');
 
 app.engine('handlebars', exphbs({defaultLayout: "main"}));
 app.set('view engine', 'handlebars');
 
-app.use(express.static('public'));
+app.use(express.static(__dirname + "/public"));
 app.use(cookieParser());
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
@@ -29,10 +28,10 @@ app.use((error, req, res, next) => {
       user: req.user,
       error
     });
-  });
+});
 
 app.post('/login', passport.authenticate('local', 
-{successRedirect: '/lol', failureRedirect: '/why', failureFlash: true }
+{successRedirect: '/city', failureRedirect: '/login', failureFlash: true }
 ));
 
 var PORT = process.env.PORT || 8080;

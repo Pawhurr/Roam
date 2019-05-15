@@ -8,21 +8,21 @@
         <input type="submit" value="Submit">
     </form>
 </div>
-
-<div id="login">
-    <form action="/login" method="POST" id="login-submit">
-        <label>Login</label>
-        <input type="text" name="username" id="login-username" required>
-        <input type="password" name="password" id="login-password" required>
-        <input type="submit" value="Submit">
-    </form>
 </div>
 
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <form action="/create" method="POST">
+                <input type='text' name="city">
+                <input type="text" name="tz">
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
 </div>
 
-
-
-<h1 id="clock" data-name="America/NewYork" data-tz="{{{result.tz}}}"></h1>
+<h1 id="clock" data-name="America/NewYork" data-tz="{{dataValues.timezone}}">{{dataValues.timezone}}</h1>
 
 <script src="js/clock.js"></script>
 <script src="js/admin.js"></script>
