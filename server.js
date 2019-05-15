@@ -36,7 +36,7 @@ app.post('/login', passport.authenticate('local',
 
 var PORT = process.env.PORT || 8080;
 
-db.sequelize.sync({force: true}).then(function() {
+db.sequelize.sync().then(function() {
     app.listen(PORT, function() {
         console.log("Listening on port: ", PORT);
     });

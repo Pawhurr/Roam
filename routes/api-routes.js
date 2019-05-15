@@ -37,8 +37,14 @@ router.post('/signup', function(req, res) {
 
 //=============================================================//
 
-router.get('/city', ensureAuthenticated, function(req, res) {
-    res.render('index');
+router.post('/countries', ensureAuthenticated, function(req, hbs) {
+    db.Country.findAll({where:{continent: req.body.continent}}).then(function(result) {
+        console.log(result);
+        var hbs_obj = {
+            result: result
+        };
+        hbs.render('countries', hbs_obj);
+    });
 });
 
 router.get('/admin', ensureAuthenticated, function(req, res) {
