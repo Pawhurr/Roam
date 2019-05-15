@@ -38,7 +38,7 @@ router.post('/signup', function(req, res) {
 //=============================================================//
 
 router.get('/city', ensureAuthenticated, function(req, res) {
-    res.render('cities');
+    res.render('index');
 });
 
 router.get('/admin', ensureAuthenticated, function(req, res) {
