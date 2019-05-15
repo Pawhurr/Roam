@@ -16,6 +16,10 @@ router.get('/city', function(req, res) {
     });
 });
 
+router.get('/cities', function(req, res) {
+    res.render('cities');
+})
+
 router.get('/admin', function(req, res) {
     res.render(res);
 });
