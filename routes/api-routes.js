@@ -37,32 +37,114 @@ router.post('/signup', function(req, res) {
 
 //=============================================================//
 
-router.post('/countries', ensureAuthenticated, function(req, hbs) {
-    db.Country.findAll({where:{continent: req.body.continent}}).then(function(result) {
-        console.log(result);
+router.get('/australia', function(req, res) {
+    db.Country.findAll({where: {continent: 'Australia'}}).then(function(result) {
         var hbs_obj = {
             result: result
         };
-        hbs.render('countries', hbs_obj);
+        res.render('countries', hbs_obj);
     });
 });
 
-router.get('/cities', function(req, res) {
-    res.render('cities');
+router.get('/asia', function(req, res) {
+    db.Country.findAll({where: {continent: 'Asia'}}).then(function(result) {
+        var hbs_obj = {
+            result: result
+        };
+        res.render('countries', hbs_obj);
+    });
 });
+
+router.get('/europe', function(req, res) {
+    db.Country.findAll({where: {continent: 'Europe'}}).then(function(result) {
+        var hbs_obj = {
+            result: result
+        };
+        res.render('countries', hbs_obj);
+    });
+});
+
+router.get('/africa', function(req, res) {
+    db.Country.findAll({where: {continent: 'Africa'}}).then(function(result) {
+        var hbs_obj = {
+            result: result
+        };
+        res.render('countries', hbs_obj);
+    });
+});
+
+router.get('/northAmerica', function(req, res) {
+    db.Country.findAll({where: {continent: 'North Ameica'}}).then(function(result) {
+        var hbs_obj = {
+            result: result
+        };
+        res.render('countries', hbs_obj);
+    });
+});
+
+router.get('/southAmerica', function(req, res) {
+    db.Country.findAll({where: {continent: 'South America'}}).then(function(result) {
+        var hbs_obj = {
+            result: result
+        };
+        res.render('countries', hbs_obj);
+    });
+});
+
+//=============================================================//
+
+// router.post('/countries', ensureAuthenticated, function(req, hbs) {
+//     db.Country.findAll({where:{continent: req.body.continent}}).then(function(result) {
+//         console.log(result);
+//         var hbs_obj = {
+//             result: result
+//         };
+//         hbs.render('countries', hbs_obj);
+//     });
+// });
 
 router.get('/admin', ensureAuthenticated, function(req, res) {
-    console.log(req.session);
-    res.render('admin');
+    db.Country.findAll({}).then(function(result) {
+        var continents = [];
+        var cont_obj = [];
+        var ContObj = function(continent) {
+            this.continent = continent
+        };
+        for (var i in result) {
+            continents.push(result[i].dataValues.continent);
+        }
+        for (var j in continents) {
+            if (j == 0) {
+                console.log('Added new obj due to undefined');
+                cont_obj[cont_obj.length] = new ContObj(continents[j]);
+                continue;
+            }
+            var cont_index = continents.indexOf(cont_obj[cont_obj.length - 1].continent);
+            if (cont_index === -1) {
+                cont_obj[cont_obj.length] = new ContObj(continents[j]);
+            }
+        }
+        console.log(cont_obj);
+        
+        hbs_obj = {
+            continents: cont_obj,
+            result: result
+        };
+        res.render('admin', hbs_obj);
+    });
 });
 
-router.post('/create', ensureAuthenticated, function(req, res) {
-    db.City.create({
-        city: req.body.city,
-        timezone: req.body.tz
-    }).then(function(result) {
+router.post('/country-select', ensureAuthenticated, function(req, res) {
+    db.Country.findOne({where:{country: req.body.country}}).then(function(result) {
         console.log(result);
-        res.render('index', result);
+        res.json(result);
+    });
+});
+
+router.post('/build-country', function(req, res) {
+    db.Country.update({where:{country: req.body.country},
+        bty: req.body.bty,
+
     });
 });
 

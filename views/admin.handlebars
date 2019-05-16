@@ -1,6 +1,7 @@
 
 <link href="https://fonts.googleapis.com/css?family=Anton|Russo+One" rel="stylesheet">
-<link rel="stylesheet" href="css/admin.css">
+<link rel="stylesheet" href="css/admin/country-builder.css">
+<link rel="stylesheet" href="css/admin/country-editor.css">
 
 <title>Admin</title>
 
@@ -11,8 +12,8 @@
     <nav>
         <ul>
 
-            <li><span class="nav" id="builder">City Builder</span></li>
-            <li><span class="nav" id="city-editor">City Editor</span></li>
+            <li><span class="nav" id="builder">Country Builder</span></li>
+            <li><span class="nav" id="country-editor">Country Editor</span></li>
             <li><span class="nav" id="user-editor">User Editor</span></li>
             
         </ul>
@@ -37,18 +38,18 @@
 
                         </form>
 
-                        <div id="city-div">
+                        <div id="country-builder-div">
 
-                            <form action="/create" method="POST" id="city-builder">
+                            <form action="/create" method="POST" id="country-builder">
                                 
                                 <label>Name of the city to add</label>
                                     <input class="input" type="text" name="city">
                                 
                                 <label>What country does it belong to?</label>
-                                    <select name="country">
-                                        {{!-- {{#each}} --}}
-                                        {{!-- <option value="{{db.country}}">{{db.country}}</option> --}}
-                                        {{!-- {{/each}} --}}
+                                    <select name="continent">
+                                        {{#each continents}}
+                                            <option value="{{continent}}">{{continent}}</option>
+                                        {{/each}}
                                     </select>
 
                                 <label>What is the Capital City of the City's country</label>
@@ -79,6 +80,49 @@
                                     <textarea name="facts" row="10" col="30">List of facts...</textarea>
 
                                 <input type="submit" id="city-submit" value="Submit">
+                            </form>
+
+                        </div>
+
+                        <div id="country-editor-div">
+
+                            <form id="country-selector">
+                                
+                                <label>Which continent will you be adding to?</label>
+                                    <select id="editor-select">
+                                        {{#each result}}
+                                            <option name="{{country}}">{{country}}</option>
+                                        {{/each}}
+                                    </select>
+                                
+                                <input type="submit" value="Submit" id="country-selector-submit">
+
+                            </form>
+
+                            <form id="country-editor-form">
+                                
+                                <h1 id="country-insert"></h1>
+
+                                <label>Best Time of Year to Visit</label>
+                                    <textarea rows="5" cols="60" form="country-editor-form" id="bty"></textarea>
+
+                                <label>Cultural Foods</label>
+                                    <textarea rows="5" cols="60" form="country-editor-form" id="foods"></textarea>
+                                
+                                <label>What're the religions of the Country to be added?</label>
+                                    <textarea rows="5" cols="60" form="country-editor-form" id="religions"></textarea>
+
+                                <label>Brief history of the Country to be added.</label>
+                                    <textarea rows="10" cols="60" form="country-editor-form" id="brief_history"></textarea>
+
+                                <label>What're some facts of the Country to be added?</label>
+                                    <textarea rows="7" cols="60" form="country-editor-form" id="facts"></textarea>
+
+                                <label>What're some fun facts of the Country to be added?</label>
+                                    <textarea rows="7" cols="60" form="country-editor-form" id="fun_fact"></textarea>
+
+                                <input type="submit" value="Submit" id="country-editor-submit">
+
                             </form>
 
                         </div>
