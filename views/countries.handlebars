@@ -1,10 +1,9 @@
-
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
 
-<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Anton|Roboto" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/countries/navbar.css">
 
@@ -18,96 +17,42 @@
         <ul>
             <li><a href="/">Home</a></li>
             <li id="li">Countries</li>
-                <ul id="country-list">
-                    {{#each result}}
-                        <li><a href="#{{country}}">{{country}}</a></li>
-                    {{/each}}
-                </ul>
+            <ul id="country-list">
+                {{#each result}}
+                <li><a href="#{{country}}">{{country}}</a></li>
+                {{/each}}
+            </ul>
         </ul>
     </nav>
 
-{{#each result}}
+    {{#each result}}
 
     <div class="parallax" style="background-image: url('img/{{dataValues.country}}.jpg')">
-   
+
         <div id="{{country}}" class="cityHeader">
             <h1>{{country}}</h1>
         </div>
     </div>
 
-    <div class="info p-5" style="background-image: url('img/extra_clean_paper.png'">
-        <p>{{capital}}</p>
-        <p>{{bty}}</p>
-        <p>{{foods}}</p>
-        <p>{{religions}}</p>
+    <div class="info p-5" style="background-image: url('img/extra_clean_paper.png')">
+        <div class="row">
+            <div class="col-6">
+                <p><span class="bullets">Capital city:</span> {{capital}}</p>
+                <p><span class="bullets">Best time of year to visit:</span> {{bty}}</p>
+                <p><span class="bullets">Popular foods:</span> {{foods}}</p>
+                <p><span class="bullets">Popular religions:</span> {{religions}}</p>
+                <p><span class="bullets">Fun fact:</span> {{fun_fact}}</p>
+            </div>
+            <div class="col-6">
+
+            </div>
+        </div>
         <p>{{brief_history}}</p>
         <p>{{facts}}</p>
-        <p>{{fun_fact}}</p>
     </div>
 
-{{/each}}
+    {{/each}}
 
-{{!-- 
-<div class="parallax" style="background-image: url('img/United Kingdom.jpg')">
-    <div class="cityHeader">
-        <h1>United Kingdom</h1>
-    </div> 
-</div>
-<div class="info p-5" style="background-image: url('img/extra_clean_paper.png'">
-    <div class="row">
-        <div class="col-6">
-    <p>Population: 65110000</p>
-    <p>Region: Europe, Northern Europe</p>
-    <p>Demonym: British</p>
-    <p>Capital: London</p>
-    <p>Currency: British Pound</p>
-    <p>Best time to visit: "Spring (March, April, May) and Summer (June, July, August)"</p>
-    <p>Popular food: "Fish and chips, Cream Tea, Falafel, Cornish Pasty, Apple Crumble, Chips and Gravy, Haggis, English Breakfast, Salt Beef Bagel"</p>
-    <p>Religions: "Christianity (59.5%). No religion (25.7%). Islam (4.4%). Hinduism (1.3%). Sikhism (0.7%). Judaism (0.4%)"</p>
-        </div>
-        <div class="col-6">
-            <p>Wind</p>
-            <p>Humidity 40</p>
-            <p>Temp 67degrees</p>
-            <p>Max Temp: 66, Min temp 59</p>
-            <P>Clouds: 39%</P>
-        </div>
-    </div>
-    <p>"The islands that are today the United Kingdom were invaded by the Romans in 55 BC., Scotland became part of the British crown in 1602 when the king of Scotland became the King James I of England. The union became official in 1707. Ireland became a part of the union in 1801. The United Kingdom has made significant contributions to the world economy, especially in technology and industry. Since World War II, however, the United Kingdom’s most prominent exports have been cultural, including literature, theatre, film, television, and popular music that draw on all parts of the country. Perhaps Britain’s greatest export has been the English language, now spoken in every corner of the world as one of the leading international mediums of cultural and economic exchange."</p>
-    <p>"England is the most populated country in the United Kingdom. The other countries that make up the United Kingdom are Wales, Scotland and Northern Ireland.England is bordered by Wales to the west and Scotland to the north. The population of England in 2011 was around 53 million. The capital city of England is London. Other major countries include Birmingham, Manchester, Sheffield, Liverpool, Newcastle and Leeds. England includes many small islands such as the Isle of Wight and Hayling Island. There is only a 34 kilometre (21 mile) gap between England and France and the countries are connected by the Channel Tunnel which opened in 1994. England was the first industrialized nation after the industrial revolution that began around 1760. Famous English scientists include Charles Darwin, Michael Faraday, Isaac Newton and Stephen Hawking among many others."</p>
-    <p>"The Queen, Elizabeth II, has visited over 115 countries despite not having a passport"</p>
-</div>
-<div class="parallax" style="background-image: url('img/France.jpg')">
-    <div class="cityHeader">
-        <h1>France</h1>
-    </div> 
-</div>
-<div class="info p-5" style="background-image: url('img/extra_clean_paper.png'">
-    <p></p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis aliquid quaerat nobis laboriosam iusto corrupti! Exercitationem sit, sunt optio temporibus quae non aliquid minima. Aliquam dicta minima nihil dolores molestiae!</p>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum laboriosam saepe vel totam, voluptate praesentium culpa odit amet aperiam? Neque porro temporibus maiores similique laborum sapiente, in obcaecati aut quasi.</p>
-</div>
-<div class="parallax" style="background-image: url('img/Italy.jpg')">
-    <div class="cityHeader">
-        <h1>Italy</h1>
-    </div> 
-</div>
-<div class="info p-5" style="background-image: url('img/extra_clean_paper.png'">
-    <p></p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis aliquid quaerat nobis laboriosam iusto corrupti! Exercitationem sit, sunt optio temporibus quae non aliquid minima. Aliquam dicta minima nihil dolores molestiae!</p>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum laboriosam saepe vel totam, voluptate praesentium culpa odit amet aperiam? Neque porro temporibus maiores similique laborum sapiente, in obcaecati aut quasi.</p>
-</div>
-
-INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact)
-VALUES("Europe", 
-"United Kingdom",
-"Spring (March, April, May) and Summer (June, July, August)",
-"Fish and chips, Cream Tea, Falafel, Cornish Pasty, Apple Crumble, Chips and Gravy, Haggis, English Breakfast, Salt Beef Bagel",
-"Christianity (59.5%). No religion (25.7%). Islam (4.4%). Hinduism (1.3%). Sikhism (0.7%). Judaism (0.4%)",
-"The islands that are today the United Kingdom were invaded by the Romans in 55 BC., Scotland became part of the British crown in 1602 when the king of Scotland became the King James I of England. The union became official in 1707. Ireland became a part of the union in 1801. The United Kingdom has made significant contributions to the world economy, especially in technology and industry. Since World War II, however, the United Kingdom’s most prominent exports have been cultural, including literature, theatre, film, television, and popular music that draw on all parts of the country. Perhaps Britain’s greatest export has been the English language, now spoken in every corner of the world as one of the leading international mediums of cultural and economic exchange.",
-"England is the most populated country in the United Kingdom. The other countries that make up the United Kingdom are Wales, Scotland and Northern Ireland.England is bordered by Wales to the west and Scotland to the north. The population of England in 2011 was around 53 million. The capital city of England is London. Other major countries include Birmingham, Manchester, Sheffield, Liverpool, Newcastle and Leeds. England includes many small islands such as the Isle of Wight and Hayling Island. There is only a 34 kilometre (21 mile) gap between England and France and the countries are connected by the Channel Tunnel which opened in 1994. England was the first industrialized nation after the industrial revolution that began around 1760. Famous English scientists include Charles Darwin, Michael Faraday, Isaac Newton and Stephen Hawking among many others.",
-"The Queen, Elizabeth II, has visited over 115 countries despite not having a passport"
-); --}}
 
 
 </body>
