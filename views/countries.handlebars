@@ -1,10 +1,9 @@
-
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
 
-<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Anton|Roboto" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/countries/navbar.css">
 
@@ -18,33 +17,42 @@
         <ul>
             <li><a href="/">Home</a></li>
             <li id="li">Countries</li>
-                <ul id="country-list">
-                    {{#each result}}
-                        <li><a href="#{{country}}">{{country}}</a></li>
-                    {{/each}}
-                </ul>
+            <ul id="country-list">
+                {{#each result}}
+                <li><a href="#{{country}}">{{country}}</a></li>
+                {{/each}}
+            </ul>
         </ul>
     </nav>
 
-{{#each result}}
+    {{#each result}}
 
     <div class="parallax" style="background-image: url('img/{{dataValues.country}}.jpg')">
-   
+
         <div id="{{country}}" class="cityHeader">
             <h1>{{country}}</h1>
         </div>
     </div>
 
-    <div class="info p-5" style="background-image: url('img/extra_clean_paper.png'">
-        <p>{{capital}}</p>
-        <p>{{bty}}</p>
-        <p>{{foods}}</p>
-        <p>{{religions}}</p>
+    <div class="info p-5" style="background-image: url('img/extra_clean_paper.png')">
+        <div class="row">
+            <div class="col-6">
+                <p><span class="bullets">Capital city:</span> {{capital}}</p>
+                <p><span class="bullets">Best time of year to visit:</span> {{bty}}</p>
+                <p><span class="bullets">Popular foods:</span> {{foods}}</p>
+                <p><span class="bullets">Popular religions:</span> {{religions}}</p>
+                <p><span class="bullets">Fun fact:</span> {{fun_fact}}</p>
+            </div>
+            <div class="col-6">
+
+            </div>
+        </div>
         <p>{{brief_history}}</p>
         <p>{{facts}}</p>
-        <p>{{fun_fact}}</p>
     </div>
 
-{{/each}}
+    {{/each}}
+
+
 
 </body>

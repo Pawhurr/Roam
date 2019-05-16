@@ -15,6 +15,8 @@ CREATE TABLE countries
     brief_history TEXT,
     facts TEXT,
     fun_fact TEXT,
+    createdAt DATETIME,
+    updatedAt DATETIME,
     primary key (id)
     
     );
