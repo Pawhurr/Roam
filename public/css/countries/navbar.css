@@ -1,0 +1,17 @@
+
+nav {
+    z-index: 1;
+    position: fixed;
+    top: 30%;
+    right: 0%;
+}
+
+nav li {
+    list-style: none;
+    color: black;
+    text-align: right;
+}
+
+#country-list {
+    display: none;
+}
