@@ -129,7 +129,7 @@ router.get('/africa', function(req, res) {
 });
 
 router.get('/northAmerica', function(req, res) {
-    db.Country.findAll({where: {continent: 'North Ameica'}}).then(function(result) {
+    db.Country.findAll({where: {continent: 'NAmerica'}}).then(function(result) {
         var hbs_obj = {
             result: result
         };
@@ -138,7 +138,7 @@ router.get('/northAmerica', function(req, res) {
 });
 
 router.get('/southAmerica', function(req, res) {
-    db.Country.findAll({where: {continent: 'South America'}}).then(function(result) {
+    db.Country.findAll({where: {continent: 'SAmerica'}}).then(function(result) {
         var hbs_obj = {
             result: result
         };
