@@ -47,6 +47,10 @@ router.post('/countries', ensureAuthenticated, function(req, hbs) {
     });
 });
 
+router.get('/cities', function(req, res) {
+    res.render('cities');
+});
+
 router.get('/admin', ensureAuthenticated, function(req, res) {
     console.log(req.session);
     res.render('admin');
