@@ -2,8 +2,13 @@
   "development": {
     "username": "root",
     "password": "root",
+<<<<<<< HEAD
+    "database": "project2",
+    "port": 8889,
+=======
     "database": "countries_db",
     "port": 3306,
+>>>>>>> 2dd1c38f3e34079211b47aa8164960ad4c7cb165
     "host": "localhost",
     "dialect": "mysql"
   },

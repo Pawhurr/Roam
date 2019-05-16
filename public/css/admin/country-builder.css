@@ -1,6 +1,6 @@
 
 body {
-    background-image: url('../imgs/rids.png');
+    background-image: url('../../imgs/rids.png');
     background-size: cover;
 }
 
@@ -29,7 +29,7 @@ nav li, span {
     margin-top: 30px;
 }
 
-#city-div {
+#country-builder-div {
     display: none;
     background: rgb(0, 0, 0, 0.6);
     margin: 50px 0px;
@@ -37,7 +37,7 @@ nav li, span {
     padding: 20px;
 }
 
-#city-builder, .input, label, textarea, select {
+#country-builder, .input, label, textarea, select {
     display: block;
     margin: 0 auto;
     text-align: center;

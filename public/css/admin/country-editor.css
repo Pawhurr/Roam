@@ -1,0 +1,51 @@
+
+#country-editor-div {
+    display: none;
+    background: rgb(0, 0, 0, 0.6);
+    border-radius: 5px;
+    padding: 20px;
+}
+
+#country-selector label, select {
+    color: white;
+    font-weight: bold;
+}
+
+#country-selector select {
+    color: black;
+    background: white;
+    text-align: center;
+}
+
+#country-selector-submit {
+    display: block;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 30px auto;
+    padding: 5px 10px;
+}
+
+#country-editor-form {
+    display: none;
+}
+
+#country-editor-form h1, label, textarea {
+    color: white;
+    font-weight: bold;
+}
+
+#country-editor-form textarea {
+    color: black;
+    background: white;
+    text-align: center;
+}
+
+#country-editor-submit {
+    display: block;
+    border: none;
+    border-radius: 5px;
+    margin: 0 auto;
+    padding: 5px 10px;
+    font-weight: bold;
+}
