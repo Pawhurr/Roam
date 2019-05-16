@@ -13,6 +13,7 @@ app.set('view engine', 'handlebars');
 
 //================================================================//
 
+
 router.get('/', ensureAuthenticated, function(req, res) {
     res.render('index');
 });
