@@ -56,8 +56,13 @@ router.get('/asia', function(req, res) {
     });
 });
 
-router.get('/getEurope', function(req, res) {
-    res.send(location.assign('/europe'));
+router.get('/europe', function(req, res) {
+    db.Country.findAll({where: {continent: 'Europe'}}).then(function(result) {
+        var hbs_obj = {
+            result: result
+        };
+        res.render('countries', hbs_obj);
+    });
 });
 
 router.get('/africa', function(req, res) {
@@ -80,66 +85,6 @@ router.get('/northAmerica', function(req, res) {
 
 router.get('/southAmerica', function(req, res) {
     db.Country.findAll({where: {continent: 'SAmerica'}}).then(function(result) {
-        var hbs_obj = {
-            result: result
-        };
-        res.render('countries', hbs_obj);
-    });
-});
-
-
-
-
-//=============================================================//
-
-
-router.get('/australia', function(req, res) {
-    db.Country.findAll({where: {continent: 'Australia'}}).then(function(result) {
-        var hbs_obj = {
-            result: result
-        };
-        res.render('countries', hbs_obj);
-    });
-});
-
-router.get('/asia', function(req, res) {
-    db.Country.findAll({where: {continent: 'Asia'}}).then(function(result) {
-        var hbs_obj = {
-            result: result
-        };
-        res.render('countries', hbs_obj);
-    });
-});
-
-router.get('/europe', function(req, res) {
-    db.Country.findAll({where: {continent: 'Europe'}}).then(function(result) {
-        var hbs_obj = {
-            result: result
-        };
-        res.render('countries', hbs_obj);
-    });
-});
-
-router.get('/africa', function(req, res) {
-    db.Country.findAll({where: {continent: 'Africa'}}).then(function(result) {
-        var hbs_obj = {
-            result: result
-        };
-        res.render('countries', hbs_obj);
-    });
-});
-
-router.get('/northAmerica', function(req, res) {
-    db.Country.findAll({where: {continent: 'North Ameica'}}).then(function(result) {
-        var hbs_obj = {
-            result: result
-        };
-        res.render('countries', hbs_obj);
-    });
-});
-
-router.get('/southAmerica', function(req, res) {
-    db.Country.findAll({where: {continent: 'South America'}}).then(function(result) {
         var hbs_obj = {
             result: result
         };

@@ -1,17 +1,39 @@
 
-nav {
+
+
+#nav-box {
+    background: rgb(237, 53, 11, 0.8);
+    border-radius: 0px 5px 5px 0px;
+    height: 100px;
+    width: 20px;
+    position: fixed;
+    top: 30%;
+    left: 0%;
+    z-index: 2;
+}
+
+#nav-box:hover {
+    width: 50px;
+    transition: width 0.5s;
+}
+
+#navbar {
+    display: none;
     z-index: 1;
     position: fixed;
     top: 30%;
-    right: 0%;
+    left: 0%;
+    background: rgb(237, 53, 11, 0.8);
+
 }
 
 nav li {
     list-style: none;
     color: black;
-    text-align: right;
+    text-align: left;
 }
 
 #country-list {
     display: none;
 }
+
