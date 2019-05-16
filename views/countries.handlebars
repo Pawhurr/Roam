@@ -6,6 +6,7 @@
 
 <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/countries/navbar.css">
 
 <title>Countries</title>
 
@@ -13,11 +14,23 @@
 
 <body>
 
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li id="li">Countries</li>
+                <ul id="country-list">
+                    {{#each result}}
+                        <li><a href="#{{country}}">{{country}}</a></li>
+                    {{/each}}
+                </ul>
+        </ul>
+    </nav>
+
 {{#each result}}
 
     <div class="parallax" style="background-image: url('img/{{dataValues.country}}.jpg')">
    
-        <div class="cityHeader">
+        <div id="{{country}}" class="cityHeader">
             <h1>{{country}}</h1>
         </div>
     </div>
