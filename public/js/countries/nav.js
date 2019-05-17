@@ -8,11 +8,11 @@ $('.toggle').on('click', function() {
        
         $('.country-imgs').animate({
             opacity: '0'
-        }, 300);
+        }, 00);
 
         $('.modal').animate({
             left: '-200%'
-        },1000, function() {});
+        },500, function() {});
 
 
     } else {
@@ -21,7 +21,7 @@ $('.toggle').on('click', function() {
         },1000, function() {});
         setTimeout(function(){$('.country-imgs').animate({
             opacity: '1'
-        }, 1500)}, 980);
+        }, 500)}, 900);
     }
 
     $('.modal').toggleClass('active');

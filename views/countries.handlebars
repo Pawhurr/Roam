@@ -22,22 +22,8 @@
         <span class="span"></span>
         <span class="span"></span>
         <span></span>
+    </div>
 
-    <div id="nav-box">
-    </div>
-    <nav id="navbar">
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li id="li">Countries</li>
-            <ul id="country-list">
-                {{#each result}}
-                <li><a href="#{{country}}">{{country}}</a></li>
-                {{/each}}
-            </ul>
-        </ul>
-    </nav>
-    <div id="nav-box">
-    </div>
 
         <div class="container-fluid modal">
             <div class="row">
@@ -67,15 +53,6 @@
 
 
 
-
-    {{#each result}}
-
-    <div id="{{country}}Anchor" class="parallax" style="background-image: url('img/{{dataValues.country}}.png')">
-                    </ul>
-            </ul>
-        </nav>
-    {{/each}}
-
     {{#each result}}
 
     <div class="parallax hidden" style="background-image: url('img/{{dataValues.country}}.jpg')">
@@ -86,7 +63,7 @@
     </div>
 
 
-    <div class="info p-5">
+    {{!-- <div class="info p-5">
         <div class="row">
             <div class="col-6">
                 <p data-aos="fade-up" data-aos-delay="100" data-aos-duration="2000" data-aos-once="false"><span class="bullets">Capital city:</span> {{capital}}</p>
@@ -94,6 +71,11 @@
                 <p data-aos="fade-up" data-aos-delay="300" data-aos-duration="2000" data-aos-once="false"><span class="bullets">Popular foods:</span> {{foods}}</p>
                 <p data-aos="fade-up" data-aos-delay="400" data-aos-duration="2000" data-aos-once="false"><span class="bullets">Popular religions:</span> {{religions}}</p>
                 <p data-aos="fade-up" data-aos-delay="500" data-aos-duration="2000" data-aos-once="false"><span class="bullets">Fun fact:</span> {{fun_fact}}</p>
+        </div>
+        </div>
+
+
+    </div> --}}
 
     <div class="info p-5" style="background-image: url('img/parchmentback.jpg')">
         <div class="row">
@@ -126,8 +108,6 @@
 
             </div>
         </div>
-        <p data-aos="fade-up" data-aos-delay="600" data-aos-duration="2000" data-aos-once="false">{{brief_history}}</p>
-        <p data-aos="fade-up" data-aos-delay="700" data-aos-duration="2000" data-aos-once="false">{{facts}}</p>
     </div>
 
     {{/each}}
