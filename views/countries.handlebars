@@ -1,11 +1,16 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
 
 <link href="https://fonts.googleapis.com/css?family=Anton|Roboto" rel="stylesheet">
+
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/countries/navbar.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
 
 <title>Countries</title>
 
@@ -13,62 +18,97 @@
 
 <body>
 
-<<<<<<< HEAD
-    <div id="nav-box">
+    <div class="toggle">
+        <span class="span"></span>
+        <span class="span"></span>
+        <span></span>
     </div>
-        <nav id="navbar">
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li id="li">Countries</li>
-                    <ul id="country-list">
+
+        <div class="container-fluid modal">
+            <div class="row">
+                <div class="col-lg-2 nav-options-col">
+                    <div id="nav-options">
+
+                    <a id="home-option" href="/">Home</a>
+                    <a id="about-us" href="/aboutus">About</a>
+                    </div>
+                </div>
+                <div id="nav-container" class="col-lg-10 colp">
+                    <div id="navbar">
+
+                    </div>
+
+                    <div id="country-imgs-div">
                         {{#each result}}
-                            <li><a href="#{{country}}">{{country}}</a></li>
+                                
+                            <div class="country-imgs parallax" style="background-image: url('img/{{country}}.jpg')">
+                                <h1 class="nav-img-headers">{{country}}</h1>
+                            </div>
                         {{/each}}
-                    </ul>
-            </ul>
-        </nav>
-=======
-    <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li id="li">Countries</li>
-            <ul id="country-list">
-                {{#each result}}
-                <li><a href="#{{country}}">{{country}}</a></li>
-                {{/each}}
-            </ul>
-        </ul>
-    </nav>
->>>>>>> 862dda68da52fa8785f1b968008276acb809970c
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    {{!-- <nav id="navbar">
+
+        <div id="nav-home-box">
+            <i id="world-icon" class="fas fa-2x fa-globe-americas"></i>
+            <a id="home" href="/">Home</a>
+        </div>
+
+        <div id="nav-countries-box">
+
+            <i id="country-icon" class="fas fa-2x fa-map-marker-alt"></i>
+
+                <div id="countries-list-box">
+
+                    <h4 id="countries-header">Countries</h4>
+                        
+                        {{#each result}}
+                            <h6 class="country-list"><a href="#{{country}}">{{country}}</a></h6>
+                        {{/each}}
+
+                </div>
+        </div>
+
+    </nav> --}}
+
+
+
+
 
     {{#each result}}
 
-    <div class="parallax" style="background-image: url('img/{{dataValues.country}}.jpg')">
+    <div id="{{country}}Anchor" class="parallax" style="background-image: url('img/{{dataValues.country}}.png')">
 
         <div id="{{country}}" class="cityHeader">
-            <h1>{{country}}</h1>
+            <h1 data-aos-anchor-placement="#{{country}}Anchor" data-aos="fade-up" data-aos-duration="2000" data-aos-once="false">{{country}}</h1>
         </div>
     </div>
 
-    <div class="info p-5" style="background-image: url('img/extra_clean_paper.png')">
+    <div class="info p-5">
         <div class="row">
             <div class="col-6">
-                <p><span class="bullets">Capital city:</span> {{capital}}</p>
-                <p><span class="bullets">Best time of year to visit:</span> {{bty}}</p>
-                <p><span class="bullets">Popular foods:</span> {{foods}}</p>
-                <p><span class="bullets">Popular religions:</span> {{religions}}</p>
-                <p><span class="bullets">Fun fact:</span> {{fun_fact}}</p>
+                <p data-aos="fade-up" data-aos-delay="100" data-aos-duration="2000" data-aos-once="false"><span class="bullets">Capital city:</span> {{capital}}</p>
+                <p data-aos="fade-up" data-aos-delay="200" data-aos-duration="2000" data-aos-once="false"><span class="bullets">Best time of year to visit:</span> {{bty}}</p>
+                <p data-aos="fade-up" data-aos-delay="300" data-aos-duration="2000" data-aos-once="false"><span class="bullets">Popular foods:</span> {{foods}}</p>
+                <p data-aos="fade-up" data-aos-delay="400" data-aos-duration="2000" data-aos-once="false"><span class="bullets">Popular religions:</span> {{religions}}</p>
+                <p data-aos="fade-up" data-aos-delay="500" data-aos-duration="2000" data-aos-once="false"><span class="bullets">Fun fact:</span> {{fun_fact}}</p>
             </div>
             <div class="col-6">
 
             </div>
         </div>
-        <p>{{brief_history}}</p>
-        <p>{{facts}}</p>
+        <p data-aos="fade-up" data-aos-delay="600" data-aos-duration="2000" data-aos-once="false">{{brief_history}}</p>
+        <p data-aos="fade-up" data-aos-delay="700" data-aos-duration="2000" data-aos-once="false">{{facts}}</p>
     </div>
 
     {{/each}}
-
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 
 
     <script src="js/countries/nav.js"></script>
