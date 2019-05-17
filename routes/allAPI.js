@@ -19,6 +19,7 @@ var apiInput = function(country, cb){
 
         function (response) {
             data.name = response.data[0].name + ", " + response.data[0].alpha2Code;
+            data.flag = response.data[0].flag;
             data.native = response.data[0].nativeName;
             data.capital = response.data[0].capital;
             data.region = response.data[0].region + ", " + response.data[0].subregion;
@@ -27,8 +28,7 @@ var apiInput = function(country, cb){
             data.currency = response.data[0].currencies[0].name + ", " + response.data[0].currencies[0].symbol + ", " + response.data[0].currencies[0].code;
             data.language = response.data[0].languages[0].name + ", " + response.data[0].languages[0].nativeName;
 
-            //console.log(response.data[0].name);
-            
+      
             var location = response.data[0].capital + "," + response.data[0].name;
             console.log('\n\n ',location,'\n\n', weather, youtube)
 

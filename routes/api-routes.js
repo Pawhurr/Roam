@@ -159,7 +159,7 @@ router.post('/clock', function(req, res) {
     res.json(clock);
 });
 
-router.post('/someRoute', function(req, res) {
+router.post('/apiCountry', function(req, res) {
     extAPI(req.body.country, function(info){
         res.send(info)
     })

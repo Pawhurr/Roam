@@ -13,21 +13,6 @@
 
 <body>
 
-<<<<<<< HEAD
-    <div id="nav-box">
-    </div>
-        <nav id="navbar">
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li id="li">Countries</li>
-                    <ul id="country-list">
-                        {{#each result}}
-                            <li><a href="#{{country}}">{{country}}</a></li>
-                        {{/each}}
-                    </ul>
-            </ul>
-        </nav>
-=======
     <nav>
         <ul>
             <li><a href="/">Home</a></li>
@@ -39,7 +24,6 @@
             </ul>
         </ul>
     </nav>
->>>>>>> 862dda68da52fa8785f1b968008276acb809970c
 
     {{#each result}}
 
@@ -69,7 +53,9 @@
 
     {{/each}}
 
+    <button id="country">test</button>
 
 
+<script src="js/countries/apiCountry.js"></script>
     <script src="js/countries/nav.js"></script>
 </body>
