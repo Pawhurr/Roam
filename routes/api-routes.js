@@ -62,6 +62,7 @@ router.get('/europe', function(req, res) {
         var hbs_obj = {
             result: result
         };
+        console.log(result);
         res.render('countries', hbs_obj);
     });
 });
@@ -80,6 +81,8 @@ router.get('/northAmerica', function(req, res) {
         var hbs_obj = {
             result: result
         };
+        console.log(hbs_obj.result[0].dataValues.continent)
+
         res.render('countries', hbs_obj);
     });
 });
@@ -159,7 +162,7 @@ router.post('/clock', function(req, res) {
     res.json(clock);
 });
 
-router.post('/someRoute', function(req, res) {
+router.post('/apiCountry', function(req, res) {
     extAPI(req.body.country, function(info){
         res.send(info)
     })

@@ -1,8 +1,6 @@
 
 $('.toggle').on('click', function() {
     $('.toggle').toggleClass('active');
-
-    // $('.modal').toggle();
     
     if($('.modal').hasClass('active')) {
        
@@ -21,7 +19,7 @@ $('.toggle').on('click', function() {
         },1000, function() {});
         setTimeout(function(){$('.country-imgs').animate({
             opacity: '1'
-        }, 500)}, 900);
+        }, 500)}, 800);
     }
 
     $('.modal').toggleClass('active');
