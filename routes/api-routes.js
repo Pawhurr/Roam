@@ -80,6 +80,8 @@ router.get('/northAmerica', function(req, res) {
         var hbs_obj = {
             result: result
         };
+        console.log(hbs_obj.result[0].dataValues.continent)
+
         res.render('countries', hbs_obj);
     });
 });

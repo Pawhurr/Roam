@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
@@ -10,7 +11,7 @@
 
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/countries/navbar.css">
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
 
 <title>Countries</title>
 
@@ -25,31 +26,36 @@
     </div>
 
 
-        <div class="container-fluid modal">
-            <div class="row">
-                <div class="col-lg-2 nav-options-col">
-                    <div id="nav-options">
+    <div class="container-fluid modal">
+        <div class="row">
+            <div class="col-lg-2 nav-options-col">
+                <div id="nav-options">
 
                     <a id="home-option" href="/">Home</a>
                     <a id="about-us" href="/aboutus">About</a>
-                    </div>
                 </div>
-                <div id="nav-container" class="col-lg-10 colp">
-                    <div id="navbar">
+            </div>
+            <div id="nav-container" class="col-lg-10 colp">
+                <div id="navbar">
 
-                    </div>
+                </div>
 
-                    <div id="country-imgs-div">
-                        {{#each result}}
-                                
-                            <div class="country-imgs parallax" style="background-image: url('img/{{country}}.jpg')">
-                                <h1 class="nav-img-headers">{{country}}</h1>
-                            </div>
-                        {{/each}}
+                <div id="country-imgs-div">
+                    {{#each result}}
+
+                    <div class="country-imgs parallax" style="background-image: url('img/{{country}}.jpg')">
+                        <h1 class="nav-img-headers">{{country}}</h1>
                     </div>
+                    {{/each}}
+                    </ul>
+                    </ul>
+                    </nav>
+                    <h1 id="countryHeader">{{result.0.dataValues.continent}}</h1>
                 </div>
             </div>
         </div>
+    </div>
+
 
 
 
@@ -58,24 +64,11 @@
     <div class="parallax hidden" style="background-image: url('img/{{dataValues.country}}.jpg')">
 
         <div id="{{country}}" class="cityHeader">
-            <h1 data-aos-anchor-placement="#{{country}}Anchor" data-aos="fade-up" data-aos-duration="2000" data-aos-once="false">{{country}}</h1>
+            <h2 data-aos-anchor-placement="#{{country}}Anchor" data-aos="fade-up" data-aos-duration="2000"
+                data-aos-once="false">{{country}}</h2>
         </div>
     </div>
 
-
-    {{!-- <div class="info p-5">
-        <div class="row">
-            <div class="col-6">
-                <p data-aos="fade-up" data-aos-delay="100" data-aos-duration="2000" data-aos-once="false"><span class="bullets">Capital city:</span> {{capital}}</p>
-                <p data-aos="fade-up" data-aos-delay="200" data-aos-duration="2000" data-aos-once="false"><span class="bullets">Best time of year to visit:</span> {{bty}}</p>
-                <p data-aos="fade-up" data-aos-delay="300" data-aos-duration="2000" data-aos-once="false"><span class="bullets">Popular foods:</span> {{foods}}</p>
-                <p data-aos="fade-up" data-aos-delay="400" data-aos-duration="2000" data-aos-once="false"><span class="bullets">Popular religions:</span> {{religions}}</p>
-                <p data-aos="fade-up" data-aos-delay="500" data-aos-duration="2000" data-aos-once="false"><span class="bullets">Fun fact:</span> {{fun_fact}}</p>
-        </div>
-        </div>
-
-
-    </div> --}}
 
     <div class="info p-5" style="background-image: url('img/parchmentback.jpg')">
         <div class="row">
@@ -111,14 +104,25 @@
     </div>
 
     {{/each}}
+<<<<<<< HEAD
   
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
   </script>
+=======
+    <button id="country">test</button>
+>>>>>>> a088c7c95b868b8e0a6f623cd0103c7f0da6f73b
 
 
-<script src="js/countries/apiCountry.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+
+
+    <script src="js/countries/apiCountry.js"></script>
     <script src="js/countries/nav.js"></script>
     <script src="js/countries/country.js"></script>
 </body>
