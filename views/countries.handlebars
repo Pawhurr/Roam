@@ -18,13 +18,10 @@
 
 <body>
 
-<<<<<<< HEAD
     <div class="toggle">
         <span class="span"></span>
         <span class="span"></span>
         <span></span>
-=======
-<<<<<<< HEAD
 
     <div id="nav-box">
     </div>
@@ -39,9 +36,7 @@
             </ul>
         </ul>
     </nav>
-=======
     <div id="nav-box">
->>>>>>> 86e125edd246fea12837c08ec8867680a483819b
     </div>
 
         <div class="container-fluid modal">
@@ -70,55 +65,27 @@
             </div>
         </div>
 
-    {{!-- <nav id="navbar">
-
-        <div id="nav-home-box">
-            <i id="world-icon" class="fas fa-2x fa-globe-americas"></i>
-            <a id="home" href="/">Home</a>
-        </div>
-
-        <div id="nav-countries-box">
-
-            <i id="country-icon" class="fas fa-2x fa-map-marker-alt"></i>
-
-                <div id="countries-list-box">
-
-                    <h4 id="countries-header">Countries</h4>
-                        
-                        {{#each result}}
-                            <h6 class="country-list"><a href="#{{country}}">{{country}}</a></h6>
-                        {{/each}}
-<<<<<<< HEAD
-
-                </div>
-        </div>
-
-    </nav> --}}
-
-
 
 
 
     {{#each result}}
 
     <div id="{{country}}Anchor" class="parallax" style="background-image: url('img/{{dataValues.country}}.png')">
-=======
                     </ul>
             </ul>
         </nav>
->>>>>>> dc4bacef2d243c7c3769fa58b3645d33fcccadb2
+    {{/each}}
 
     {{#each result}}
 
     <div class="parallax hidden" style="background-image: url('img/{{dataValues.country}}.jpg')">
->>>>>>> 86e125edd246fea12837c08ec8867680a483819b
 
         <div id="{{country}}" class="cityHeader">
             <h1 data-aos-anchor-placement="#{{country}}Anchor" data-aos="fade-up" data-aos-duration="2000" data-aos-once="false">{{country}}</h1>
         </div>
     </div>
 
-<<<<<<< HEAD
+
     <div class="info p-5">
         <div class="row">
             <div class="col-6">
@@ -127,7 +94,7 @@
                 <p data-aos="fade-up" data-aos-delay="300" data-aos-duration="2000" data-aos-once="false"><span class="bullets">Popular foods:</span> {{foods}}</p>
                 <p data-aos="fade-up" data-aos-delay="400" data-aos-duration="2000" data-aos-once="false"><span class="bullets">Popular religions:</span> {{religions}}</p>
                 <p data-aos="fade-up" data-aos-delay="500" data-aos-duration="2000" data-aos-once="false"><span class="bullets">Fun fact:</span> {{fun_fact}}</p>
-=======
+
     <div class="info p-5" style="background-image: url('img/parchmentback.jpg')">
         <div class="row">
             <div class="col-4">
@@ -141,7 +108,6 @@
             <div class="col-4">
                 <button type="button" class="btn btn-info btn3"><span class="bullets">Fact & Info</span></button>
 
->>>>>>> 86e125edd246fea12837c08ec8867680a483819b
             </div>
             <div class="row">
                 <div class="col-12 show1 pt-3">
@@ -160,14 +126,12 @@
 
             </div>
         </div>
-<<<<<<< HEAD
         <p data-aos="fade-up" data-aos-delay="600" data-aos-duration="2000" data-aos-once="false">{{brief_history}}</p>
         <p data-aos="fade-up" data-aos-delay="700" data-aos-duration="2000" data-aos-once="false">{{facts}}</p>
-=======
->>>>>>> 86e125edd246fea12837c08ec8867680a483819b
     </div>
 
     {{/each}}
+  
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
