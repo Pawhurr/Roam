@@ -1,7 +1,7 @@
 USE countries_db;
 
 INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact, activity_name, activity_description, activity_media_url)
-VALUES("NAmerica",
+VALUES("North America",
 "United States of America",
 "Spring and autumn are the best times to travel",
 "Corn Dogs, Hot dog, Crab Cakes, Clam Chowder, Buffalo Wings, State Fair Foods, Barbecue, Root Beer, Pie, Gumbo, Chicken and Waffles.",
@@ -15,7 +15,7 @@ VALUES("NAmerica",
 );
 
 INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact, activity_name, activity_description, activity_media_url)
-VALUES("NAmerica",
+VALUES("North America",
 "Canada",
 "During Summer, End of spring to early fall(May-October)",
 "Poutine, Bannock, Butter tarts, Nova Scotian Lobster Rolls, Montreal-style Bagels, Saskatoon berry pie, Montreal-style Smoked Meat, Peameal Bacon.",
@@ -29,7 +29,7 @@ VALUES("NAmerica",
 );
 
 INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact, activity_name, activity_description, activity_media_url)
-VALUES("NAmerica",
+VALUES("North America",
 "Mexico",
 "During the dry season between December and April",
 "Chilaquiles, Pozole, Tacos al pastor, Tostadas, Chiles en nogada, Elote, Enchiladas, Mole.",
