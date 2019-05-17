@@ -13,7 +13,6 @@
 
 <body>
 
-<<<<<<< HEAD
     <div id="nav-box">
     </div>
         <nav id="navbar">
@@ -27,19 +26,6 @@
                     </ul>
             </ul>
         </nav>
-=======
-    <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li id="li">Countries</li>
-            <ul id="country-list">
-                {{#each result}}
-                <li><a href="#{{country}}">{{country}}</a></li>
-                {{/each}}
-            </ul>
-        </ul>
-    </nav>
->>>>>>> 862dda68da52fa8785f1b968008276acb809970c
 
     {{#each result}}
 
@@ -53,11 +39,16 @@
     <div class="info p-5" style="background-image: url('img/extra_clean_paper.png')">
         <div class="row">
             <div class="col-6">
-                <p><span class="bullets">Capital city:</span> {{capital}}</p>
+                <div>
                 <p><span class="bullets">Best time of year to visit:</span> {{bty}}</p>
+                </div>
+                <div>
                 <p><span class="bullets">Popular foods:</span> {{foods}}</p>
-                <p><span class="bullets">Popular religions:</span> {{religions}}</p>
                 <p><span class="bullets">Fun fact:</span> {{fun_fact}}</p>
+                </div>
+                <div>
+                    <p><span class="bullets">Activities:</span></p>
+                </div>
             </div>
             <div class="col-6">
 
