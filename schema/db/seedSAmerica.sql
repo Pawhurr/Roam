@@ -1,7 +1,7 @@
 USE countries_db;
 
 INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact, activity_name, activity_description, activity_media_url)
-VALUES("SAmerica",
+VALUES("South America",
 "Brazil",
 "The dry season in the south runs from March to November, whereas December to February sees the most rainfall.",
 "Brazilian chicken coxinha, Pão de queijo (cheese bread), Kibe, Cassava chips, Bacalhau (salt cod) bites, Brigadieros da Escocia (chocolate truffles), Brazilian Feijoada, Brazilian acarajé with vatapá",
@@ -15,7 +15,7 @@ VALUES("SAmerica",
 );
 
 INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact, activity_name, activity_description, activity_media_url)
-VALUES("SAmerica",
+VALUES("South America",
 "Peru",
 "The winter (May – September)",
 "Brigadeiro, Pão de Queijo, Coxinhas, Pastels, Farofa, Feijoada, Moqueca de Camarão.",
@@ -29,7 +29,7 @@ VALUES("SAmerica",
 );
 
 INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact, activity_name, activity_description, activity_media_url)
-VALUES("SAmerica",
+VALUES("South America",
 "Argentina",
 "April-June (fall) or from September-December (spring)",
 "Empanadas, Alfajores, Dulce de Leche, Helado, Medialunas",
@@ -43,7 +43,7 @@ VALUES("SAmerica",
 );
 
 INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact, activity_name, activity_description, activity_media_url)
-VALUES("SAmerica",
+VALUES("South America",
 "Bolivia",
 "May-Oct is the best time to visit Bolivia",
 "Salteñas, Pique macho, Anticucho, Chicharrón, Majadito, Trucha, Fricase.",
@@ -58,7 +58,7 @@ VALUES("SAmerica",
 
 
 INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact, activity_name, activity_description, activity_media_url)
-VALUES("SAmerica",
+VALUES("South America",
 "Ecuador",
 "On the coast, the dry season from late May and June",
 "Llapingachos, Arroz con Pollo, Ceviche stand, Choclo, Cuy (guinea pig) in Banos, Langostinos, Librillo (tripe)",
