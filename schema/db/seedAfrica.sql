@@ -2,7 +2,7 @@ USE countries_db;
 
 INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact)
 VALUES("Africa",
-"Moroco",
+"Morocco",
 "spring (mid-March to May) and Autumn (September to October)",
 "Couscous, Zaalouk, Fish Chermoula, Harira, Pastilla (Chicken or Pigeon Pie), Khobz, Steamed Sheep Head, Spicy Sardines.",
 "Islam (93%), Christianity, Bahá'í community, Jews.",
