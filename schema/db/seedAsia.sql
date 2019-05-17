@@ -1,6 +1,6 @@
 USE countries_db;
 
-INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact)
+INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact, activity_name, activity_description, activity_media_url)
 VALUES("Asia",
 "India",
 "October to March",
@@ -14,7 +14,7 @@ VALUES("Asia",
 "https://drwyjmricaxm7.cloudfront.net/blog/wp-content/uploads/2011/12/The-greenery-of-Munnar-in-India.jpg"
 );
 
-INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact)
+INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact, activity_name, activity_description, activity_media_url)
 VALUES("Asia",
 "China",
 "spring (April–May) and autumn (September–October)",
@@ -28,7 +28,7 @@ VALUES("Asia",
 "https://www.easytourchina.com/images/Photo/top-10-destinations-in-china-for-honeymooners/p852_d20120813171247.jpg"
 );
 
-INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact)
+INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact, activity_name, activity_description, activity_media_url)
 VALUES("Asia",
 "Japan",
 "Late spring (March to May) and late autumn (September to November)",
@@ -42,7 +42,7 @@ VALUES("Asia",
 "https://cdn.buttercms.com/COr9jy3FTLaMQuoDPDAz"
 );
 
-INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact)
+INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact, activity_name, activity_description, activity_media_url)
 VALUES("Asia",
 "United Arab Emirates",
 "April and May or from September to October",
@@ -56,7 +56,7 @@ VALUES("Asia",
 "https://i.dailymail.co.uk/i/pix/2015/10/30/12/2DF0A81000000578-3296523-image-a-8_1446208302329.jpg"
 );
 
-INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact)
+INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact, activity_name, activity_description, activity_media_url)
 VALUES("Asia",
 "Thailand",
 "During the cool and dry season between November and early April",
