@@ -18,6 +18,7 @@
 </head>
 
 <body>
+<h1 id="countryHeader">{{result.0.dataValues.continent}}</h1>
 
     <div class="toggle">
         <span class="span"></span>
@@ -50,7 +51,6 @@
                     </ul>
                     </ul>
                     </nav>
-                    <h1 id="countryHeader">{{result.0.dataValues.continent}}</h1>
                 </div>
             </div>
         </div>
@@ -58,7 +58,7 @@
 
 
 
-
+    
     {{#each result}}
 
     <div class="parallax hidden" style="background-image: url('img/{{dataValues.country}}.jpg')">
@@ -69,7 +69,7 @@
         </div>
     </div>
 
-
+   
     <div class="info p-5" style="background-image: url('img/parchmentback.jpg')">
         <div class="row">
             <div class="col-4">
@@ -105,16 +105,16 @@
 
     {{/each}}
     <button id="country">test</button>
+        
+
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+       
 
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
-
-
-
-    <script src="js/countries/apiCountry.js"></script>
-    <script src="js/countries/nav.js"></script>
-    <script src="js/countries/country.js"></script>
+        <script src="js/countries/apiCountry.js"></script>
+        <script src="js/countries/nav.js"></script>
+        <script src="js/countries/country.js"></script>
 </body>
