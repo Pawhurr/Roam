@@ -13,22 +13,10 @@
 
 <body>
 
-<<<<<<< HEAD
+
     <div id="nav-box">
     </div>
-        <nav id="navbar">
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li id="li">Countries</li>
-                    <ul id="country-list">
-                        {{#each result}}
-                            <li><a href="#{{country}}">{{country}}</a></li>
-                        {{/each}}
-                    </ul>
-            </ul>
-        </nav>
-=======
-    <nav>
+    <nav id="navbar">
         <ul>
             <li><a href="/">Home</a></li>
             <li id="li">Countries</li>
@@ -39,32 +27,47 @@
             </ul>
         </ul>
     </nav>
->>>>>>> 862dda68da52fa8785f1b968008276acb809970c
 
     {{#each result}}
 
-    <div class="parallax" style="background-image: url('img/{{dataValues.country}}.jpg')">
+    <div class="parallax hidden" style="background-image: url('img/{{dataValues.country}}.jpg')">
 
         <div id="{{country}}" class="cityHeader">
             <h1>{{country}}</h1>
         </div>
     </div>
 
-    <div class="info p-5" style="background-image: url('img/extra_clean_paper.png')">
+    <div class="info p-5" style="background-image: url('img/parchmentback.jpg')">
         <div class="row">
-            <div class="col-6">
-                <p><span class="bullets">Capital city:</span> {{capital}}</p>
-                <p><span class="bullets">Best time of year to visit:</span> {{bty}}</p>
-                <p><span class="bullets">Popular foods:</span> {{foods}}</p>
-                <p><span class="bullets">Popular religions:</span> {{religions}}</p>
-                <p><span class="bullets">Fun fact:</span> {{fun_fact}}</p>
+            <div class="col-4">
+                <button type="button" class="btn btn-info btn1"><span class="bullets">Best Activities</span></button>
             </div>
-            <div class="col-6">
+            <div class="col-4">
+                <button type="button" class="btn btn-info btn2"><span class="bullets">Most Popular</span></button>
+
+
+            </div>
+            <div class="col-4">
+                <button type="button" class="btn btn-info btn3"><span class="bullets">Fact & Info</span></button>
+
+            </div>
+            <div class="row">
+                <div class="col-12 show1 pt-3">
+                    <p>Stuff about activities</p>
+                </div>
+                <div class="col-12 show2 pt-3">
+                    <p><span class="bullets">Foods: </span>{{foods}}</p>
+                    <p><span class="bullets">Religions: </span>{{religions}}</p>
+                    <p><span class="bullets">Time to visit: </span>{{bty}}</p>
+                </div>
+                <div class="col-12 show3 pt-3">
+                    <p>{{fun_fact}}</p>
+                    <p>{{brief_history}}</p>
+                    <p>{{facts}}</p>
+                </div>
 
             </div>
         </div>
-        <p>{{brief_history}}</p>
-        <p>{{facts}}</p>
     </div>
 
     {{/each}}
@@ -72,4 +75,5 @@
 
 
     <script src="js/countries/nav.js"></script>
+    <script src="js/countries/country.js"></script>
 </body>
