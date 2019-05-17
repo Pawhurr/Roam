@@ -15,6 +15,9 @@ CREATE TABLE countries
     brief_history TEXT,
     facts TEXT,
     fun_fact TEXT,
+    activity_name VARCHAR(100),
+    activity_description TEXT,
+    activity_media_url TEXT,
     createdAt DATETIME,
     updatedAt DATETIME,
     primary key (id)

@@ -18,10 +18,30 @@
 
 <body>
 
+<<<<<<< HEAD
     <div class="toggle">
         <span class="span"></span>
         <span class="span"></span>
         <span></span>
+=======
+<<<<<<< HEAD
+
+    <div id="nav-box">
+    </div>
+    <nav id="navbar">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li id="li">Countries</li>
+            <ul id="country-list">
+                {{#each result}}
+                <li><a href="#{{country}}">{{country}}</a></li>
+                {{/each}}
+            </ul>
+        </ul>
+    </nav>
+=======
+    <div id="nav-box">
+>>>>>>> 86e125edd246fea12837c08ec8867680a483819b
     </div>
 
         <div class="container-fluid modal">
@@ -68,6 +88,7 @@
                         {{#each result}}
                             <h6 class="country-list"><a href="#{{country}}">{{country}}</a></h6>
                         {{/each}}
+<<<<<<< HEAD
 
                 </div>
         </div>
@@ -81,12 +102,23 @@
     {{#each result}}
 
     <div id="{{country}}Anchor" class="parallax" style="background-image: url('img/{{dataValues.country}}.png')">
+=======
+                    </ul>
+            </ul>
+        </nav>
+>>>>>>> dc4bacef2d243c7c3769fa58b3645d33fcccadb2
+
+    {{#each result}}
+
+    <div class="parallax hidden" style="background-image: url('img/{{dataValues.country}}.jpg')">
+>>>>>>> 86e125edd246fea12837c08ec8867680a483819b
 
         <div id="{{country}}" class="cityHeader">
             <h1 data-aos-anchor-placement="#{{country}}Anchor" data-aos="fade-up" data-aos-duration="2000" data-aos-once="false">{{country}}</h1>
         </div>
     </div>
 
+<<<<<<< HEAD
     <div class="info p-5">
         <div class="row">
             <div class="col-6">
@@ -95,13 +127,44 @@
                 <p data-aos="fade-up" data-aos-delay="300" data-aos-duration="2000" data-aos-once="false"><span class="bullets">Popular foods:</span> {{foods}}</p>
                 <p data-aos="fade-up" data-aos-delay="400" data-aos-duration="2000" data-aos-once="false"><span class="bullets">Popular religions:</span> {{religions}}</p>
                 <p data-aos="fade-up" data-aos-delay="500" data-aos-duration="2000" data-aos-once="false"><span class="bullets">Fun fact:</span> {{fun_fact}}</p>
+=======
+    <div class="info p-5" style="background-image: url('img/parchmentback.jpg')">
+        <div class="row">
+            <div class="col-4">
+                <button type="button" class="btn btn-info btn1"><span class="bullets">Best Activities</span></button>
             </div>
-            <div class="col-6">
+            <div class="col-4">
+                <button type="button" class="btn btn-info btn2"><span class="bullets">Most Popular</span></button>
+
+
+            </div>
+            <div class="col-4">
+                <button type="button" class="btn btn-info btn3"><span class="bullets">Fact & Info</span></button>
+
+>>>>>>> 86e125edd246fea12837c08ec8867680a483819b
+            </div>
+            <div class="row">
+                <div class="col-12 show1 pt-3">
+                    <p>Stuff about activities</p>
+                </div>
+                <div class="col-12 show2 pt-3">
+                    <p><span class="bullets">Foods: </span>{{foods}}</p>
+                    <p><span class="bullets">Religions: </span>{{religions}}</p>
+                    <p><span class="bullets">Time to visit: </span>{{bty}}</p>
+                </div>
+                <div class="col-12 show3 pt-3">
+                    <p>{{fun_fact}}</p>
+                    <p>{{brief_history}}</p>
+                    <p>{{facts}}</p>
+                </div>
 
             </div>
         </div>
+<<<<<<< HEAD
         <p data-aos="fade-up" data-aos-delay="600" data-aos-duration="2000" data-aos-once="false">{{brief_history}}</p>
         <p data-aos="fade-up" data-aos-delay="700" data-aos-duration="2000" data-aos-once="false">{{facts}}</p>
+=======
+>>>>>>> 86e125edd246fea12837c08ec8867680a483819b
     </div>
 
     {{/each}}
@@ -112,4 +175,5 @@
 
 
     <script src="js/countries/nav.js"></script>
+    <script src="js/countries/country.js"></script>
 </body>
