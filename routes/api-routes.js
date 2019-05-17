@@ -7,6 +7,7 @@ var moment = require('moment-timezone');
 var passport = require('passport');
 var Strategy = require('passport-local').Strategy;
 var { ensureAuthenticated} = require('../config/auth');
+var extAPI = require('./allAPI')
 
 app.engine('handlebars', exphbs({defaultLayout: "main"}));
 app.set('view engine', 'handlebars');
@@ -75,7 +76,7 @@ router.get('/africa', function(req, res) {
 });
 
 router.get('/northAmerica', function(req, res) {
-    db.Country.findAll({where: {continent: 'NAmerica'}}).then(function(result) {
+    db.Country.findAll({where: {continent: 'North America'}}).then(function(result) {
         var hbs_obj = {
             result: result
         };
@@ -84,7 +85,7 @@ router.get('/northAmerica', function(req, res) {
 });
 
 router.get('/southAmerica', function(req, res) {
-    db.Country.findAll({where: {continent: 'SAmerica'}}).then(function(result) {
+    db.Country.findAll({where: {continent: 'South America'}}).then(function(result) {
         var hbs_obj = {
             result: result
         };
@@ -157,5 +158,11 @@ router.post('/clock', function(req, res) {
     };
     res.json(clock);
 });
+
+router.post('/someRoute', function(req, res) {
+    extAPI(req.body.country, function(info){
+        res.send(info)
+    })
+})
 
 module.exports = router;

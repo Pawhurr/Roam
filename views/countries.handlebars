@@ -13,6 +13,7 @@
 
 <body>
 
+<<<<<<< HEAD
 
     <div id="nav-box">
     </div>
@@ -27,6 +28,21 @@
             </ul>
         </ul>
     </nav>
+=======
+    <div id="nav-box">
+    </div>
+        <nav id="navbar">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li id="li">Countries</li>
+                    <ul id="country-list">
+                        {{#each result}}
+                            <li><a href="#{{country}}">{{country}}</a></li>
+                        {{/each}}
+                    </ul>
+            </ul>
+        </nav>
+>>>>>>> dc4bacef2d243c7c3769fa58b3645d33fcccadb2
 
     {{#each result}}
 
