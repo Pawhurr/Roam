@@ -7,6 +7,7 @@ var moment = require('moment-timezone');
 var passport = require('passport');
 var Strategy = require('passport-local').Strategy;
 var { ensureAuthenticated} = require('../config/auth');
+var extAPI = require('./allAPI')
 
 app.engine('handlebars', exphbs({defaultLayout: "main"}));
 app.set('view engine', 'handlebars');
@@ -157,5 +158,11 @@ router.post('/clock', function(req, res) {
     };
     res.json(clock);
 });
+
+router.post('/someRoute', function(req, res) {
+    extAPI(req.body.country, function(info){
+        res.send(info)
+    })
+})
 
 module.exports = router;
