@@ -1,6 +1,6 @@
 USE countries_db;
 
-INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact, activity_description, activity_media_url)
+INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact, activity_name, activity_description, activity_media_url)
 VALUES ("Europe", 
 "France", 
 "spring (April–May), summer (June–August) and autumn (September–October)", 
@@ -14,7 +14,7 @@ VALUES ("Europe",
 "https://cdn.thecrazytourist.com/wp-content/uploads/2017/11/ccimage-shutterstock_227545819.jpg"
 );
 
-INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact, activity_description, activity_media_url)
+INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact, activity_name, activity_description, activity_media_url)
 VALUES("Europe", 
 "Italy",
 "spring (April to June) or fall (September and October)",
@@ -28,7 +28,7 @@ VALUES("Europe",
 "https://www.planetware.com/photos-large/I/italy-things-to-do-hiking-cinque-terre.jpg"
 );
 
-INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact, activity_description, activity_media_url)
+INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact, activity_name, activity_description, activity_media_url)
 VALUES("Europe", 
 "United Kingdom",
 "Spring (March, April, May) and Summer (June, July, August)",
@@ -38,11 +38,11 @@ VALUES("Europe",
 "England is the most populated country in the United Kingdom. The other countries that make up the United Kingdom are Wales, Scotland and Northern Ireland.England is bordered by Wales to the west and Scotland to the north. The population of England in 2011 was around 53 million. The capital city of England is London. Other major countries include Birmingham, Manchester, Sheffield, Liverpool, Newcastle and Leeds. England includes many small islands such as the Isle of Wight and Hayling Island. There is only a 34 kilometre (21 mile) gap between England and France and the countries are connected by the Channel Tunnel which opened in 1994. England was the first industrialized nation after the industrial revolution that began around 1760. Famous English scientists include Charles Darwin, Michael Faraday, Isaac Newton and Stephen Hawking among many others.",
 "The Queen, Elizabeth II, has visited over 115 countries despite not having a passport",
 "Climb the United Kingdom’s highest peak Ben Nevis",
-"Ben Nevis is 1,345 metres above sea level. There are two main routes up – the Mountain Track, which is used by most walkers or Carn Mor Dearg Arête, a more challenging ascent for experienced scramblers and hill walkers which can take more than ten hours to complete."
+"Ben Nevis is 1,345 metres above sea level. There are two main routes up – the Mountain Track, which is used by most walkers or Carn Mor Dearg Arête, a more challenging ascent for experienced scramblers and hill walkers which can take more than ten hours to complete.",
 "https://cimg.visitscotland.com/cms-images/660554/660565/nevis-ridge?size=md"
 );
 
-INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact, activity_description, activity_media_url)
+INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact, activity_name, activity_description, activity_media_url)
 VALUES("Europe", 
 "Switzerland",
 "January/February: winter high season. March: early spring. July/August: summer high season.",
@@ -56,7 +56,7 @@ VALUES("Europe",
 "https://media.timeout.com/images/102843379/1372/772/image.jpg"
 );
 
-INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact, activity_description, activity_media_url)
+INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact, activity_name, activity_description, activity_media_url)
 VALUES("Europe", 
 "Spain",
 "spring (March to May) or during the fall (September to November)",
@@ -70,7 +70,7 @@ VALUES("Europe",
 "https://www.telegraph.co.uk/content/dam/Travel/leadAssets/31/38/Summary_Isabella--_3138475a.jpg?imwidth=1400"
 );
 
-INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact, activity_description, activity_media_url)
+INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact, activity_name, activity_description, activity_media_url)
 VALUES("Europe", 
 "Greece",
 "spring and early summer (mid-Apr to mid-June) or autumn (Sept to mid-Oct)",

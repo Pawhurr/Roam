@@ -18,6 +18,19 @@
 
 <body>
 
+<<<<<<< HEAD
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li id="li">Countries</li>
+            <ul id="country-list">
+                {{#each result}}
+                <li><a href="#{{country}}">{{country}}</a></li>
+                {{/each}}
+            </ul>
+        </ul>
+    </nav>
+=======
     <div class="toggle">
         <span class="span"></span>
         <span class="span"></span>
@@ -52,6 +65,7 @@
         </div>
 
 
+>>>>>>> 9f4750c1d577589b3ba44c9272fb183bbab0b58f
 
     {{#each result}}
 
@@ -111,13 +125,19 @@
     </div>
 
     {{/each}}
+<<<<<<< HEAD
+
+    <button id="country">test</button>
+=======
   
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
   </script>
+>>>>>>> 9f4750c1d577589b3ba44c9272fb183bbab0b58f
 
 
+<script src="js/countries/apiCountry.js"></script>
     <script src="js/countries/nav.js"></script>
     <script src="js/countries/country.js"></script>
 </body>
