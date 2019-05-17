@@ -9,3 +9,40 @@
     width: 100%;
     z-index: 2;
 }
+body, html {
+    height: 100%;
+    background-color:#27849D;
+  }
+#footer {
+    position: bottom;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:#27849D;
+    color: white;
+    text-align: center;
+    margin-top: 0%;
+    
+
+}
+.columns {
+    line-height: 15%;
+}
+a:link {
+    color: #98C1D9 ;
+}
+
+/* A link that has been visited */
+a:visited {
+    color: #252443;
+}
+
+/* A link that is hovered on */
+a:hover {
+    color: #E0FBFC;
+}
+
+/* A link that is selected */
+a:active {
+    color: #8E9AAF;
+}
