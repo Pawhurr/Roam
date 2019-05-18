@@ -1,14 +1,32 @@
 
+body {
+    background-image: url('../../imgs/rids.png');
+    height: 100%; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    transition: opacity 2s;
+    opacity: 1;
+}
+
 #country-editor-div {
     display: none;
     background: rgb(0, 0, 0, 0.6);
     border-radius: 5px;
     padding: 20px;
+    margin: 50px 0px;
+    text-align: center;
 }
 
 #country-selector label, select {
     color: white;
     font-weight: bold;
+}
+
+#country-selector label {
+    margin-bottom: 20px;
 }
 
 #country-selector select {
@@ -19,6 +37,7 @@
 
 #country-selector-submit {
     display: block;
+    background: rgb(196, 196, 196);
     border: none;
     border-radius: 5px;
     font-weight: bold;
@@ -43,6 +62,7 @@
 
 #country-editor-submit {
     display: block;
+    background: rgb(196, 196, 196);
     border: none;
     border-radius: 5px;
     margin: 0 auto;

@@ -2,11 +2,7 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
     integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
-
 <link href="https://fonts.googleapis.com/css?family=Anton|Roboto" rel="stylesheet">
 
 <link rel="stylesheet" href="css/style.css">
@@ -18,6 +14,9 @@
 </head>
 
 <body>
+<div class="cursor"></div>
+
+    <h1 id="countryHeader">{{result.0.dataValues.continent}}</h1>
 
     <div class="toggle">
         <span class="span"></span>
@@ -33,6 +32,7 @@
 
                     <a id="home-option" href="/">Home</a>
                     <a id="about-us" href="/aboutus">About</a>
+                    <a id="portfolio" href="/portfolio">Portfolio</a>
                 </div>
             </div>
             <div id="nav-container" class="col-lg-10 colp">
@@ -42,33 +42,29 @@
 
                 <div id="country-imgs-div">
                     {{#each result}}
-
-                    <div class="country-imgs parallax" style="background-image: url('img/{{country}}.jpg')">
-                        <h1 class="nav-img-headers">{{country}}</h1>
-                    </div>
+                    <a href="#{{country}}">
+                        <div class="country-imgs parallax" style="background-image: url('img/{{country}}.jpg')">
+                            <h1 class="nav-img-headers">{{country}}</h1>
+                        </div>
+                    </a>
                     {{/each}}
                     </ul>
                     </ul>
                     </nav>
-                    <h1 id="countryHeader">{{result.0.dataValues.continent}}</h1>
                 </div>
             </div>
         </div>
     </div>
 
-
-
-
     {{#each result}}
 
-    <div class="parallax hidden" style="background-image: url('img/{{dataValues.country}}.jpg')">
+    <div  id="{{country}}" class="parallax hidden" style="background-image: url('img/{{dataValues.country}}.jpg')">
 
-        <div id="{{country}}" class="cityHeader">
+        <div class="cityHeader">
             <h2 data-aos-anchor-placement="#{{country}}Anchor" data-aos="fade-up" data-aos-duration="2000"
                 data-aos-once="false">{{country}}</h2>
         </div>
     </div>
-
 
     <div class="info p-5" style="background-image: url('img/parchmentback.jpg')">
         <div class="row">
@@ -104,7 +100,6 @@
     </div>
 
     {{/each}}
-
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>

@@ -11,7 +11,8 @@
 
     <nav>
         <ul>
-
+            
+            <li><a href="/"><span class="nav" id="home">Home</span></a></li>
             <li><span class="nav" id="builder">Country Builder</span></li>
             <li><span class="nav" id="country-editor">Country Editor</span></li>
             <li><span class="nav" id="user-editor">User Editor</span></li>
@@ -30,56 +31,40 @@
                             <h1 id="admin-header">Admin Control Panel</h1>
                         </div>
 
-                        <form action="/countries" method="POST">
-                        
-                            <input type="text" name="continent">
-                            
-                            <input type="submit" value="Submit">
-
-                        </form>
 
                         <div id="country-builder-div">
 
                             <form action="/create" method="POST" id="country-builder">
                                 
-                                <label>Name of the city to add</label>
-                                    <input class="input" type="text" name="city">
-                                
-                                <label>What country does it belong to?</label>
-                                    <select name="continent">
+                                <label>What continent does the new Country belong to?</label>
+                                    <select class="input" id="continent">
                                         {{#each continents}}
                                             <option value="{{continent}}">{{continent}}</option>
                                         {{/each}}
                                     </select>
+                                
+                                <label>What's the name of the Country?</label>
+                                    <input class="input" type="text" id="country">
+                                                                                                
+                                <label>What's the best time of the year to visit the Country?</label>
+                                    <input class="input" type="text" id="bty" placeholder="Best Time of Year">
+                                
+                                <label>Please provide a list of the Country's cultural foods.</label>
+                                    <textarea class="input" id="foods"  rows="5" cols="50"></textarea>
+                                
+                                <label>What're the popular religions within the Country?</label>
+                                    <textarea class="input" id="religions"  rows="5" cols="50"></textarea>
+                                
+                                <label>What's a brief description of the Country's history?</label>
+                                    <textarea class="input" id="brief_history"  rows="5" cols="50"></textarea>
+                                
+                                <label>What're some facts of the Country?</label>
+                                    <textarea class="input" id="facts"  rows="5" cols="50"></textarea>
 
-                                <label>What is the Capital City of the City's country</label>
-                                    <input class="input" type="text" name="capital" placeholder="Capital">
-                                
-                                <label>What is the City's population?</label>
-                                    <input class="input" type="text" name="population" placeholder="Population #">
-                                
-                                <label>What is the City's most used language?</label>
-                                    <input class="input" type="text" name="language" placeholder="Language">
-                                
-                                <label>What is the City's Currency?</label>
-                                    <input class="input" type="text" name="currency" placeholder="currency">
-                                
-                                <label>What's the best time of the year to visit the City?</label>
-                                    <input class="input" type="text" name="bty" placeholder="Best Time of Year">
-                                
-                                <label>Please provide a list of the City's cultural foods.</label>
-                                    <textarea name="food" rows="10" col="30">List of foods...</textarea>
-                                
-                                <label>What're the popular religions within the City?</label>
-                                    <textarea name="religion" row="10" col="30">List of religions...</textarea>
-                                
-                                <label>What's a brief description of the City's history?</label>
-                                    <textarea name="history" row="10" col="30">History description...</textarea>
-                                
-                                <label>What're some facts of the City?</label>
-                                    <textarea name="facts" row="10" col="30">List of facts...</textarea>
+                                <label>What're some fun facts of the Country?</label>
+                                    <textarea class="input" id="fun_fact"  rows="5" cols="50"></textarea>
 
-                                <input type="submit" id="city-submit" value="Submit">
+                                <input type="submit" id="country-submit" value="Submit">
                             </form>
 
                         </div>
@@ -134,5 +119,5 @@
         </div>
     </div>
 
-    <script src="js/admin-control.js"></script>
+    <script src="js/admin/admin-control.js"></script>
 </body>
