@@ -24,6 +24,29 @@ $(document).on('click', function() {
     }, 500);
 });
 
+$('#home-option').on('pointerover', function() {
+    $('.homeSpan').toggleClass('navTrigger');
+})
+
+$('#home-option').on('pointerout', function() {
+    $('.homeSpan').toggleClass('navTrigger');
+})
+
+$('#about-us').on('pointerover', function() {
+    $('.aboutSpan').toggleClass('navTrigger');
+})
+
+$('#about-us').on('pointerout', function() {
+    $('.aboutSpan').toggleClass('navTrigger');
+})
+
+$('#portfolio').on('pointerover', function() {
+    $('.portSpan').toggleClass('navTrigger');
+})
+
+$('#portfolio').on('pointerout', function() {
+    $('.portSpan').toggleClass('navTrigger');
+})
 
 // $('button .cursor-clone').on('pointerover', function(e) {
 //     console.log(e);
