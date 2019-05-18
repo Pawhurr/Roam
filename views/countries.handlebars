@@ -3,7 +3,7 @@
     integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
-<link href="https://fonts.googleapis.com/css?family=Anton|Roboto" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Anton|Roboto|Josefin+Sans&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/countries/navbar.css">
@@ -14,25 +14,31 @@
 </head>
 
 <body>
-<div class="cursor"></div>
+    <div class="cursor"></div>
+    <div class="cursor-clone"></div>
 
-    <h1 id="countryHeader">{{result.0.dataValues.continent}}</h1>
 
     <div class="toggle">
         <span class="span"></span>
         <span class="span"></span>
         <span></span>
     </div>
+    <h1 id="countryHeader">{{result.0.dataValues.continent}}</h1>
 
 
     <div class="container-fluid modal">
         <div class="row">
             <div class="col-lg-2 nav-options-col">
                 <div id="nav-options">
+                    
+                    <span class="homeSpan"></span>
+                    <a class="animTarget" id="home-option" href="/">Home</a>
+                    <span class="homeSpan aboutSpan"></span>
+                    <a class="animTarget" id="about-us" href="/aboutus">About</a>
+                    <span class="portSpan aboutSpan"></span>
+                    <a class="animTarget" id="portfolio" href="/portfolio">Portfolio</a>
+                    <span class="portSpan"></span>
 
-                    <a id="home-option" href="/">Home</a>
-                    <a id="about-us" href="/aboutus">About</a>
-                    <a id="portfolio" href="/portfolio">Portfolio</a>
                 </div>
             </div>
             <div id="nav-container" class="col-lg-10 colp">
@@ -58,38 +64,54 @@
 
     {{#each result}}
 
-    <div  id="{{country}}" class="parallax hidden" style="background-image: url('img/{{dataValues.country}}.jpg')">
+    <div id="{{country}}" class="parallax hidden" style="background-image: url('img/{{dataValues.country}}.jpg')">
 
         <div class="cityHeader">
-            <h2 data-aos-anchor-placement="#{{country}}Anchor" data-aos="fade-up" data-aos-duration="2000"
+            <h2 data-aos-anchor-placement="#{{country}}Anchor" data-aos="fade-up" data-aos-duration="1000"
                 data-aos-once="false">{{country}}</h2>
         </div>
     </div>
 
     <div class="info p-5" style="background-image: url('img/parchmentback.jpg')">
         <div class="row">
-            <div class="col-4">
-                <button type="button" class="btn btn-info btn1"><span class="bullets">Best Activities</span></button>
+            <div class="col-xs col-sm col-md col-lg">
+
             </div>
-            <div class="col-4">
-                <button type="button" class="btn btn-info btn2"><span class="bullets">Most Popular</span></button>
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 m-1">
+                <button type="button" class="btn btn-info btn1">Best Activities</button>
+            </div>
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 m-1">
+                <button type="button" class="btn btn-info btn2">Most Popular</button>
 
 
             </div>
-            <div class="col-4">
-                <button type="button" class="btn btn-info btn3"><span class="bullets">Fact & Info</span></button>
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 m-1">
+                <button type="button" class="btn btn-info btn3">Facts & Info</button>
+
+            </div>
+            <div class="col-xs col-sm col-md col-lg">
 
             </div>
             <div class="row">
-                <div class="col-12 show1 pt-3">
-                    <p>Stuff about activities</p>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 show1 pt-3">
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <h5><span class="bullets">{{activity_name}}</span></h5>
+                            <p>{{activity_description}}</p>
+                            <p>Visit here for more: <a href="{{activity_media_url}}"
+                                    target="_blank">{{activity_media_url}}</a></p>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="text-align: center">
+                            <img class="rounded actImg" src="imgs/activities/{{country}}/{{activity_name}}.jpg">
+                        </div>
+                    </div>
                 </div>
-                <div class="col-12 show2 pt-3">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 show2 pt-3">
                     <p><span class="bullets">Foods: </span>{{foods}}</p>
                     <p><span class="bullets">Religions: </span>{{religions}}</p>
                     <p><span class="bullets">Time to visit: </span>{{bty}}</p>
                 </div>
-                <div class="col-12 show3 pt-3">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 show3 pt-3">
                     <p>{{fun_fact}}</p>
                     <p>{{brief_history}}</p>
                     <p>{{facts}}</p>

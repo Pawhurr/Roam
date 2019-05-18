@@ -56,6 +56,27 @@ module.exports = function(sequelize, DataTypes) {
                 len: [1]
             }
         },
+        activity_name: {
+            type: DataTypes.TEXT,
+            allowNull: false,
+            validate: {
+                len: [1]
+            }
+        },
+        activity_description: {
+            type: DataTypes.TEXT,
+            allowNull: false,
+            validate: {
+                len: [1]
+            }
+        },
+        activity_media_url: {
+            type: DataTypes.TEXT,
+            allowNull: false,
+            validate: {
+                len: [1]
+            }
+        }
 
     });
     return Country;

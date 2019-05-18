@@ -9,7 +9,7 @@ VALUES ("Europe",
 "The medieval Kingdom of France emerged from the western part of Charlemagne Carolingian Empire, known as West Francia, and achieved increasing prominence under the rule of the House of Capet, founded by Hugh Capet in 987., During the next centuries, France experienced the Renaissance and the Protestant Reformation.", 
 "France official name is the French Republic (République Française). It became a republic in 1792 as a result of the French Revolution against centuries of royal rule. Colonial past is one reason why there are more than five million people of Arab and African descent living in France, Today, French is the second most studied language after English and spoken by more than 300 million people around the world as first or second language. Try these five useful expressions in French: bonjour - good day. salut - hello.", 
 "Louis XIX was the king of France for just 20 minutes, the shortest ever reign", 
-"Paris: Musee de Louvre",
+"Musee de Louvre",
 "The Musee de Louvre is an artistic dream, as is befitting to the world’s most visited museum. Inside everything from the Code of Hammurabi, to Egyptian mummies, to Leonardo’s Mona Lisa, and the Venus de Milo.",
 "https://cdn.thecrazytourist.com/wp-content/uploads/2017/11/ccimage-shutterstock_227545819.jpg"
 );
