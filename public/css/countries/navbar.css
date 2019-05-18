@@ -9,10 +9,23 @@ html {
     border-radius: 50px;
     border: 1px solid black;
     position: absolute;
-    transition-duration: 150ms;
+    /* transition-duration: 150ms; */
     transition-timing-function: ease-out;
     animation: cursorAnim 3s infinite alternate;
     pointer-events: none;
+}
+
+.cursor-clone {
+    display: none;
+    z-index: 550;
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
+    border: 8px solid white;
+    position: absolute;
+    /* transition-duration: 150ms; */
+    transition-timing-function: ease-out;
+    animation: cursorAnim 3s infinite alternate;
 }
 
 .cursor::after {
@@ -20,10 +33,10 @@ html {
     width: 30px;
     height: 30px;
     position: absolute;
-    border: 8px solid white;
+    border: 1px solid black;
     border-radius: 50%;
     opacity: .5;
-    animation: cursorAnim2 3s infinite alternate;
+    animation: cursorAnim2 1.5s infinite alternate;
     bottom: -1px;
     right: -1px;
 }
@@ -44,7 +57,7 @@ html {
 
     }
     to {
-        transform: scale(.4); 
+        transform: scale(1.5); 
     }
 }
 
@@ -66,9 +79,8 @@ html {
     border: 1px solid red;
 }
 
-a:hover button:hover, .btn:not(:disabled):not(:disabled), button:not(:disabled){
+a:hover, button:hover, .btn:not(:disabled):not(:disabled), button:not(:disabled){
     cursor: none;
-
 } 
 
 .colp {

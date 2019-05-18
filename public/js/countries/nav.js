@@ -1,11 +1,18 @@
 
-
+var cursorY;
 
 $(document).on('mousemove', function(e) {
-    
+    cursorY = e.clientY -10;
     $('.cursor').css({
         top: e.pageY - 10 + 'px',
         left: e.pageX - 10 + 'px' 
+    });
+});
+
+
+$(document).on('scroll', function(e) {
+    $('.cursor').css({
+        top: cursorY + e.currentTarget.scrollingElement.scrollTop
     });
 });
 
@@ -16,6 +23,47 @@ $(document).on('click', function() {
         $('.cursor').toggleClass('expand');
     }, 500);
 });
+
+
+// $('button .cursor-clone').on('pointerover', function(e) {
+//     console.log(e);
+//     var currentRect = e.currentTarget.getBoundingClientRect();
+//     // var targetRect = e.currentTarget.children[0].getBoundingClientRect();
+//     if ($('.cursor-clone').hasClass('active')) {
+//         // $('.cursor-clone').toggleClass('.active');
+//     } else {
+//         $('.cursor-clone').css({
+//             display: 'block',
+//             top: currentRect.top + window.scrollY - (currentRect.height/2) + 8 ,
+//             left: currentRect.left + (currentRect.width/2)
+//         });
+//         $('.cursor-clone').toggleClass('active');
+//     }
+    
+// });
+
+
+// $('button').on('pointerleave', function(e) {
+//     console.log('EXIT')
+//     var flag = true;
+//     // if ($('.cursor-clone').on('pointerover')) {
+//     //     flag = false;
+//     //     console.log('TRIP')
+//     // }
+
+
+//     if (flag) {
+//         $('.cursor-clone').toggleClass('active');
+//         $('.cursor-clone').css({
+//             display: 'none',
+//             top: 0,
+//             left: 0
+//         })
+//     } else {
+//         console.log('NOPE')
+//         flag = true;
+//     }
+// });
 
 $('.toggle').on('click', function() {
     $('.toggle').toggleClass('active');
