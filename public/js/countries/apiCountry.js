@@ -1,15 +1,13 @@
-$("#country").on("click", function(event){
+
+$(".country").on("click", function (event) {
     event.preventDefault();
-    console.log("test");
+    let data = { country: this.id }
     $.ajax({
         type: "POST",
         url: '/apiCountry',
-        data: data        
-      }).then(function(res){
-          console.log(res);
-      }); 
+        data: data
+    }).then(function (res) {
+        console.log(res);
+    });
 
-  });
-
-
-  
+});

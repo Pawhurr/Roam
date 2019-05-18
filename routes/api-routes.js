@@ -39,7 +39,7 @@ router.post('/signup', function(req, res) {
 
 //=============================================================//
 
-router.get('/australia', function(req, res) {
+router.get('/australia', ensureAuthenticated, function(req, res) {
     db.Country.findAll({where: {continent: 'Australia'}}).then(function(result) {
         var hbs_obj = {
             result: result
@@ -48,7 +48,7 @@ router.get('/australia', function(req, res) {
     });
 });
 
-router.get('/asia', function(req, res) {
+router.get('/asia', ensureAuthenticated, function(req, res) {
     db.Country.findAll({where: {continent: 'Asia'}}).then(function(result) {
         var hbs_obj = {
             result: result
@@ -57,7 +57,7 @@ router.get('/asia', function(req, res) {
     });
 });
 
-router.get('/europe', function(req, res) {
+router.get('/europe', ensureAuthenticated, function(req, res) {
     db.Country.findAll({where: {continent: 'Europe'}}).then(function(result) {
         var hbs_obj = {
             result: result
@@ -67,7 +67,7 @@ router.get('/europe', function(req, res) {
     });
 });
 
-router.get('/africa', function(req, res) {
+router.get('/africa', ensureAuthenticated, function(req, res) {
     db.Country.findAll({where: {continent: 'Africa'}}).then(function(result) {
         var hbs_obj = {
             result: result
@@ -76,7 +76,7 @@ router.get('/africa', function(req, res) {
     });
 });
 
-router.get('/northAmerica', function(req, res) {
+router.get('/northAmerica', ensureAuthenticated, function(req, res) {
     db.Country.findAll({where: {continent: 'North America'}}).then(function(result) {
         var hbs_obj = {
             result: result
@@ -87,7 +87,7 @@ router.get('/northAmerica', function(req, res) {
     });
 });
 
-router.get('/southAmerica', function(req, res) {
+router.get('/southAmerica', ensureAuthenticated, function(req, res) {
     db.Country.findAll({where: {continent: 'South America'}}).then(function(result) {
         var hbs_obj = {
             result: result
@@ -97,16 +97,6 @@ router.get('/southAmerica', function(req, res) {
 });
 
 //=============================================================//
-
-// router.post('/countries', ensureAuthenticated, function(req, hbs) {
-//     db.Country.findAll({where:{continent: req.body.continent}}).then(function(result) {
-//         console.log(result);
-//         var hbs_obj = {
-//             result: result
-//         };
-//         hbs.render('countries', hbs_obj);
-//     });
-// });
 
 router.get('/admin', ensureAuthenticated, function(req, res) {
     db.Country.findAll({}).then(function(result) {
@@ -139,17 +129,40 @@ router.get('/admin', ensureAuthenticated, function(req, res) {
     });
 });
 
-router.post('/country-select', ensureAuthenticated, function(req, res) {
-    db.Country.findOne({where:{country: req.body.country}}).then(function(result) {
-        console.log(result);
+router.post('/country-builder', function(req, res) {
+    db.Country.create({
+        continent: req.body.continent,
+        country: req.body.country,
+        bty: req.body.bty,
+        foods: req.body.foods,
+        religions: req.body.religions,
+        brief_history: req.body.brief_history,
+        facts: req.body.facts,
+        fun_fact: req.body.fun_fact
+    }).then(function(result) {
         res.json(result);
     });
 });
 
-router.post('/build-country', function(req, res) {
-    db.Country.update({where:{country: req.body.country},
-        bty: req.body.bty,
+router.post('/country-select', function(req, res) {
+    db.Country.findOne({where:{country: req.body.country}}).then(function(result) {
+        res.json(result);
+    });
+});
 
+router.post('/edit-country', function(req, res) {
+    console.log(req.body.bty);
+    db.Country.update({
+        bty: req.body.bty,
+        foods: req.body.foods,
+        religions: req.body.religions,
+        brief_history: req.body.brief_history,
+        facts: req.body.facts,
+        fun_fact: req.body.fun_fact,
+    },{where:{country: req.body.country}}).then(function(result) {
+        console.log("RESULT")
+        console.log(result);
+        res.json(result);
     });
 });
 

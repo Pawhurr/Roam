@@ -5,6 +5,7 @@ body {
 }
 
 nav {
+    z-index: 1;
     position: fixed;
     vertical-align: center;
     top: 30%;
@@ -37,7 +38,7 @@ nav li, span {
     padding: 20px;
 }
 
-#country-builder, .input, label, textarea, select {
+#country-builder label, textarea, select {
     display: block;
     margin: 0 auto;
     text-align: center;
@@ -46,10 +47,22 @@ nav li, span {
     border-radius: 5px;
 }
 
-#city-submit {
+.input {
+    display: block;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+#country-submit {
+    display: block;
+    margin: 0 auto;
     color: black;
     font-weight: bold;
-    background: lightblue;
+    background: rgb(196, 196, 196);
     border: none;
     border-radius: 5px;
     padding: 5px 10px;
