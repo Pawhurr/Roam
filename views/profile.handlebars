@@ -1,4 +1,6 @@
 
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
 <link rel="stylesheet" href="css/profile/profile.css">
 <link rel="stylesheet" href="css/profile/cursor.css">
 
@@ -21,8 +23,9 @@
 
                         <div id="settings-options-div">
 
-                            <h6>Change password</h6>
-                            <h6>Change email</h6>
+                            <h6 id="user-info">User info</h6>
+                            <h6 id="pass-option">Change password</h6>
+                            <h6 id="email-option">Change email</h6>
 
                         </div>
 
@@ -34,13 +37,23 @@
             </div>
 
             <div class="col-lg-8 setting-display-col">
+                
                 <h1 id="welcome-user">{{name}}</h1>
                 
                 <div id="settings-modal">
-                    <h5 id="success-msg"></h5>
+
+                    <p id="close-btn-wrapper"><i class="close-btn fas fa-2x fa-times"></i></p>
+                    <h5 id="modal-msg">Your password has successfully been updated!</h5>
+
                 </div>
 
                 <div id="settings-display">
+
+                    <h3 class="user-info" id="email-display-header">Email:</h3>
+                        <h6 class="user-info" id="email-display">{{email}}</h6>
+
+                    <h3 class="user-info" id="first-joined-header">First joined:</h3>
+                        <h6 class="user-info" id="first-joined">{{createdAt}}</h6>
 
                     <form id="password-confirm">
                         <label id="pass-confirm-err"></label>
@@ -59,6 +72,7 @@
                     </form>
 
                     <form id="email-confirm">
+                        <label id="email-pass-confirm"></label>
                         <label>Please confirm password first</label>
                             <input type="password" id="email-confirm-input" placeholder="Please confirm password here...">
                             <input type="submit" id="email-confirm-submit" class="submit-btn" value="Submit">

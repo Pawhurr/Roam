@@ -38,11 +38,14 @@ router.post('/signup', function(req, res) {
 });
 
 router.get('/profile', ensureAuthenticated, function(req, res) {
+    var createdAt = moment(req.user.dataValues.createdAt).format('MMMM Do YYYY');
+    var updatedAt = moment(req.user.dataValues.updatedAt).format('MMMM Do YYYY')
+    
     hbs_obj = {
         name: req.user.dataValues.username,
         email: req.user.dataValues.email,
-        createdAt: req.user.dataValues.createdAt,
-        updatedAt: req.user.dataValues.updatedAt,
+        createdAt: createdAt,
+        updatedAt: updatedAt,
         isSuperUser: req.user.dataValues.isSuperUser
     };
     res.render('profile', hbs_obj);
@@ -208,9 +211,28 @@ router.post('/pass-update', ensureAuthenticated, function(req, res) {
     db.User.update({
         password: req.body.password
     },{where:{username: req.user.dataValues.username}}).then(function(result) {
-        if (res[0] === 1) {
+        console.log(result);
+        if (result[0] === 1) {
             success = {
                 updated: "Your password has successfully been updated!"
+            };
+            res.json(success);
+        } else {
+            error = {
+                err: "Something went wrong :("
+            };
+            res.json(error);
+        }
+    });
+});
+
+router.post('/email-update', ensureAuthenticated, function(req, res) {
+    db.User.update({
+        email: req.body.email,
+    },{where:{username: req.user.dataValues.username}}).then(function(result) {
+        if (result[0] === 1) {
+            success = {
+                updated: "Your email has successfully been updated!"
             };
             res.json(success);
         } else {
