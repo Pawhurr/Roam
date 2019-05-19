@@ -3,8 +3,9 @@ html {
 }
 
 body {
-    background-image: url('../../imgs/profile/john-t.png');
+    background-image: url('../../imgs/profile/roland-losslein.png');
     background-size: cover;
+    font-family: 'Questrial', sans-serif;
 }
 
 .settings-options-top, .settings-options-bottom {
@@ -14,8 +15,16 @@ body {
 }
 
 #settings-options-div h6 {
+    z-index: 6;
     font-weight: bold;
+    font-size: 20px;
     margin: 20px 0px;
+    color: white;
+    text-shadow: 0px 0px 10px rgb(0, 0, 0, 0.6)
+}
+
+#settings-options-div h6:hover {
+    text-shadow: 0px 0px 30px rgb(0, 0, 0, 1)
 }
 
 #welcome-user {
@@ -28,11 +37,19 @@ body {
 }
 
 #settings-display {
+    z-index: 5;
     background: rgb(0, 0, 0, 0.6);
     border: none;
     border-radius: 5px;
     margin: 40px 0px;
     padding: 20px;
+    font-size: 20px;
+}
+
+#email-display-header, #first-joined-header,#email-display, #first-joined {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
 }
 
 #settings-display form {
@@ -65,6 +82,31 @@ form input {
     ;
 }
 
-#password-change, #email-confirm, #email-change {
+#password-confirm, #password-change, #email-confirm, #email-change {
     display: none;
+}
+
+#settings-modal {
+    z-index: 10;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 20vh;
+    width: 50vw;
+    background: lightcoral;
+    border-radius: 5px;
+    box-shadow: 10px 10px 10px rgb(0, 0, 0, 0.6);
+}
+
+#close-btn-wrapper {
+    margin: 5px 10px 0px 0px;
+    text-align: right;
+}
+
+#modal-msg {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
 }
