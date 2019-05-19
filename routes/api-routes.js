@@ -53,7 +53,7 @@ router.get('/profile', ensureAuthenticated, function(req, res) {
 router.get('/australia', ensureAuthenticated, function(req, res) {
     db.Country.findAll({where: {continent: 'Australia'}}).then(function(result) {
         var hbs_obj = {
-            name: req.user.name,
+            name: req.user.dataValues.username,
             result: result
         };
         res.render('countries', hbs_obj);
@@ -63,7 +63,7 @@ router.get('/australia', ensureAuthenticated, function(req, res) {
 router.get('/asia', ensureAuthenticated, function(req, res) {
     db.Country.findAll({where: {continent: 'Asia'}}).then(function(result) {
         var hbs_obj = {
-            name: req.user.name,
+            name: req.user.dataValues.username,
             result: result
         };
         res.render('countries', hbs_obj);
@@ -73,7 +73,7 @@ router.get('/asia', ensureAuthenticated, function(req, res) {
 router.get('/europe', ensureAuthenticated, function(req, res) {
     db.Country.findAll({where: {continent: 'Europe'}}).then(function(result) {
         var hbs_obj = {
-            name: req.user.name,
+            name: req.user.dataValues.username,
             result: result
         };
         console.log(result);
@@ -95,7 +95,7 @@ router.get('/africa', ensureAuthenticated, function(req, res) {
 router.get('/northAmerica', ensureAuthenticated, function(req, res) {
     db.Country.findAll({where: {continent: 'North America'}}).then(function(result) {
         var hbs_obj = {
-            name: req.user.name,
+            name: req.user.dataValues.username,
             result: result
         };
         console.log(hbs_obj.result[0].dataValues.continent)
@@ -107,7 +107,7 @@ router.get('/northAmerica', ensureAuthenticated, function(req, res) {
 router.get('/southAmerica', ensureAuthenticated, function(req, res) {
     db.Country.findAll({where: {continent: 'South America'}}).then(function(result) {
         var hbs_obj = {
-            name: req.user.name,
+            name: req.user.dataValues.username,
             result: result
         };
         res.render('countries', hbs_obj);
