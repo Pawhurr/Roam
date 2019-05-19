@@ -1,6 +1,6 @@
-USE countries_db;
+USE Countries_db;
 
-INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact, activity_name, activity_description, activity_media_url)
+INSERT INTO Countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact, activity_name, activity_description, activity_media_url)
 VALUES("South America",
 "Brazil",
 "The dry season in the south runs from March to November, whereas December to February sees the most rainfall.",
@@ -14,7 +14,7 @@ VALUES("South America",
 "https://s29581.pcdn.co/wp-content/uploads/2017/03/Iguazu-Falls-Brazil-with-Kids-Feature2.jpg"
 );
 
-INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact, activity_name, activity_description, activity_media_url)
+INSERT INTO Countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact, activity_name, activity_description, activity_media_url)
 VALUES("South America",
 "Peru",
 "The winter (May – September)",
@@ -28,7 +28,7 @@ VALUES("South America",
 "https://www.tripadvisor.com/Attraction_Review-g294318-d668949-Reviews-Santuario_Historico_de_Machu_Picchu-Machu_Picchu_Sacred_Valley_Cusco_Region.html#photos;aggregationId=101&albumid=101&filter=7&ff=61969125"
 );
 
-INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact, activity_name, activity_description, activity_media_url)
+INSERT INTO Countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact, activity_name, activity_description, activity_media_url)
 VALUES("South America",
 "Argentina",
 "April-June (fall) or from September-December (spring)",
@@ -42,14 +42,14 @@ VALUES("South America",
 "https://i2.wp.com/www.hachettebookgroup.com/wp-content/uploads/2019/01/Argentina_SectorFitzRoy_MichalJastrzebski-Dreamstime.jpg?resize=1080%2C1080&ssl=1"
 );
 
-INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact, activity_name, activity_description, activity_media_url)
+INSERT INTO Countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact, activity_name, activity_description, activity_media_url)
 VALUES("South America",
 "Bolivia",
 "May-Oct is the best time to visit Bolivia",
 "Salteñas, Pique macho, Anticucho, Chicharrón, Majadito, Trucha, Fricase.",
 "Roman Catholic (76%), Protestant (17%), Other religion (1%),  None (5%), no answer (1%)",
 "Bolivia officially the Plurinational State of Bolivia is a landlocked country located in western-central South America. After the fall of Tiwanaku empire, the many Aymara Lake Titicaca were conquered by the Inca empire.  Bolivia, like many of its neighbours, fought a long and painful war to gain independence from Spanish colonial rule all those years ago. After the 1st call for independence in 1809, 16 years of war followed before the establishment of the Bolivian Republic, named for the Liberator Simón Bolívar, on August 6, 1825.",
-"40% of all animal and plant life on the planet can be found in Bolivia. Bolivia has an annual rainfall of over 5 meters, making it one of the wettest countries on the planet. Bolivia has has over 30 official languages. Bolivia has (half of) the highest navigable lake in the world.",
+"40% of all animal and plant life on the planet can be found in Bolivia. Bolivia has an annual rainfall of over 5 meters, making it one of the wettest Countries on the planet. Bolivia has has over 30 official languages. Bolivia has (half of) the highest navigable lake in the world.",
 "In the Amazon, river dolphins are pink",
 "Yungas Road",
 "World's Most Dangerous Road, The Yungas Road is a cycle route about 60 km long which links the city of La Paz and the Yungas region of Bolivia. The route includes the Cotapata-Santa Bárbara section that replaced the old 'Road of Death', currently reserved exclusively for cycling activities. The road was built in the 1930. Not for the faint of heart!",
@@ -57,7 +57,7 @@ VALUES("South America",
 );
 
 
-INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact, activity_name, activity_description, activity_media_url)
+INSERT INTO Countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact, activity_name, activity_description, activity_media_url)
 VALUES("South America",
 "Ecuador",
 "On the coast, the dry season from late May and June",

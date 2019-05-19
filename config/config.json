@@ -2,8 +2,8 @@
   "development": {
     "username": "root",
     "password": "root",
-    "database": "countries_db",
-    "port": 3306,
+    "database": "project2",
+    "port": 8889,
     "host": "localhost",
     "dialect": "mysql"
   },
@@ -16,11 +16,12 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": "root",
-    "database": "countries_db",
-    "port": 8889,
-    "host": "localhost",
+    "use_env_variable": "JAWSDB_URL",
+    "username": "en9o73rtoal2mi05",
+    "password": "v3cg22eldoz86yyy",
+    "database": "yr9kkifn3z7kocyh",
+    "port": 3306,
+    "host": "s554ongw9quh1xjs.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   }
 }

@@ -1,6 +1,6 @@
-USE countries_db;
+USE Countries_db;
 
-INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact, activity_name, activity_description, activity_media_url)
+INSERT INTO Countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact, activity_name, activity_description, activity_media_url)
 VALUES("North America",
 "United States of America",
 "Spring and autumn are the best times to travel",
@@ -14,7 +14,7 @@ VALUES("North America",
 "https://youtu.be/LfAkCTlC2F0"
 );
 
-INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact, activity_name, activity_description, activity_media_url)
+INSERT INTO Countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact, activity_name, activity_description, activity_media_url)
 VALUES("North America",
 "Canada",
 "During Summer, End of spring to early fall(May-October)",
@@ -28,14 +28,14 @@ VALUES("North America",
 "https://www.tripadvisor.com/Attraction_Review-g154911-d184443-Reviews-Banff_Gondola-Banff_Banff_National_Park_Alberta.html#photos;aggregationId=&albumid=101&filter=7&ff=298613064"
 );
 
-INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact, activity_name, activity_description, activity_media_url)
+INSERT INTO Countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact, activity_name, activity_description, activity_media_url)
 VALUES("North America",
 "Mexico",
 "During the dry season between December and April",
 "Chilaquiles, Pozole, Tacos al pastor, Tostadas, Chiles en nogada, Elote, Enchiladas, Mole.",
 "Roman Catholicism (83%), Other Christian (10%), Other Religion (0.2%), No religion (5%), Unspecified (3%)",
 "The history of Mexico, a country in the southern portion of North America, covers a period of more than three millennia. First populated more than 13,000 years ago, the territory had complex indigenous civilizations before being conquered and colonized by the Spanish in the 16th century. From the stone cities of the Maya to the might of the Aztecs, from its conquest by Spain to its rise as a modern nation, Mexico boasts a rich history and cultural heritage spanning more than 10,000 years. This detailed timeline of Mexican history explores such themes as the early civilizations that left their mark on the region’s landscape and society, the 300-year period of colonial rule, the struggle for independence in the early 1800s and the country’s rebuilding in the 20th century.",
-"The official name of for Mexico is the United Mexican States. Mexico is the 11th most populated country in the world with around 117 million people (as of July 2012). Mexico is the 14th largest country by land area. There are 31 states in Mexico as well as the capital city (Mexico City). It's one of the most diverse countries in the world. Yucatan was named after a misunderstanding. The Day of the Dead is widely celebrated. Mexicans are working the longest average hours in the world. Chichen Itza is one of the seven wonders of the world. Mexico has 68 official languages. The Chihuahua dog has Mexican origins.",
+"The official name of for Mexico is the United Mexican States. Mexico is the 11th most populated country in the world with around 117 million people (as of July 2012). Mexico is the 14th largest country by land area. There are 31 states in Mexico as well as the capital city (Mexico City). It's one of the most diverse Countries in the world. Yucatan was named after a misunderstanding. The Day of the Dead is widely celebrated. Mexicans are working the longest average hours in the world. Chichen Itza is one of the seven wonders of the world. Mexico has 68 official languages. The Chihuahua dog has Mexican origins.",
 "Mexico City is built on a lake called Texcoco. The city is constantly sinking and has sunk more than nine meters in some areas over the last 100 years.",
 "Cenotes Dos Ojos",
 "Experience the Yucatan Peninsula’s beautiful Dos Ojos Park on this all-day excursion. Dive, swim, or snorkel, and spend the day exploring this flooded cave system’s clear waters. Search for amazing rock formations, admire sea corals, watch for birds, wildlife and butterflies, and enjoy a once-in-a-lifetime journey through one of the world’s longest underwater caves.",

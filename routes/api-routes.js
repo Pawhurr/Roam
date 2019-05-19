@@ -16,7 +16,7 @@ app.set('view engine', 'handlebars');
 
 
 router.get('/', ensureAuthenticated, function(req, res) {
-    res.render('index');
+    res.render('index', {name: req.user.name});
 });
 
 router.get('/login', function(req, res) {
@@ -37,11 +37,23 @@ router.post('/signup', function(req, res) {
     });
 });
 
+router.get('/profile', ensureAuthenticated, function(req, res) {
+    hbs_obj = {
+        name: req.user.dataValues.username,
+        email: req.user.dataValues.email,
+        createdAt: req.user.dataValues.createdAt,
+        updatedAt: req.user.dataValues.updatedAt,
+        isSuperUser: req.user.dataValues.isSuperUser
+    };
+    res.render('profile', hbs_obj);
+});
+
 //=============================================================//
 
 router.get('/australia', ensureAuthenticated, function(req, res) {
     db.Country.findAll({where: {continent: 'Australia'}}).then(function(result) {
         var hbs_obj = {
+            name: req.user.name,
             result: result
         };
         res.render('countries', hbs_obj);
@@ -51,6 +63,7 @@ router.get('/australia', ensureAuthenticated, function(req, res) {
 router.get('/asia', ensureAuthenticated, function(req, res) {
     db.Country.findAll({where: {continent: 'Asia'}}).then(function(result) {
         var hbs_obj = {
+            name: req.user.name,
             result: result
         };
         res.render('countries', hbs_obj);
@@ -60,6 +73,7 @@ router.get('/asia', ensureAuthenticated, function(req, res) {
 router.get('/europe', ensureAuthenticated, function(req, res) {
     db.Country.findAll({where: {continent: 'Europe'}}).then(function(result) {
         var hbs_obj = {
+            name: req.user.name,
             result: result
         };
         console.log(result);
@@ -69,7 +83,9 @@ router.get('/europe', ensureAuthenticated, function(req, res) {
 
 router.get('/africa', ensureAuthenticated, function(req, res) {
     db.Country.findAll({where: {continent: 'Africa'}}).then(function(result) {
+        console.log(req.user.dataValues.username)
         var hbs_obj = {
+            name: req.user.dataValues.username,
             result: result
         };
         res.render('countries', hbs_obj);
@@ -79,6 +95,7 @@ router.get('/africa', ensureAuthenticated, function(req, res) {
 router.get('/northAmerica', ensureAuthenticated, function(req, res) {
     db.Country.findAll({where: {continent: 'North America'}}).then(function(result) {
         var hbs_obj = {
+            name: req.user.name,
             result: result
         };
         console.log(hbs_obj.result[0].dataValues.continent)
@@ -90,6 +107,7 @@ router.get('/northAmerica', ensureAuthenticated, function(req, res) {
 router.get('/southAmerica', ensureAuthenticated, function(req, res) {
     db.Country.findAll({where: {continent: 'South America'}}).then(function(result) {
         var hbs_obj = {
+            name: req.user.name,
             result: result
         };
         res.render('countries', hbs_obj);
@@ -165,6 +183,28 @@ router.post('/edit-country', function(req, res) {
         res.json(result);
     });
 });
+
+
+//=============================================================//
+
+router.post('/pass-confirm', ensureAuthenticated, function(req, res) {
+    db.User.findOne({where:{username: req.user.dataValues.username}}).then(function(result) {
+        if (req.user.dataValues.password === req.body.password) {
+            console.log('THE PASSWORD MATCHES!!!')
+            res.json(result);
+        } else {
+            error = {
+                err: "You've entered an incorrect password!"
+            };
+            res.json(error);
+        }
+    });
+});
+
+//=============================================================//
+
+
+
 
 router.post('/clock', function(req, res) {
     var tz = req.body.tz;

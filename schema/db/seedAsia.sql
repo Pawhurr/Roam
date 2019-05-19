@@ -1,34 +1,34 @@
-USE countries_db;
+USE Countries_db;
 
-INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact, activity_name, activity_description, activity_media_url)
+INSERT INTO Countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact, activity_name, activity_description, activity_media_url)
 VALUES("Asia",
 "India",
 "October to March",
 "Biryani, Dosa, Butter chicken/Butter paneer, Tandoori meats, vegetables and bread, Samosas, Chaat, Daal Makhni",
 "79.8% Hinduism, 14.2% Islam, 2.3% Christianity, 1.7% Sikhism. others Zoroastrianism and Judaism",
 "India's history and culture is dynamic, spanning back to the beginning of human civilization. It begins with a mysterious culture along the Indus River and in farming communities in the southern lands of India. By the end of the fourth millennium BC, India had emerged as a region of highly developed civilization. Throughout its history. Especially important was the coming of Islam, brought from the northwest by Arab, Turkish, Persian, and other raiders beginning early in the 8th century CE; by the 13th century much of the subcontinent was under Muslim rule. Only after the arrival of the Portuguese navigator Vasco da Gama in 1498 and the subsequent establishment of European maritime supremacy in the region did India become exposed to major external influences arriving by the sea, later ruled by British Empire.",
-"India remains one of the most ethnically diverse countries in the world. Apart from its many religions and sects, India is home to innumerable castes and tribes, as well as to more than a dozen major and hundreds of minor linguistic groups from several language families unrelated to one another. A floating post office. Kumbh Mela gathering visible from space. The wettest inhabited place in the world. Bandra Worli Sealink has steel wires equal to the earth's circumference. The highest cricket ground in the world. Shampooing is an Indian concept. The Indian national Kabaddi team has won all World Cups.",
+"India remains one of the most ethnically diverse Countries in the world. Apart from its many religions and sects, India is home to innumerable castes and tribes, as well as to more than a dozen major and hundreds of minor linguistic groups from several language families unrelated to one another. A floating post office. Kumbh Mela gathering visible from space. The wettest inhabited place in the world. Bandra Worli Sealink has steel wires equal to the earth's circumference. The highest cricket ground in the world. Shampooing is an Indian concept. The Indian national Kabaddi team has won all World Cups.",
 "Home to the second largest English speaking population in the world.",
 "Munnar: your cup of chai",
 "The surrounding scenery of Munnar is not to be missed. Rent yourself a bike and zoom through plantations as your senses get aroused by the sweet smell of fresh tea.",
 "https://drwyjmricaxm7.cloudfront.net/blog/wp-content/uploads/2011/12/The-greenery-of-Munnar-in-India.jpg"
 );
 
-INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact, activity_name, activity_description, activity_media_url)
+INSERT INTO Countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact, activity_name, activity_description, activity_media_url)
 VALUES("Asia",
 "China",
 "spring (April–May) and autumn (September–October)",
 "Spinach Noodles (bō cài miàn), Fried Mashi (chǎo má shi), BBQ Meat (kǎo ròu), Cold Vegetable Dish (liáng cài), Stinky Tofu (chòu dòu fu), Dumplings (jiǎo zi), Mutton Stew (yáng ròu pào mó), Chinese Hamburger (ròu jiā mó)",
 " Non-religious / Chinese folk religion (including local cults to deities and ancestors, Confucianism, Taoism, Chinese Buddhism) (73.56%), Buddhism (15.87%), Other religions, including folk salvationism and Taoist sects(7.60%), Christianity(2.53%), Islam(0.45%)",
 "The history of China (Over 3,000 Years of Civilization) China is one of the world's four ancient civilizations, and the written history of China dates back to the Shang Dynasty (c. 1600–1046 BC), over 3,000 years ago. Pre-1600 BC, China is charted mainly by legends and prebrief_historic evidence. The ancient China era was c. 1600–221 BC. The imperial era was 221 BC – 1912 AD, from China's unification under Qin rule until the end of the Qing Dynasty, the Republic of China era was from 1912 until 1949, and the modern China era from 1949 until the present day.",
-"China, country of East Asia. It is the largest of all Asian countries and has the largest population of any country in the world. Occupying nearly the entire East Asian landmass, it occupies approximately one-fourteenth of the land area of Earth. Among the major countries of the world, China is surpassed in area by only Russia and Canada, and it is almost as large as the whole of Europe. The Sunrise in parts of China can be as late as 10 AM. The Elderly Rights Law. China has the world's largest economy. The Chinese New Year celebration lasts for 15 days. Fortune cookies are not a traditional Chinese custom.",
+"China, country of East Asia. It is the largest of all Asian Countries and has the largest population of any country in the world. Occupying nearly the entire East Asian landmass, it occupies approximately one-fourteenth of the land area of Earth. Among the major Countries of the world, China is surpassed in area by only Russia and Canada, and it is almost as large as the whole of Europe. The Sunrise in parts of China can be as late as 10 AM. The Elderly Rights Law. China has the world's largest economy. The Chinese New Year celebration lasts for 15 days. Fortune cookies are not a traditional Chinese custom.",
 "Football (soccer) was invented here.",
 "Boating On River Li",
 "The 83 km long Li River is clean enough for a boating trip or just a swim for those who are looking for fun things to do in China. You can travel on the cruise boat for a comfortable boating experience, choose to kayak on the Li River from Yangshuo, or can also enjoy bamboo rafting for a floating experience as the scenery is worth the visit.",
 "https://www.easytourchina.com/images/Photo/top-10-destinations-in-china-for-honeymooners/p852_d20120813171247.jpg"
 );
 
-INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact, activity_name, activity_description, activity_media_url)
+INSERT INTO Countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact, activity_name, activity_description, activity_media_url)
 VALUES("Asia",
 "Japan",
 "Late spring (March to May) and late autumn (September to November)",
@@ -42,7 +42,7 @@ VALUES("Asia",
 "https://cdn.buttercms.com/COr9jy3FTLaMQuoDPDAz"
 );
 
-INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact, activity_name, activity_description, activity_media_url)
+INSERT INTO Countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact, activity_name, activity_description, activity_media_url)
 VALUES("Asia",
 "United Arab Emirates",
 "April and May or from September to October",
@@ -56,7 +56,7 @@ VALUES("Asia",
 "https://i.dailymail.co.uk/i/pix/2015/10/30/12/2DF0A81000000578-3296523-image-a-8_1446208302329.jpg"
 );
 
-INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact, activity_name, activity_description, activity_media_url)
+INSERT INTO Countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact, activity_name, activity_description, activity_media_url)
 VALUES("Asia",
 "Thailand",
 "During the cool and dry season between November and early April",
