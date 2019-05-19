@@ -36,6 +36,10 @@
             <div class="col-lg-8 setting-display-col">
                 <h1 id="welcome-user">{{name}}</h1>
                 
+                <div id="settings-modal">
+                    <h5 id="success-msg"></h5>
+                </div>
+
                 <div id="settings-display">
 
                     <form id="password-confirm">
@@ -46,8 +50,11 @@
                     </form>
 
                     <form id="password-change">
+                        <label id="pass-update-err"></label>
                         <label>What will be your new password?</label>
                             <input type="password" id="pass-update-input">
+                        <label>Please confirm your new password</label>
+                            <input type="password" id="pass-update-confirm">
                             <input type="submit" id="pass-update-submit" class="submit-btn" value="Submit">
                     </form>
 

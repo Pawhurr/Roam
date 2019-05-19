@@ -64,3 +64,7 @@ form input {
     background: rgb(97, 226, 121, 0.7)
     ;
 }
+
+#password-change, #email-confirm, #email-change {
+    display: none;
+}

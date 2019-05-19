@@ -190,11 +190,32 @@ router.post('/edit-country', function(req, res) {
 router.post('/pass-confirm', ensureAuthenticated, function(req, res) {
     db.User.findOne({where:{username: req.user.dataValues.username}}).then(function(result) {
         if (req.user.dataValues.password === req.body.password) {
-            console.log('THE PASSWORD MATCHES!!!')
-            res.json(result);
+            console.log('THE PASSWORD MATCHES!!!');
+            success = {
+                valid: 'Your password you entered is valid'
+            };
+            res.json(success);
         } else {
             error = {
                 err: "You've entered an incorrect password!"
+            };
+            res.json(error);
+        }
+    });
+});
+
+router.post('/pass-update', ensureAuthenticated, function(req, res) {
+    db.User.update({
+        password: req.body.password
+    },{where:{username: req.user.dataValues.username}}).then(function(result) {
+        if (res[0] === 1) {
+            success = {
+                updated: "Your password has successfully been updated!"
+            };
+            res.json(success);
+        } else {
+            error = {
+                err: "Something went wrong :("
             };
             res.json(error);
         }

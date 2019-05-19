@@ -38,8 +38,9 @@ module.exports = (app) => {
   });
   passport.use(new LocalStrategy({usernameField: 'username', passwordField: 'password'},(username, password, done) => {
     const errorMsg = 'Invalid username or password';
-
-    db.User.findOne({username: username})
+    console.log("FIRE")
+    console.log(username);
+    db.User.findOne({where:{username: username}})
       .then(function(user) {
         console.log(user);
         if (!user) {
