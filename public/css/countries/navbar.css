@@ -164,7 +164,7 @@ a:hover, button:hover, .btn:not(:disabled):not(:disabled), button:not(:disabled)
     margin: 0 auto;
 }
 
-.homeSpan, .aboutSpan, .portSpan {
+.userSpan, .homeSpan, .aboutSpan, .portSpan {
     display: block;
     height: 1px;
     width: 70%;
@@ -174,6 +174,14 @@ a:hover, button:hover, .btn:not(:disabled):not(:disabled), button:not(:disabled)
     animation: navAnim2 1s forwards;
 }
 
+.user {
+    margin-bottom: 80px;
+}
+
+.userSpan.navTrigger {
+    animation: navAnim1 1s forwards;
+    transition-timing-function: ease-out;
+}
 .homeSpan.navTrigger {
     animation: navAnim1 1s forwards;
     transition-timing-function: ease-out;
@@ -211,12 +219,12 @@ a:hover, button:hover, .btn:not(:disabled):not(:disabled), button:not(:disabled)
     padding: 10px 0px;
 }
 
-#home-option, #home-option:visited, #about-us, #about-us:visited, #portfolio, #portfolio:visited {
+#user-profile, #user-profile:visited, #home-option, #home-option:visited, #about-us, #about-us:visited, #portfolio, #portfolio:visited {
     font-size: 24px;
     color: black;
 }
 
-#home-option:hover, #about-us:hover, #portfolio:hover {
+#user-profile:hover, #home-option:hover, #about-us:hover, #portfolio:hover {
     color: darkgray;
     text-decoration: none;
 }

@@ -1,0 +1,75 @@
+
+<link rel="stylesheet" href="css/profile/profile.css">
+<link rel="stylesheet" href="css/profile/cursor.css">
+
+
+<title>{{name}}</title>
+
+</head>
+
+<body>
+
+    <div class="cursor"></div>
+    <div class="cursor-clone"></div>
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-lg-2">
+                <div class="row">
+                    <div class="col-lg-12 settings-options-top">
+
+                        <div id="settings-options-div">
+
+                            <h6>Change password</h6>
+                            <h6>Change email</h6>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 settings-options-bottom"></div>
+                </div>
+            </div>
+
+            <div class="col-lg-8 setting-display-col">
+                <h1 id="welcome-user">{{name}}</h1>
+                
+                <div id="settings-display">
+
+                    <form id="password-confirm">
+                        <label id="pass-confirm-err"></label>
+                        <label>Please confirm your password</label>
+                            <input type="password" id="pass-confirm-input" placeholder="Confirm password here...">
+                            <input type="submit" id="pass-confirm-submit" class="submit-btn" value="Submit">
+                    </form>
+
+                    <form id="password-change">
+                        <label>What will be your new password?</label>
+                            <input type="password" id="pass-update-input">
+                            <input type="submit" id="pass-update-submit" class="submit-btn" value="Submit">
+                    </form>
+
+                    <form id="email-confirm">
+                        <label>Please confirm password first</label>
+                            <input type="password" id="email-confirm-input" placeholder="Please confirm password here...">
+                            <input type="submit" id="email-confirm-submit" class="submit-btn" value="Submit">
+                    </form>
+
+                    <form id="email-change">
+                        <label>What will be your new email?</label>
+                            <input type="email" id="email-update-input" placeholder="{{email}}">
+                            <input type="submit" id="email-update-submit" class="submit-btn" value="Submit">
+                    </form>
+
+                </div>
+            </div>
+
+            <div class="col-lg-2"></div>
+        </div>
+    </div>
+
+<script src="js/cursor.js"></script>
+<script src="js/profiles/profileForms.js"></script>
+</body>

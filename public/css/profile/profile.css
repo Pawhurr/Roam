@@ -1,0 +1,66 @@
+html {
+    cursor: none;
+}
+
+body {
+    background-image: url('../../imgs/profile/john-t.png');
+    background-size: cover;
+}
+
+.settings-options-top, .settings-options-bottom {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+}
+
+#settings-options-div h6 {
+    font-weight: bold;
+    margin: 20px 0px;
+}
+
+#welcome-user {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.col-lg-8 {
+    padding: 0px 40px;
+}
+
+#settings-display {
+    background: rgb(0, 0, 0, 0.6);
+    border: none;
+    border-radius: 5px;
+    margin: 40px 0px;
+    padding: 20px;
+}
+
+#settings-display form {
+    text-align: center;
+    margin: 10px;
+}
+
+form label, input {
+    display: block;
+    margin: 20px auto;
+}
+
+form label {
+    color: white;
+    font-weight: bold;
+}
+
+form input {
+    color: black;
+    text-align: center;
+    border: none;
+    border-radius: 2px;
+    padding: 5px;
+    font-weight: bold;
+}
+
+#pass-confirm-submit, #pass-update-submit, #email-confirm-submit, #email-update-submit {
+    padding: 5px 10px;
+    background: rgb(97, 226, 121, 0.7)
+    ;
+}

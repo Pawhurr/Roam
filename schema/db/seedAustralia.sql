@@ -1,20 +1,20 @@
-USE countries_db;
+USE Countries_db;
 
-INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact, activity_name, activity_description, activity_media_url)
+INSERT INTO Countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact, activity_name, activity_description, activity_media_url)
 VALUES("Australia", 
 "Australia",
 "During the cool and dry season between November and early April",
 "Barbequed snags (aka sausages), Lamingtons, A burger with 'the lot', Chicken parmigiana, Pavlova, Meat pies, Barramundi, Vegemite on Toast.",
 "52.1% Christian, 22.6% Catholic, 13.3% Anglican, 8.2% other religion.",
 "The history of Australia is the history of the area and people of the Commonwealth of Australia with its preceding Indigenous and colonial societies. Aboriginal Australians arrived on the Australian mainland by sea from Maritime Southeast Asia between 40,000 and 70,000 years ago. The artistic, musical and spiritual traditions they established are among the longest surviving such traditions in human history. Slowly, more and more of the settlers were not convicts. Sometimes you will still hear people refer to Australia as being started by a penal colony. Six colonies were formed in Australia: New South Wales, 1788; Tasmania, 1825; Western Australia, 1829; South Australia, 1836; Victoria, 1851; and Queensland, 1859.",
-"Australia, the smallest continent and one of the largest countries on Earth, lying between the Pacific and Indian oceans in the Southern Hemisphere. Australia has a range of different landscapes, including urban areas, mountain ranges, deserts and rain forests. Australia is home to a variety of unique animals, including the koala, kangaroo, emu, kookaburra and platypus.The Australian Alps get more snow than the Swiss Alps. Tasmania has the cleanest air in the world. The Great Barrier Reef is the largest eco-system in the world. Australia has over 60 separate wine regions. Fraser Island is the largest sand island in the world.",
+"Australia, the smallest continent and one of the largest Countries on Earth, lying between the Pacific and Indian oceans in the Southern Hemisphere. Australia has a range of different landscapes, including urban areas, mountain ranges, deserts and rain forests. Australia is home to a variety of unique animals, including the koala, kangaroo, emu, kookaburra and platypus.The Australian Alps get more snow than the Swiss Alps. Tasmania has the cleanest air in the world. The Great Barrier Reef is the largest eco-system in the world. Australia has over 60 separate wine regions. Fraser Island is the largest sand island in the world.",
 " 90% of Australians live on the coast",
 "Royal Botanic Gardens Victoria",
 "Visit Melbourne's inner-city oasis. Over 10,000 plant species from around the world are presented in a kaleidoscope of colour and texture. Sweeping lawns, tranquil lakes and majestic trees are home to an amazing range of wildlife.",
 "https://www.tripadvisor.com/Attraction_Review-g255100-d256846-Reviews-Royal_Botanic_Gardens_Victoria-Melbourne_Victoria.html#photos;aggregationId=101&albumid=101&filter=7&ff=367920609"
 );
 
-INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact, activity_name, activity_description, activity_media_url)
+INSERT INTO Countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact, activity_name, activity_description, activity_media_url)
 VALUES("Australia", 
 "New Zealand",
 "Summer - December to February",

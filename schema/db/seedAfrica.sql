@@ -1,20 +1,20 @@
-USE countries_db;
+USE Countries_db;
 
-INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact, activity_name, activity_description, activity_media_url)
+INSERT INTO Countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact, activity_name, activity_description, activity_media_url)
 VALUES("Africa",
 "Morocco",
 "spring (mid-March to May) and Autumn (September to October)",
 "Couscous, Zaalouk, Fish Chermoula, Harira, Pastilla (Chicken or Pigeon Pie), Khobz, Steamed Sheep Head, Spicy Sardines.",
 "Islam (93%), Christianity, Bahá'í community, Jews.",
 "The recorded history of Morocco begins with the Phoenician colonization of the Moroccan coast between the 8th and 6th centuries BCE, although the area was inhabited by indigenous Berbers for some two thousand years before that. Half a century later, the Moroccan state was established by the Idrisid dynasty.",
-"Morocco is one of the oldest recognized countries in Africa, with its first declaration of sovereignty dating back to the year 788. The city of Fez is a UNESCO world heritage site. Visitors from the UK, EU, Australia, Canada, USA, and Japan are allowed to stay in Morocco for up to three months without a Visa. Morocco encompasses desert (Sahara), mountainous (Atlas, Rif) and coastal (Atlantic, Mediterranean) regions.",
+"Morocco is one of the oldest recognized Countries in Africa, with its first declaration of sovereignty dating back to the year 788. The city of Fez is a UNESCO world heritage site. Visitors from the UK, EU, Australia, Canada, USA, and Japan are allowed to stay in Morocco for up to three months without a Visa. Morocco encompasses desert (Sahara), mountainous (Atlas, Rif) and coastal (Atlantic, Mediterranean) regions.",
 "The Karawan mosque in Fez is the oldest university in the world built by Fatima al-Fihr",
 "Jardin Majorelle",
 "The Jardin Majorelle in Marrakech is one of the most visited sites in Morocco. It took French painter Jacques Majorelle (1886-1962) forty years of passion and dedication to create this enchanting garden in the heart of the 'Ochre City'.",
 "http://jardinmajorelle.com/ang/"
 );
 
-INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact, activity_name, activity_description, activity_media_url)
+INSERT INTO Countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact, activity_name, activity_description, activity_media_url)
 VALUES("Africa",
 "South Africa",
 "Summer months between November and February, For whale watching is between July and November.",
@@ -28,7 +28,7 @@ VALUES("Africa",
 "https://www.tablemountain.net/"
 );
 
-INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact, activity_name, activity_description, activity_media_url)
+INSERT INTO Countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact, activity_name, activity_description, activity_media_url)
 VALUES("Africa",
 "Egypt",
 "Best time to visit is from October to April.",
@@ -42,7 +42,7 @@ VALUES("Africa",
 "http://www.mahmya.com/"
 );
 
-INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact, activity_name, activity_description, activity_media_url)
+INSERT INTO Countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact, activity_name, activity_description, activity_media_url)
 VALUES("Africa",
 "Tanzania",
 "Dry season from late June to October. Wildebeest migration in Serengeti is June and July and calving is late January to February.",
@@ -56,7 +56,7 @@ VALUES("Africa",
 "http://cheetahsrock.org/"
 );
 
-INSERT INTO countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact, activity_name, activity_description, activity_media_url)
+INSERT INTO Countries (continent, country, bty, foods, religions, brief_history, facts, fun_fact, activity_name, activity_description, activity_media_url)
 VALUES("Africa",
 "Kenya",
 "Dry season from late June to October. The wildebeest migration in Masai Mara in July and remains until October.",

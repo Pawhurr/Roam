@@ -24,6 +24,14 @@ $(document).on('click', function() {
     }, 500);
 });
 
+$('#user-profile').on('pointerover', function() {
+    $('.userSpan').toggleClass('navTrigger');
+})
+
+$('#user-profile').on('pointerout', function() {
+    $('.userSpan').toggleClass('navTrigger');
+})
+
 $('#home-option').on('pointerover', function() {
     $('.homeSpan').toggleClass('navTrigger');
 })
