@@ -3,8 +3,9 @@ html {
 }
 
 body {
-    background-image: url('../../imgs/profile/john-t.png');
+    background-image: url('../../imgs/profile/roland-losslein.png');
     background-size: cover;
+    font-family: 'Questrial', sans-serif;
 }
 
 .settings-options-top, .settings-options-bottom {
@@ -14,8 +15,16 @@ body {
 }
 
 #settings-options-div h6 {
+    z-index: 6;
     font-weight: bold;
+    font-size: 20px;
     margin: 20px 0px;
+    color: white;
+    text-shadow: 0px 0px 10px rgb(0, 0, 0, 0.6)
+}
+
+#settings-options-div h6:hover {
+    text-shadow: 0px 0px 30px rgb(0, 0, 0, 1)
 }
 
 #welcome-user {
@@ -28,11 +37,13 @@ body {
 }
 
 #settings-display {
+    z-index: 5;
     background: rgb(0, 0, 0, 0.6);
     border: none;
     border-radius: 5px;
     margin: 40px 0px;
     padding: 20px;
+    font-size: 20px;
 }
 
 #email-display-header, #first-joined-header,#email-display, #first-joined {
@@ -76,6 +87,7 @@ form input {
 }
 
 #settings-modal {
+    z-index: 10;
     display: none;
     position: fixed;
     top: 50%;

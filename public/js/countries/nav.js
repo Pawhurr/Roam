@@ -103,7 +103,7 @@ $('.toggle').on('click', function() {
        
         $('.country-imgs').animate({
             opacity: '0'
-        }, 00);
+        }, 1000);
 
         $('.modal').animate({
             left: '-200%'
