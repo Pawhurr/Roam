@@ -54,11 +54,13 @@ body, html {
 }
 
 .info {
+  height: 100vh;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  overflow-y: scroll;
 }
 
 .bullets {
@@ -72,6 +74,4 @@ p {
 .actImg {
   width: 100%;
 }
-
-
 
