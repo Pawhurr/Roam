@@ -164,7 +164,7 @@ a:hover, button:hover, .btn:not(:disabled):not(:disabled), button:not(:disabled)
     margin: 0 auto;
 }
 
-.userSpan, .homeSpan, .aboutSpan, .portSpan {
+.adminSpan, .userSpan, .homeSpan, .aboutSpan, .portSpan {
     display: block;
     height: 1px;
     width: 70%;
@@ -178,6 +178,10 @@ a:hover, button:hover, .btn:not(:disabled):not(:disabled), button:not(:disabled)
     margin-bottom: 80px;
 }
 
+.adminSpan.navTrigger {
+    animation: navAnim1 1s forwards;
+    transition-timing-function: ease-out;
+}
 .userSpan.navTrigger {
     animation: navAnim1 1s forwards;
     transition-timing-function: ease-out;
@@ -219,12 +223,12 @@ a:hover, button:hover, .btn:not(:disabled):not(:disabled), button:not(:disabled)
     padding: 10px 0px;
 }
 
-#user-profile, #user-profile:visited, #home-option, #home-option:visited, #about-us, #about-us:visited, #portfolio, #portfolio:visited {
+#admin-port, #admin-port:visited, #user-profile, #user-profile:visited, #home-option, #home-option:visited, #about-us, #about-us:visited, #portfolio, #portfolio:visited {
     font-size: 24px;
     color: black;
 }
 
-#user-profile:hover, #home-option:hover, #about-us:hover, #portfolio:hover {
+#admin-port:hover, #user-profile:hover, #home-option:hover, #about-us:hover, #portfolio:hover {
     color: darkgray;
     text-decoration: none;
 }
