@@ -1,7 +1,9 @@
-
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Anton|Russo+One" rel="stylesheet">
 <link rel="stylesheet" href="css/admin/country-builder.css">
 <link rel="stylesheet" href="css/admin/country-editor.css">
+<link rel="stylesheet" href="css/cursor.css">
+<link rel="stylesheet" href="css/nav.css">
 
 <title>Admin</title>
 
@@ -9,13 +11,45 @@
 
 <body>
 
-    <nav>
+    <div class="cursor"></div>
+    <div class="cursor-clone"></div>
+
+    <div class="toggle">
+        <span class="span"></span>
+        <span class="span"></span>
+        <span></span>
+    </div>
+
+    <div id="nav-options-col">
+
+        <div id="nav-modal">
+
+            <span class="homeSpan"></span>
+                <a id="home-option" href="/">Home</a>
+            <span class="homeSpan aboutSpan"></span>
+                <a id="about-option" href="/about">About</a>
+            <span class="portSpan aboutSpan"></span>
+                <a id="portfolio" href="/portfolio">Portfolio</a>
+            <span class="portSpan"></span>
+
+        </div>
+
+    </div>
+
+    <div id="admin-msg-modal">
+
+        <p id="close-btn-wrapper"><i class="close-btn fas fa-2x fa-times"></i></p>
+        <h5 id="modal-msg"></h5>
+
+    </div>
+
+
+    <nav id="admin-control-options">
         <ul>
             
-            <li><a href="/"><span class="nav" id="home">Home</span></a></li>
-            <li><span class="nav" id="builder">Country Builder</span></li>
-            <li><span class="nav" id="country-editor">Country Editor</span></li>
-            <li><span class="nav" id="user-editor">User Editor</span></li>
+            <li class="nav"><span class="nav" id="builder">Country Builder</span></li>
+            <li class="nav"><span class="nav" id="country-editor">Country Editor</span></li>
+            <li class="nav"><span class="nav" id="user-editor">User Editor</span></li>
             
         </ul>
     </nav>
@@ -64,6 +98,15 @@
                                 <label>What're some fun facts of the Country?</label>
                                     <textarea class="input" id="fun_fact"  rows="5" cols="50"></textarea>
 
+                                <label>What's a fun activity to do?</label>
+                                    <textarea class="input" id="activity_name"  rows="5" cols="50"></textarea>
+                                
+                                <label>A description of the activity...</label>
+                                    <textarea class="input" id="activity_description"  rows="5" cols="50"></textarea>
+                                
+                                <label>The URL to a photo the activity...</label>
+                                    <textarea class="input" id="activity_media_url"  rows="5" cols="50"></textarea>
+
                                 <input type="submit" id="country-submit" value="Submit">
                             </form>
 
@@ -73,7 +116,7 @@
 
                             <form id="country-selector">
                                 
-                                <label>Which continent will you be adding to?</label>
+                                <label>Which country will you be editing?</label>
                                     <select id="editor-select">
                                         {{#each result}}
                                             <option name="{{country}}">{{country}}</option>
@@ -89,22 +132,31 @@
                                 <h1 id="country-insert"></h1>
 
                                 <label>Best Time of Year to Visit</label>
-                                    <textarea rows="5" cols="60" form="country-editor-form" id="bty"></textarea>
+                                    <textarea rows="5" cols="60" form="country-editor-form" id="edit-bty"></textarea>
 
                                 <label>Cultural Foods</label>
-                                    <textarea rows="5" cols="60" form="country-editor-form" id="foods"></textarea>
+                                    <textarea rows="5" cols="60" form="country-editor-form" id="edit-foods"></textarea>
                                 
                                 <label>What're the religions of the Country to be added?</label>
-                                    <textarea rows="5" cols="60" form="country-editor-form" id="religions"></textarea>
+                                    <textarea rows="5" cols="60" form="country-editor-form" id="edit-religions"></textarea>
 
                                 <label>Brief history of the Country to be added.</label>
-                                    <textarea rows="10" cols="60" form="country-editor-form" id="brief_history"></textarea>
+                                    <textarea rows="10" cols="60" form="country-editor-form" id="edit-brief_history"></textarea>
 
                                 <label>What're some facts of the Country to be added?</label>
-                                    <textarea rows="7" cols="60" form="country-editor-form" id="facts"></textarea>
+                                    <textarea rows="7" cols="60" form="country-editor-form" id="edit-facts"></textarea>
 
                                 <label>What're some fun facts of the Country to be added?</label>
-                                    <textarea rows="7" cols="60" form="country-editor-form" id="fun_fact"></textarea>
+                                    <textarea rows="7" cols="60" form="country-editor-form" id="edit-fun_fact"></textarea>
+
+                                <label>What's a fun activity to do?</label>
+                                    <textarea rows="7" cols="60" form="country-editor-form" id="edit-activity_name"></textarea>
+
+                                <label>A description of the activity...</label>
+                                    <textarea rows="7" cols="60" form="country-editor-form" id="edit-activity_description"></textarea>
+
+                                <label>The URL to a photo the activity...</label>
+                                    <textarea rows="7" cols="60" form="country-editor-form" id="edit-activity_media_url"></textarea>
 
                                 <input type="submit" value="Submit" id="country-editor-submit">
 
@@ -120,4 +172,6 @@
     </div>
 
     <script src="js/admin/admin-control.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/cursor.js"></script>
 </body>

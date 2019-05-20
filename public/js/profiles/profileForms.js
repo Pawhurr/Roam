@@ -141,6 +141,7 @@ $('#email-change').on('submit', function(event) {
             $('#email-confirm').css({
                 display: 'block'
             });
+            $('.close-btn').toggleClass('refresh-btn');
         }
     });
 });
