@@ -130,3 +130,9 @@ $('.toggle').on('click', function() {
     $('.modal').toggleClass('active');
 });
 
+$('.country-img-scroll').on('click', function() {
+    $('.modal').animate({
+        left: '-200%'
+    },500, function() {});
+    $('.toggle').toggleClass('active');
+});

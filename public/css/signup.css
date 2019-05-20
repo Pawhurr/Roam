@@ -53,6 +53,11 @@ body {
     margin-bottom: 10px;
 }
 
+#helper {
+    font-size: 12px;
+    color: white;
+}
+
 #signup-modal {
     z-index: 10;
     display: none;
