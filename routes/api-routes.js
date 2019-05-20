@@ -28,6 +28,15 @@ router.get('/about', ensureAuthenticated, function(req, res) {
     res.render('about', hbs_obj);
 });
 
+router.get('/portfolio', ensureAuthenticated, function(req, res) {
+    hbs_obj = {
+        name: req.user.dataValues.username,
+        isSuperUser: req.user.dataValues.isSuperUser
+    };
+
+    res.render('portfolio', hbs_obj);
+});
+
 router.get('/login', function(req, res) {
     res.render('login');
 });
