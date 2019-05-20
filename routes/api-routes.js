@@ -132,7 +132,7 @@ router.get('/northAmerica', ensureAuthenticated, function(req, res) {
             name: req.user.dataValues.username,
             result: result
         };
-        console.log(hbs_obj.result[0].dataValues.continent)
+        console.log(result);
 
         res.render('countries', hbs_obj);
     });
