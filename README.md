@@ -20,7 +20,7 @@ The creative idea behind was to open a world of exploration and wonder with beau
 
 ## Authors
 
-Heath Banner
-Paul Whurr
-Ruchita Gandhe
-Kathleen McNamara
+- Heath Banner
+- Paul Whurr
+- Ruchita Gandhe
+- Kathleen McNamara
