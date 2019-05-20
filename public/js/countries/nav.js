@@ -32,11 +32,11 @@ $('#user-profile').on('pointerout', function() {
     $('.userSpan').toggleClass('navTrigger');
 })
 
-$('#admin-port').on('pointerover', function() {
+$('#adminPort').on('pointerover', function() {
     $('.adminSpan').toggleClass('navTrigger');
 })
 
-$('#admin-port').on('pointerout', function() {
+$('#adminPort').on('pointerout', function() {
     $('.adminSpan').toggleClass('navTrigger');
 })
 
