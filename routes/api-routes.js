@@ -19,6 +19,15 @@ router.get('/', ensureAuthenticated, function(req, res) {
     res.render('index', {name: req.user.name});
 });
 
+router.get('/about', ensureAuthenticated, function(req, res) {
+    hbs_obj = {
+        name: req.user.dataValues.username,
+        isSuperUser: req.user.dataValues.isSuperUser
+    };
+
+    res.render('about', hbs_obj);
+});
+
 router.get('/login', function(req, res) {
     res.render('login');
 });

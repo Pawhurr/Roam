@@ -1,0 +1,33 @@
+
+body {
+    background-image: url('../../imgs/john-t.png')
+}
+
+#about-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background: rgb(0, 0, 0, 0.6);
+    border-radius: 5px;
+    color: white;
+    border: 5px;
+    width: 70%;
+    padding: 20px;
+    text-align: center;
+}
+
+#about-content h1 {
+    margin-bottom: 10px;
+}
+
+#about-content span {
+    display: block;
+    margin: 0 auto;
+    height: 1px;
+    width: 30%;
+    background: white;
+    margin-bottom: 10px;
+
+}
