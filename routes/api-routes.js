@@ -24,7 +24,6 @@ router.get('/about', ensureAuthenticated, function(req, res) {
         name: req.user.dataValues.username,
         isSuperUser: req.user.dataValues.isSuperUser
     };
-
     res.render('about', hbs_obj);
 });
 
@@ -37,12 +36,25 @@ router.get('/signup', function(req, res) {
 });
 
 router.post('/signup', function(req, res) {
-    db.User.create({
-        username: req.body.username,
-        email: req.body.email,
-        password: req.body.password
-    }).then(function(result) {
-        res.render('login');
+    db.User.findOne({where:{username: req.body.username}}).then(function(result) {
+        console.log(result);
+        if (!result) {
+        db.User.create({
+            username: req.body.username,
+            email: req.body.email,
+            password: req.body.password
+            }).then(function(result) {
+                success = {
+                    signup: "You've successfully created a profile!"
+                };
+                res.json(success);
+            });
+        } else {
+            error = {
+                err: 'This username is already taken!'
+            };
+            res.json(error);
+        }
     });
 });
 
