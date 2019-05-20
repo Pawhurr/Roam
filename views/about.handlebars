@@ -1,0 +1,77 @@
+<link rel="stylesheet" href="css/about/about.css">
+<link rel="stylesheet" href="css/cursor.css">
+<link rel="stylesheet" href="css/nav.css">
+
+
+<title>About</title>
+</head>
+
+<body>
+
+    <div class="cursor"></div>
+    <div class="cursor-clone"></div>
+
+    <div class="toggle">
+        <span class="span"></span>
+        <span class="span"></span>
+        <span></span>
+    </div>
+
+    <div id="nav-options-col">
+
+        <div id="nav-modal">
+
+            {{#if isSuperUser}}
+            <span class="adminSpan"></span>
+            <a class="animTarget" id="adminPort" href="/admin">Admin Port</a>
+            <span class="adminSpan user"></span>
+            {{/if}}
+
+            <span class="userSpan"></span>
+                <a class="animTarget" id="user-profile" href="/profile">{{name}}</a>
+            <span class="userSpan user"></span>
+
+
+            <span class="homeSpan"></span>
+            <a id="home-option" href="/">Home</a>
+            <span class="homeSpan aboutSpan"></span>
+            <a id="about-option" href="/about">About</a>
+            <span class="portSpan aboutSpan"></span>
+            <a id="portfolio" href="/portfolio">Portfolio</a>
+            <span class="portSpan"></span>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8">
+                <div id="about-content">
+                    <h1>About Roam Travel App</h1>
+
+                    <span></span>
+
+                    <p>Roam is a travel application for world explorers. It is a platform which brings a travel
+                        enthusiast and global destinations together. Roam allows our explorer to navigate all around the
+                        world going through continents and each continent leading to it’s most popular countries for
+                        travel. </p>
+
+                    <p>The application is not only mesmerizes with its beautiful visuals from all over the world but
+                        also feeds a curious mind by providing an array of countries each presenting it’s uniqueness.
+                        Every country displays what it offers & appeals to visitors. Roam is a great tool for explorers
+                        and travelers to find a destination for their future travels adventures.</p>
+                </div>
+            </div>
+            <div class="col-lg-2"></div>
+        </div>
+    </div>
+
+
+    <script src="js/cursor.js"></script>
+    <script src="js/nav.js"></script>
+
+</body>

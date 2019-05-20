@@ -19,6 +19,15 @@ router.get('/', ensureAuthenticated, function(req, res) {
     res.render('index', {name: req.user.name});
 });
 
+router.get('/about', ensureAuthenticated, function(req, res) {
+    hbs_obj = {
+        name: req.user.dataValues.username,
+        isSuperUser: req.user.dataValues.isSuperUser
+    };
+
+    res.render('about', hbs_obj);
+});
+
 router.get('/login', function(req, res) {
     res.render('login');
 });
@@ -86,9 +95,10 @@ router.get('/europe', ensureAuthenticated, function(req, res) {
 
 router.get('/africa', ensureAuthenticated, function(req, res) {
     db.Country.findAll({where: {continent: 'Africa'}}).then(function(result) {
-        console.log(req.user.dataValues.username)
+        console.log(req.user.dataValues)
         var hbs_obj = {
             name: req.user.dataValues.username,
+            isSuperUser: req.user.dataValues.isSuperUser,
             result: result
         };
         res.render('countries', hbs_obj);
@@ -122,69 +132,113 @@ router.get('/southAmerica', ensureAuthenticated, function(req, res) {
 router.get('/admin', ensureAuthenticated, function(req, res) {
     db.Country.findAll({}).then(function(result) {
         var continents = [];
+        var conts = [];
         var cont_obj = [];
         var ContObj = function(continent) {
             this.continent = continent
         };
-        for (var i in result) {
-            continents.push(result[i].dataValues.continent);
-        }
-        for (var j in continents) {
-            if (j == 0) {
-                console.log('Added new obj due to undefined');
-                cont_obj[cont_obj.length] = new ContObj(continents[j]);
-                continue;
+
+        if (req.user.dataValues.isSuperUser) {
+
+            for (var i in result) {
+                continents.push(result[i].dataValues.continent);
             }
-            var cont_index = continents.indexOf(cont_obj[cont_obj.length - 1].continent);
-            if (cont_index === -1) {
-                cont_obj[cont_obj.length] = new ContObj(continents[j]);
+            console.log("continents!" + continents);
+            for (var j in continents) {
+                if (j == 0) {
+                    console.log('Added new obj due to undefined');
+                    conts.push(continents[j]);
+                    cont_obj[cont_obj.length] = new ContObj(continents[j])
+                    console.log(cont_obj);
+                    continue;
+                }
+                for (var f in conts) {
+                    console.log("INDEX" + conts);
+                    var cont_index = conts.indexOf(continents[j]);
+                    if (cont_index === -1) {
+                        console.log('Added new Cont!');
+                        conts.push(continents[j]);
+                        cont_obj[cont_obj.length] = new ContObj(continents[j])
+                        console.log(cont_obj);
+                    }
+                }
             }
+            console.log(conts);
+            console.log(cont_obj);
+                        
+            hbs_obj = {
+                continents: cont_obj,
+                result: result
+            };
+            console.log(hbs_obj.continents)
+
+            res.render('admin', hbs_obj);
+        } else {
+            res.redirect('/');
         }
-        console.log(cont_obj);
-        
-        hbs_obj = {
-            continents: cont_obj,
-            result: result
-        };
-        res.render('admin', hbs_obj);
     });
 });
 
-router.post('/country-builder', function(req, res) {
-    db.Country.create({
-        continent: req.body.continent,
-        country: req.body.country,
-        bty: req.body.bty,
-        foods: req.body.foods,
-        religions: req.body.religions,
-        brief_history: req.body.brief_history,
-        facts: req.body.facts,
-        fun_fact: req.body.fun_fact
-    }).then(function(result) {
-        res.json(result);
-    });
+router.post('/country-builder', ensureAuthenticated, function(req, res) {
+    if (req.user.dataValues.isSuperUser) {
+
+        db.Country.create({
+            continent: req.body.continent,
+            country: req.body.country,
+            bty: req.body.bty,
+            foods: req.body.foods,
+            religions: req.body.religions,
+            brief_history: req.body.brief_history,
+            facts: req.body.facts,
+            fun_fact: req.body.fun_fact
+        }).then(function(result) {
+            res.json(result);
+        });
+    } else {
+        res.redirect('/');
+    }
 });
 
-router.post('/country-select', function(req, res) {
-    db.Country.findOne({where:{country: req.body.country}}).then(function(result) {
-        res.json(result);
-    });
+router.post('/country-select', ensureAuthenticated, function(req, res) {
+    if (req.user.dataValues.isSuperUser) {
+
+        db.Country.findOne({where:{country: req.body.country}}).then(function(result) {
+            res.json(result);
+        });
+    } else {
+        res.redirect('/');
+    }
 });
 
-router.post('/edit-country', function(req, res) {
-    console.log(req.body.bty);
-    db.Country.update({
-        bty: req.body.bty,
-        foods: req.body.foods,
-        religions: req.body.religions,
-        brief_history: req.body.brief_history,
-        facts: req.body.facts,
-        fun_fact: req.body.fun_fact,
-    },{where:{country: req.body.country}}).then(function(result) {
-        console.log("RESULT")
-        console.log(result);
-        res.json(result);
-    });
+router.post('/edit-country', ensureAuthenticated, function(req, res) {
+    
+    if (req.user.dataValues.isSuperUser) {
+
+        console.log(req.body.bty);
+        db.Country.update({
+            bty: req.body.bty,
+            foods: req.body.foods,
+            religions: req.body.religions,
+            brief_history: req.body.brief_history,
+            facts: req.body.facts,
+            fun_fact: req.body.fun_fact,
+        },{where:{country: req.body.country}}).then(function(result) {
+            
+            if (result[0] === 1) {
+                success = {
+                    updated: "Country updated successfully!"
+                };
+                res.json(success);
+            } else {
+                error = {
+                    err: "Something went wrong :("
+                };
+                res.json(error);
+            }
+        });
+    } else {
+        res.redirect('/');
+    }
 });
 
 

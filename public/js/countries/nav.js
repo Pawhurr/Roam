@@ -32,6 +32,14 @@ $('#user-profile').on('pointerout', function() {
     $('.userSpan').toggleClass('navTrigger');
 })
 
+$('#admin-port').on('pointerover', function() {
+    $('.adminSpan').toggleClass('navTrigger');
+})
+
+$('#admin-port').on('pointerout', function() {
+    $('.adminSpan').toggleClass('navTrigger');
+})
+
 $('#home-option').on('pointerover', function() {
     $('.homeSpan').toggleClass('navTrigger');
 })

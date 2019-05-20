@@ -10,17 +10,16 @@ nav {
     vertical-align: center;
     top: 30%;
     left: -2%;
+    list-style: none;
 }
 
-nav li, span {
-    list-style: none;
+.nav {
     color: white;
     font-weight: bold;
     padding: 5px 5px 5px 0px;
 }
 
 .nav:hover {
-    cursor: pointer;
     text-shadow: 0px 0px 10px rgb(255, 185, 158);
 }
 
@@ -31,7 +30,7 @@ nav li, span {
 }
 
 #country-builder-div {
-    display: none;
+    /* display: none; */
     background: rgb(0, 0, 0, 0.6);
     margin: 50px 0px;
     border-radius: 5px;

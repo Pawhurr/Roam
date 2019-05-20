@@ -1,5 +1,5 @@
 .toggle {
-    z-index: 2;
+    z-index: 3;
     position: fixed;
     top: 4.5%;
     left: 3.5%;
@@ -53,19 +53,19 @@
 }
 
 .toggle.active {
-    z-index: 2;
+    z-index: 3;
     transition: all 2s ease-in-out;
 }
 
 #nav-options-col {
-    z-index: 1;
+    z-index: 2;
     position: absolute;
     display: flex;
     align-items: center;
     top: 0%;
     left: -100%;
     height: 100vh;
-    width: 20vw;   
+    width: 25vw;   
     background: white;
 }
 
@@ -79,7 +79,7 @@
     font-size: 30px;
 }
 
-.homeSpan, .aboutSpan, .portSpan {
+.adminSpan, .userSpan, .homeSpan, .aboutSpan, .portSpan {
     display: block;
     height: 1px;
     width: 70%;
@@ -89,6 +89,18 @@
     animation: navAnim2 1s forwards;
 }
 
+.user {
+    margin-bottom: 80px;
+}
+
+.adminSpan.navTrigger {
+    animation: navAnim1 1s forwards;
+    transition-timing-function: ease-out;
+}
+.userSpan.navTrigger {
+    animation: navAnim1 1s forwards;
+    transition-timing-function: ease-out;
+}
 .homeSpan.navTrigger {
     animation: navAnim1 1s forwards;
     transition-timing-function: ease-out;
@@ -121,12 +133,41 @@
     }
 }
 
-#home-option, #home-option:visited, #about-option, #about-option:visited, #portfolio, #portfolio:visited {
+#adminPort, #adminPort:visited, #user-profile, #user-profile:visited, #home-option, #home-option:visited, #about-option, #about-option:visited, #portfolio, #portfolio:visited {
     font-size: 24px;
     color: black;
 }
 
-#home-option:hover, #about-option:hover, #portfolio:hover {
+#adminPort:hover, #user-profile:hover, #home-option:hover, #about-option:hover, #portfolio:hover {
     color: darkgray;
     text-decoration: none;
+}
+
+a:hover, button:hover, .btn:not(:disabled):not(:disabled), button:not(:disabled){
+    cursor: none;
+} 
+
+#admin-msg-modal {
+    z-index: 2;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 20vh;
+    width: 50vw;
+    background: lightcoral;
+    border-radius: 5px;
+    box-shadow: 10px 10px 10px rgb(0, 0, 0, 0.6);
+}
+
+#close-btn-wrapper {
+    margin: 5px 10px 0px 0px;
+    text-align: right;
+}
+
+#modal-msg {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
 }
