@@ -1,10 +1,25 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 <link rel="stylesheet" href="css/signup.css">
+<link rel="stylesheet" href="css/cursor.css">
 
 <title>Login</title>
 
 </head>
 
 <body>
+
+
+    <div class="cursor"></div>
+    <div class="cursor-clone"></div>
+
+
+
+    <div id="signup-modal">
+
+        <p id="close-btn-wrapper"><i class="close-btn fas fa-2x fa-times"></i></p>
+        <h5 id="modal-msg"></h5>
+
+    </div>
 
     <div class="container">
         <div class="row">
@@ -15,20 +30,20 @@
 
                         <div id="login-div">
 
-                            <form action="/signup" method="POST" id="login-form">
+                            <form id="login-form">
                                 
                                 <h1 id="login-header">Signup Form</h1>
 
                                 <label>Username:</label>
-                                    <input type="text" name="username" id="signup-username" placeholder="master_of_the_universe" required>
+                                    <input type="text" name="username" class="input-btn" id="signup-username" placeholder="master_of_the_universe" required>
                                 
                                 <label>Email:</label>
-                                    <input type="email" name="email" id="signup-email" placeholder="johndoe@gmail.com">
+                                    <input type="email" name="email" class="input-btn" id="signup-email" placeholder="johndoe@gmail.com">
 
                                 <label>Password:</label>
-                                    <input type="password" name="password" id="signup-password" required>
+                                    <input type="password" name="password" class="input-btn" id="signup-password" required>
                                 
-                                <input type="submit" value="Submit" id="submit-btn">
+                                <input type="submit" value="Submit" class="input-btn" id="submit-btn">
 
                             </form>
 
@@ -42,5 +57,8 @@
             <div class="col-lg-2"></div>
         </div>
     </div>
+
+    <script src="js/signup.js"></script>
+    <script src="js/cursor.js"></script>
 
 </body>
