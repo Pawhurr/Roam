@@ -16,6 +16,21 @@ $('.toggle').on('click', function() {
     $('#nav-options-col').toggleClass('active');
 });
 
+$('#user-profile').on('pointerover', function() {
+    $('.userSpan').toggleClass('navTrigger');
+})
+
+$('#user-profile').on('pointerout', function() {
+    $('.userSpan').toggleClass('navTrigger');
+})
+
+$('#adminPort').on('pointerover', function() {
+    $('.adminSpan').toggleClass('navTrigger');
+})
+
+$('#adminPort').on('pointerout', function() {
+    $('.adminSpan').toggleClass('navTrigger');
+})
 
 $('#home-option').on('pointerover', function() {
     $('.homeSpan').toggleClass('navTrigger');

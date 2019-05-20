@@ -26,6 +26,12 @@
 
         <div id="nav-modal">
 
+            {{#if isSuperUser}}
+            <span class="adminSpan"></span>
+                <a class="animTarget" id="admin-port" href="/admin">Admin Port</a>
+            <span class="adminSpan user"></span>
+            {{/if}}
+
             <span class="homeSpan"></span>
                 <a id="home-option" href="/">Home</a>
             <span class="homeSpan aboutSpan"></span>
