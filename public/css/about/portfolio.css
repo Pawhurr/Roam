@@ -1,0 +1,54 @@
+
+body {
+    background-image: url('../../imgs/john-t.png')
+}
+
+#portfolio-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background: rgb(0, 0, 0, 0.6);
+    border-radius: 5px;
+    color: white;
+    border: 5px;
+    width: 70%;
+    padding: 20px;
+    text-align: center;
+}
+
+#portfolio-content h1 {
+    margin-bottom: 10px;
+}
+
+#portfolio-content span {
+    display: block;
+    margin: 0 auto;
+    height: 1px;
+    width: 30%;
+    background: white;
+    margin-bottom: 10px;
+
+}
+
+.authors{
+    position: relative;
+}
+
+.portfolio {
+    text-align: left;
+    position: relative;
+    background: rgba(235, 231, 231, 0.6);
+    border-radius: 5px;
+    color: black;
+    border: 5px;
+    width: 100%;
+    padding: 25px;
+}
+
+.portfolio h4, a {
+    padding: 10px;
+    margin-left: 10px;
+    border-left: 2px solid rgb(54, 54, 54);
+}

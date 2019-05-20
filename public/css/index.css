@@ -10,7 +10,8 @@
     z-index: 2;
 }
 body, html {
-    height: 100%;
+    min-height: 100vh!important;
+    min-width: 100vw!important;
     background-color:#27849D;
   }
 #footer {
@@ -26,12 +27,12 @@ body, html {
 
 }
 #mapHeader{
-    position:absolute;
+    position: absolute;
     top:0;
     width:100%;
     text-align: center;
     font-family: 'Fredericka the Great', cursive;
-    font-weight: 900;
+    /* font-weight: 900; */
     margin-top: 4px;
 }
 .columns {
@@ -55,3 +56,40 @@ a:hover {
 a:active {
     color: #8E9AAF;
 }
+
+@media screen and (max-width:1440px){
+    .headerMain {
+        font-size: 40px;
+        margin-bottom: 0;
+    }
+    .subtitle{
+        font-size: 28px;
+    }
+}
+@media screen and (max-width:1080px){
+    .headerMain {
+        font-size: 32px;
+        margin-bottom: 0;
+    }
+    .subtitle{
+        font-size: 22px;
+    }
+}
+@media screen and (max-width:768px){
+    .headerMain {
+        font-size: 22px;
+    }
+    .subtitle{
+        font-size: 17px;
+    }
+}
+@media screen and (max-width:426px){
+    .headerMain {
+        font-size: 15px;
+    }
+    .subtitle{
+        font-size: 10px;
+    }
+}
+
+

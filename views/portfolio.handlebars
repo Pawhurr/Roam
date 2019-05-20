@@ -1,0 +1,91 @@
+<link rel="stylesheet" href="css/about/portfolio.css">
+<link rel="stylesheet" href="css/cursor.css">
+<link rel="stylesheet" href="css/nav.css">
+
+
+<title>Portfolio</title>
+</head>
+
+<body>
+
+    <div class="cursor"></div>
+    <div class="cursor-clone"></div>
+
+    <div class="toggle">
+        <span class="span"></span>
+        <span class="span"></span>
+        <span></span>
+    </div>
+
+    <div id="nav-options-col">
+
+        <div id="nav-modal">
+
+            {{#if isSuperUser}}
+            <span class="adminSpan"></span>
+            <a class="animTarget" id="adminPort" href="/admin">Admin Port</a>
+            <span class="adminSpan user"></span>
+            {{/if}}
+
+            <span class="userSpan"></span>
+            <a class="animTarget" id="user-profile" href="/profile">{{name}}</a>
+            <span class="userSpan user"></span>
+
+
+            <span class="homeSpan"></span>
+            <a id="home-option" href="/">Home</a>
+            <span class="homeSpan aboutSpan"></span>
+            <a id="about-option" href="/about">About</a>
+            <span class="portSpan aboutSpan"></span>
+            <a id="portfolio" href="/portfolio">Portfolio</a>
+            <span class="portSpan"></span>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8">
+                <div id="portfolio-content">
+                    <h1>About Us</h1>
+
+                    <span></span>
+
+                    <p>Roam is product of a group project by enthusiastic student developers channeling
+                        their creativity
+                        through their passion for travel.</p>
+
+                    <div id="authors">
+                        <h6 class="portfolio">Heath Banner  <a href="https://heathbanner.github.io/"
+                                target="_blank">Portfolio
+                            </a><a href="https://github.com/HeathBanner?tab=repositories" target="_blank" rel="noopener noreferrer">GitHub Repositories</a></h6>
+                        <h6 class="portfolio">Paul Whurr  <a href="https://pawhurr.github.io/portfolio"
+                                target="_blank">Portfolio
+                            </a><a href="https://github.com/Pawhurr?tab=repositories" target="_blank" rel="noopener noreferrer">GitHub Repositories</a></h6>
+                        <h6 class="portfolio">Ruchita Gandhe  <a href="https://ruchita-g.github.io/Responsive-Portfolio"
+                                target="_blank">Portfolio
+                            </a><a href="https://github.com/Ruchita-G?tab=repositories" target="_blank" rel="noopener noreferrer">GitHub Repositories</a></h6>
+                        <h6 class="portfolio">Kathleen McNamara  <a
+                                href="https://mcnamarakc.github.io/Bootstrap-Portfolio/" target="_blank">Portfolio
+                            </a><a href="https://github.com/mcnamarakc?tab=repositories" target="_blank" rel="noopener noreferrer">GitHub Repositories</a></h6>
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+            <div class="col-lg-2"></div>
+        </div>
+    </div>
+
+
+    <script src="js/cursor.js"></script>
+    <script src="js/nav.js"></script>
+
+</body>
