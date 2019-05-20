@@ -180,7 +180,9 @@ router.get('/admin', ensureAuthenticated, function(req, res) {
                         
             hbs_obj = {
                 continents: cont_obj,
-                result: result
+                result: result,
+                name: req.user.dataValues.username,
+                isSuperUser: req.user.dataValues.isSuperUser        
             };
             console.log(hbs_obj.continents)
 
