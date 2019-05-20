@@ -135,4 +135,5 @@ $('.country-img-scroll').on('click', function() {
         left: '-200%'
     },500, function() {});
     $('.toggle').toggleClass('active');
+    $('.modal').toggleClass('active');
 });

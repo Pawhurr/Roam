@@ -1,0 +1,173 @@
+.toggle {
+    z-index: 3;
+    position: fixed;
+    top: 4.5%;
+    left: 3.5%;
+    transform: translate(-50%, -50%);
+    border: 1px solid red;
+    border-radius: 50%;
+    padding: 10px;
+    transition-timing-function: ease-in;
+}
+
+.toggle:hover {
+    padding: 15px;
+    transition: all .5s ease-in-out;
+
+}
+
+.toggle span {
+    position: relative;
+    width: 20px;
+    height: 2px;
+    display: block;
+    transition: .5s;
+    background: red;
+}
+
+.span {
+    margin-bottom: 5px;
+}
+
+.toggle span:nth-child(1) {
+    transform-origin: left;
+
+}
+.toggle span:nth-child(2) {
+    transform-origin: center;
+    
+}
+.toggle span:nth-child(3) {
+    transform-origin: left;
+}
+.toggle.active span:nth-child(1) {
+    transform: rotate(45deg);
+    left: 4.5px;
+}
+.toggle.active span:nth-child(2) {
+    transform: rotate(315deg);
+    right: 0px;
+}
+.toggle.active span:nth-child(3) {
+    transform: scaleX(0);
+}
+
+.toggle.active {
+    z-index: 3;
+    transition: all 2s ease-in-out;
+}
+
+#nav-options-col {
+    z-index: 2;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    top: 0%;
+    left: -100%;
+    height: 100vh;
+    width: 25vw;   
+    background: white;
+}
+
+#nav-modal {
+    display: block;
+    margin: 0 auto;
+}
+
+#nav-modal a {
+    display: block;
+    font-size: 30px;
+}
+
+.adminSpan, .userSpan, .homeSpan, .aboutSpan, .portSpan {
+    display: block;
+    height: 1px;
+    width: 70%;
+    margin: 10px 0px;
+    background: black;
+    transition-timing-function: ease-out;
+    animation: navAnim2 1s forwards;
+}
+
+.user {
+    margin-bottom: 80px;
+}
+
+.adminSpan.navTrigger {
+    animation: navAnim1 1s forwards;
+    transition-timing-function: ease-out;
+}
+.userSpan.navTrigger {
+    animation: navAnim1 1s forwards;
+    transition-timing-function: ease-out;
+}
+.homeSpan.navTrigger {
+    animation: navAnim1 1s forwards;
+    transition-timing-function: ease-out;
+}
+.aboutSpan.navTrigger {
+    animation: navAnim1 1s forwards;
+    transition-timing-function: ease-out;
+}
+.portSpan.navTrigger {
+    animation: navAnim1 1s forwards;
+    transition-timing-function: ease-out;
+}
+
+@keyframes navAnim1 {
+    from {
+        transform: scale(1);
+
+    }
+    to {
+        transform: scale(1.5); 
+    }
+}
+
+@keyframes navAnim2 {
+    from {
+        transform: scale(1.5);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+#adminPort, #adminPort:visited, #user-profile, #user-profile:visited, #home-option, #home-option:visited, #about-option, #about-option:visited, #portfolio, #portfolio:visited {
+    font-size: 24px;
+    color: black;
+}
+
+#adminPort:hover, #user-profile:hover, #home-option:hover, #about-option:hover, #portfolio:hover {
+    color: darkgray;
+    text-decoration: none;
+}
+
+a:hover, button:hover, .btn:not(:disabled):not(:disabled), button:not(:disabled){
+    cursor: none;
+} 
+
+#admin-msg-modal {
+    z-index: 2;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 20vh;
+    width: 50vw;
+    background: lightcoral;
+    border-radius: 5px;
+    box-shadow: 10px 10px 10px rgb(0, 0, 0, 0.6);
+}
+
+#close-btn-wrapper {
+    margin: 5px 10px 0px 0px;
+    text-align: right;
+}
+
+#modal-msg {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+}
