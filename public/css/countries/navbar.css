@@ -223,12 +223,12 @@ a:hover, button:hover, .btn:not(:disabled):not(:disabled), button:not(:disabled)
     padding: 10px 0px;
 }
 
-#admin-port, #admin-port:visited, #user-profile, #user-profile:visited, #home-option, #home-option:visited, #about-us, #about-us:visited, #portfolio, #portfolio:visited {
+#adminPort, #adminPort:visited, #user-profile, #user-profile:visited, #home-option, #home-option:visited, #about-us, #about-us:visited, #portfolio, #portfolio:visited {
     font-size: 24px;
     color: black;
 }
 
-#admin-port:hover, #user-profile:hover, #home-option:hover, #about-us:hover, #portfolio:hover {
+#adminPort:hover, #user-profile:hover, #home-option:hover, #about-us:hover, #portfolio:hover {
     color: darkgray;
     text-decoration: none;
 }
