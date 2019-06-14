@@ -1,4 +1,4 @@
-# Project2 
+# Roam: A Snappy Travel App
 ## 'ROAM' An exploration assistant for worldly travels.
 
 <https://snappytravelapp.herokuapp.com/>
